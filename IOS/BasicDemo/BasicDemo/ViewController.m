@@ -49,6 +49,8 @@
     if([self.adSumMapViewController isMapDataAvailable]){
         // You can start the map since map data are present
         [self.adSumMapViewController start];
+        //[self.adSumMapViewController setSiteView]; // mkmodif test
+        
     }else{
         UIAlertView *message = [[UIAlertView alloc] initWithTitle:@"update finished with errors"
                                                           message:nil
@@ -65,6 +67,8 @@
     [self.adSumMapViewController customizeInactivePlaces:[UIColor redColor]];
     //Setup the type of camera you want (here 3D)
     [self.adSumMapViewController setCameraMode:FULL];
+    
+    [self.adSumMapViewController setCurrentFloor:0];
 }
 
 - (void)adSumViewController:(id)adSumViewController OnPOIClicked:(NSArray *)poiIDs placeId:(long)placeId

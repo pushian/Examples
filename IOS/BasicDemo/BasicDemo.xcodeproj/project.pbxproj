@@ -8,7 +8,6 @@
 
 /* Begin PBXBuildFile section */
 		4D1361561C4F9075004F0554 /* libz.1.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 4D779B751C4F8CEC008E3579 /* libz.1.dylib */; };
-		4D1361581C4F914D004F0554 /* config.xml in Resources */ = {isa = PBXBuildFile; fileRef = 4D1361571C4F914D004F0554 /* config.xml */; };
 		4D779B791C4F8D7F008E3579 /* AdsumConfig.xml in Resources */ = {isa = PBXBuildFile; fileRef = 4D779B771C4F8D7F008E3579 /* AdsumConfig.xml */; };
 		4D779B7A1C4F8D7F008E3579 /* AdsumCaCert.pem in Resources */ = {isa = PBXBuildFile; fileRef = 4D779B781C4F8D7F008E3579 /* AdsumCaCert.pem */; };
 		4D779B7C1C4F8E7F008E3579 /* libc++.1.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 4D779B7B1C4F8E7F008E3579 /* libc++.1.dylib */; };
@@ -28,7 +27,6 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		4D1361571C4F914D004F0554 /* config.xml */ = {isa = PBXFileReference; lastKnownFileType = text.xml; name = config.xml; path = BasicDemo/config.xml; sourceTree = "<group>"; };
 		4D779B751C4F8CEC008E3579 /* libz.1.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libz.1.dylib; path = ../../../../../../../usr/lib/libz.1.dylib; sourceTree = "<group>"; };
 		4D779B771C4F8D7F008E3579 /* AdsumConfig.xml */ = {isa = PBXFileReference; lastKnownFileType = text.xml; name = AdsumConfig.xml; path = BasicDemo/AdsumConfig.xml; sourceTree = "<group>"; };
 		4D779B781C4F8D7F008E3579 /* AdsumCaCert.pem */ = {isa = PBXFileReference; lastKnownFileType = text; name = AdsumCaCert.pem; path = BasicDemo/AdsumCaCert.pem; sourceTree = "<group>"; };
@@ -75,7 +73,6 @@
 		4D9127AB1C4F8C3C0088CDBC = {
 			isa = PBXGroup;
 			children = (
-				4D1361571C4F914D004F0554 /* config.xml */,
 				4D779B7B1C4F8E7F008E3579 /* libc++.1.dylib */,
 				4D779B771C4F8D7F008E3579 /* AdsumConfig.xml */,
 				4D779B781C4F8D7F008E3579 /* AdsumCaCert.pem */,
@@ -181,7 +178,6 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				4D1361581C4F914D004F0554 /* config.xml in Resources */,
 				4D779B791C4F8D7F008E3579 /* AdsumConfig.xml in Resources */,
 				4D779B7A1C4F8D7F008E3579 /* AdsumCaCert.pem in Resources */,
 				4D9127C71C4F8C3C0088CDBC /* LaunchScreen.storyboard in Resources */,
