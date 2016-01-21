@@ -1,0 +1,7 @@
+source 'https://github.com/CocoaPods/Specs.git'
+use_frameworks!
+
+xcodeproj '../AdsumReader.xcodeproj'
+workspace 'AdsumReader'
+
+pod 'ActionSheetPicker-3.0'
