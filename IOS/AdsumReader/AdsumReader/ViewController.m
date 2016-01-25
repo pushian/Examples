@@ -267,6 +267,21 @@ UIButton *bu3d, *buChangeFloors, *buBack;
     [ViewController applyCustomButtonStyle:buBack];
     [self.view addSubview:buBack];
     
+    // "powered by adactive"
+    UILabel *label = [[UILabel alloc] initWithFrame:CGRectMake(20,500, 0,0) ];
+    label.text = @"Powered by Adactive";
+    [label sizeToFit];
+    [self.view addSubview:label];
+    
+    // auto layout
+    [self.view addConstraint:[NSLayoutConstraint constraintWithItem:label
+                                                          attribute:NSLayoutAttributeRight
+                                                          relatedBy:NSLayoutRelationEqual
+                                                             toItem:self.view
+                                                          attribute:NSLayoutAttributeRight
+                                                         multiplier:1.0
+                                                           constant:0]];
+    
     // done
     [_progressCircle stopAnimating];
     [_progressCircle setHidden:YES];
