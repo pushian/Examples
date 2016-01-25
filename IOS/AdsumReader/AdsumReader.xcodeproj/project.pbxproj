@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		4D3118091C5627980061D54B /* AdsumFont.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 4D3118081C5627980061D54B /* AdsumFont.ttf */; };
+		4DD9BF431C56306900A29F29 /* AdsumIOSAPI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4DCB22ED1C521D6F00CDD4AF /* AdsumIOSAPI.framework */; };
 		4DF032661C51153000472603 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 4DF032651C51153000472603 /* main.m */; };
 		4DF032691C51153000472603 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 4DF032681C51153000472603 /* AppDelegate.m */; };
 		4DF0326C1C51153000472603 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4DF0326B1C51153000472603 /* ViewController.m */; };
@@ -21,7 +23,6 @@
 		4DF032861C51158A00472603 /* MobileCoreServices.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4DF032851C51158A00472603 /* MobileCoreServices.framework */; };
 		4DF032881C51159000472603 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4DF032871C51159000472603 /* UIKit.framework */; };
 		4DF0328A1C51159600472603 /* ImageIO.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4DF032891C51159600472603 /* ImageIO.framework */; };
-		4DF0328C1C5115A600472603 /* AdsumIOSAPI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4DF0328B1C5115A600472603 /* AdsumIOSAPI.framework */; };
 		4DF0328F1C5115D000472603 /* libc++.1.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 4DF0328D1C5115D000472603 /* libc++.1.dylib */; };
 		4DF032901C5115D000472603 /* libz.1.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 4DF0328E1C5115D000472603 /* libz.1.dylib */; };
 		714BD00475326D497B0A8194 /* Pods.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 63BCCB391A9D2DF571944E65 /* Pods.framework */; };
@@ -29,6 +30,12 @@
 
 /* Begin PBXFileReference section */
 		29A9FC92B96C424BC2EFF987 /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "AdsumReader/Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
+		4D3118021C5622C90061D54B /* AdsumIOSAPI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AdsumIOSAPI.framework; path = "../../../../adsum-core/Wrappers/IOS/IOS_step_2/build/Debug-iphoneos/AdsumIOSAPI.framework"; sourceTree = "<group>"; };
+		4D3118041C5625120061D54B /* AdsumIOSAPI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AdsumIOSAPI.framework; path = AdsumReader/AdsumIOSAPI.framework; sourceTree = "<group>"; };
+		4D3118061C5625920061D54B /* AdsumIOSAPI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AdsumIOSAPI.framework; path = "../../../../adsum-core/Wrappers/IOS/IOS_step_2/build/Debug-iphoneos/AdsumIOSAPI.framework"; sourceTree = "<group>"; };
+		4D3118081C5627980061D54B /* AdsumFont.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = AdsumFont.ttf; path = AdsumReader/AdsumFont.ttf; sourceTree = "<group>"; };
+		4DCB22ED1C521D6F00CDD4AF /* AdsumIOSAPI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AdsumIOSAPI.framework; path = "../../../../../Library/Developer/Xcode/DerivedData/AdsumReader-ftltctqmnpjirieuyzlxvifzxuyd/Build/Products/Debug-iphoneos/AdsumIOSAPI.framework"; sourceTree = "<group>"; };
+		4DD9BF401C562A7200A29F29 /* AdsumIOSAPI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AdsumIOSAPI.framework; path = AdsumReader/AdsumIOSAPI.framework; sourceTree = "<group>"; };
 		4DF032611C51153000472603 /* AdsumReader.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AdsumReader.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		4DF032651C51153000472603 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		4DF032671C51153000472603 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -47,7 +54,6 @@
 		4DF032851C51158A00472603 /* MobileCoreServices.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MobileCoreServices.framework; path = System/Library/Frameworks/MobileCoreServices.framework; sourceTree = SDKROOT; };
 		4DF032871C51159000472603 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		4DF032891C51159600472603 /* ImageIO.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ImageIO.framework; path = System/Library/Frameworks/ImageIO.framework; sourceTree = SDKROOT; };
-		4DF0328B1C5115A600472603 /* AdsumIOSAPI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AdsumIOSAPI.framework; path = AdsumReader/AdsumIOSAPI.framework; sourceTree = "<group>"; };
 		4DF0328D1C5115D000472603 /* libc++.1.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = "libc++.1.dylib"; path = "../../../../../../../usr/lib/libc++.1.dylib"; sourceTree = "<group>"; };
 		4DF0328E1C5115D000472603 /* libz.1.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libz.1.dylib; path = ../../../../../../../usr/lib/libz.1.dylib; sourceTree = "<group>"; };
 		63BCCB391A9D2DF571944E65 /* Pods.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -59,9 +65,9 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4DD9BF431C56306900A29F29 /* AdsumIOSAPI.framework in Frameworks */,
 				4DF0328F1C5115D000472603 /* libc++.1.dylib in Frameworks */,
 				4DF032901C5115D000472603 /* libz.1.dylib in Frameworks */,
-				4DF0328C1C5115A600472603 /* AdsumIOSAPI.framework in Frameworks */,
 				4DF0328A1C51159600472603 /* ImageIO.framework in Frameworks */,
 				4DF032881C51159000472603 /* UIKit.framework in Frameworks */,
 				4DF032861C51158A00472603 /* MobileCoreServices.framework in Frameworks */,
@@ -78,6 +84,10 @@
 		24B110EEEFB4B2C952DEE0E9 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				4D3118061C5625920061D54B /* AdsumIOSAPI.framework */,
+				4D3118041C5625120061D54B /* AdsumIOSAPI.framework */,
+				4D3118021C5622C90061D54B /* AdsumIOSAPI.framework */,
+				4DCB22ED1C521D6F00CDD4AF /* AdsumIOSAPI.framework */,
 				63BCCB391A9D2DF571944E65 /* Pods.framework */,
 			);
 			name = Frameworks;
@@ -86,9 +96,10 @@
 		4DF032581C51153000472603 = {
 			isa = PBXGroup;
 			children = (
+				4DD9BF401C562A7200A29F29 /* AdsumIOSAPI.framework */,
+				4D3118081C5627980061D54B /* AdsumFont.ttf */,
 				4DF0328D1C5115D000472603 /* libc++.1.dylib */,
 				4DF0328E1C5115D000472603 /* libz.1.dylib */,
-				4DF0328B1C5115A600472603 /* AdsumIOSAPI.framework */,
 				4DF032891C51159600472603 /* ImageIO.framework */,
 				4DF032871C51159000472603 /* UIKit.framework */,
 				4DF032851C51158A00472603 /* MobileCoreServices.framework */,
@@ -205,6 +216,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4D3118091C5627980061D54B /* AdsumFont.ttf in Resources */,
 				4DF032741C51153000472603 /* LaunchScreen.storyboard in Resources */,
 				4DF0327D1C51156900472603 /* AdsumCaCert.pem in Resources */,
 				4DF0327E1C51156900472603 /* AdsumConfig.xml in Resources */,
@@ -388,7 +400,10 @@
 					"$(inherited)",
 					"$(PROJECT_DIR)/AdsumReader",
 				);
-				HEADER_SEARCH_PATHS = /Users/mk/git/adactive/Examples/IOS/AdsumReader/AdsumReader/AdsumIOSAPI.framework/Headers;
+				HEADER_SEARCH_PATHS = (
+					"$(BUILT_PRODUCTS_DIR)",
+					"$(BUILT_PRODUCTS_DIR)/AdsumIOSAPI.framework/Headers",
+				);
 				INFOPLIST_FILE = AdsumReader/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.adactive.AdsumReader;
@@ -406,7 +421,10 @@
 					"$(inherited)",
 					"$(PROJECT_DIR)/AdsumReader",
 				);
-				HEADER_SEARCH_PATHS = /Users/mk/git/adactive/Examples/IOS/AdsumReader/AdsumReader/AdsumIOSAPI.framework/Headers;
+				HEADER_SEARCH_PATHS = (
+					"$(BUILT_PRODUCTS_DIR)",
+					"$(BUILT_PRODUCTS_DIR)/AdsumIOSAPI.framework/Headers",
+				);
 				INFOPLIST_FILE = AdsumReader/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.adactive.AdsumReader;

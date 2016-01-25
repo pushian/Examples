@@ -39,12 +39,24 @@ UIButton *bu3d, *buChangeFloors, *buBack;
 }
 
 - (IBAction)buBack:(id)sender {
-    
+    [self showButtons:false];
     [self.adSumMapViewController setSiteView];
-    // mktodo: çà emmene sur un carré gris, on ne peut pas réentrer dans le batiment
-    
-    // mktodo: cacher le bouton "floors"
-    // mktodo: renommer "back" ou le cacher
+}
+
+
+
+- (void) adSumViewController:		(id) 	adSumViewController
+           OnBuildingClicked:		(long) 	buildingId
+{
+    [self.adSumMapViewController setCurrentBuilding:buildingId];
+    [self showButtons:true];
+}
+
+-(void)showButtons:(bool)b
+{
+    [bu3d setHidden:!b];
+    [buChangeFloors setHidden:!b];
+    [buBack setHidden:!b];
 }
 
 - (IBAction)buChangeFloors:(id)sender {
@@ -120,28 +132,8 @@ UIButton *bu3d, *buChangeFloors, *buBack;
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    // Do any additional setup after loading the view, typically from a nib.
-    
-    // note: _viewMap permet de mettre la vue dans une sous vue, et donc l'UI affiché par dessus fonctionne
-    // note: sa taille passe automatiquemnet en fullscreen quand l'init de la map est ok
-    
-    // version modifié avec subview : mktodo : à supprimer
-    /*
-     //Allocate memory to the ADSumMapViewController
-     self.adSumMapViewController = [[ADSumMapViewController alloc] init];
-     //Setup the size of the ADSumMapViewController display
-     self.adSumMapViewController.AdactiveParentRect = CGRectMake(0, 0, self.view.frame.size.width, self.view.frame.size.height);
-     //Register your view controller as delegate to receive ADSumMapViewController events
-     self.adSumMapViewController.delegate = self;
-     //Setup the background color
-     self.adSumMapViewController.view.backgroundColor = [UIColor whiteColor];
-     _viewMap.backgroundColor =[ UIColor whiteColor];
-     //Add the ADSumMapViewController view to your ViewController view
-     [_viewMap addSubview:self.adSumMapViewController.view];
-     //Launch the downloading or update of the map data
-     [self.adSumMapViewController update];*/
-    
-    // VERSION normale
+
+
     //Allocate memory to the ADSumMapViewController
     self.adSumMapViewController = [[ADSumMapViewController alloc] init];
     //Setup the size of the ADSumMapViewController display
@@ -150,14 +142,37 @@ UIButton *bu3d, *buChangeFloors, *buBack;
     self.adSumMapViewController.delegate = self;
     //Setup the background color
     self.adSumMapViewController.view.backgroundColor = [UIColor whiteColor];
-    self.view.backgroundColor =[ UIColor whiteColor];
+    self.view.backgroundColor = [ UIColor whiteColor];
     //Add the ADSumMapViewController view to your ViewController view
     [self.view addSubview:self.adSumMapViewController.view];
     //Launch the downloading or update of the map data
     [self.adSumMapViewController update];
     
-    
+    // go
+    [_progressCircle startAnimating];
 }
+
+/*
+-(void)viewWillLayoutSubviews
+{
+    CGRect rect = CGRectMake(0, 0, self.view.frame.size.width, self.view.frame.size.height);
+
+    AdsumCoreView *acv = [self.adSumMapViewController getAdsumCoreView];
+    
+    acv.frame = rect;
+    
+    
+    //self.adSumMapViewController.AdactiveParentRect = rect;
+   // [self.adSumMapViewController
+   // [self.adSumMapViewController update];
+    
+   // AdsumCoreView *acv = (AdsumCoreView *)self.adSumMapViewController.;
+    
+    //acv=acv;
+    //[self.adSumMapViewController. AdsumCoreView setupView];
+    
+    //[acv resizeViewportWithWidth:self.view.frame.size.width height:self.view.frame.size.height];
+}*/
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
@@ -251,7 +266,10 @@ UIButton *bu3d, *buChangeFloors, *buBack;
     [buBack addTarget:self action:@selector(buBack:) forControlEvents:UIControlEventTouchUpInside];
     [ViewController applyCustomButtonStyle:buBack];
     [self.view addSubview:buBack];
-
+    
+    // done
+    [_progressCircle stopAnimating];
+    [_progressCircle setHidden:YES];
 }
 
 // mktodo: mettre çà ailleurs ou différemment

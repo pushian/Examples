@@ -2,6 +2,9 @@
 <Workspace
    version = "1.0">
    <FileRef
+      location = "group:../../../../../adsum-core/Wrappers/IOS/IOS_step_2/AdsumCoreNativeAPI.xcodeproj">
+   </FileRef>
+   <FileRef
       location = "group:../AdsumReader.xcodeproj">
    </FileRef>
    <FileRef

@@ -12,6 +12,7 @@
 @interface ViewController : UIViewController<ADSumMapViewControllerDelegate>
 
 @property (nonatomic, strong) ADSumMapViewController * adSumMapViewController;
+@property (weak, nonatomic) IBOutlet UIActivityIndicatorView *progressCircle;
 
 @end
 

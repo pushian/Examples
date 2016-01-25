@@ -31,6 +31,8 @@
     [self.view addSubview:self.adSumMapViewController.view];
     //Launch the downloading or update of the map data
     [self.adSumMapViewController update];
+    
+    [_progressCircle startAnimating];
 }
 
 - (void)didReceiveMemoryWarning {
@@ -69,6 +71,9 @@
     [self.adSumMapViewController setCameraMode:FULL];
     
     [self.adSumMapViewController setCurrentFloor:0];
+    
+    [_progressCircle stopAnimating];
+    [_progressCircle setHidden:YES];
 }
 
 - (void)adSumViewController:(id)adSumViewController OnPOIClicked:(NSArray *)poiIDs placeId:(long)placeId
