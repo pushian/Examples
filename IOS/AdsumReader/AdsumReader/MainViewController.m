@@ -8,13 +8,14 @@
 
 #import "MainViewController.h"
 #import "ViewController.h"
+#import "MLPAutoCompleteTextField/MLPAutoCompleteTextField.h"
 
 @interface MainViewController ()
 @property (weak, nonatomic) IBOutlet UIButton *buSearch;
 @property (weak, nonatomic) IBOutlet UIButton *buFloors;
 @property (weak, nonatomic) IBOutlet UIButton *bu3d;
 @property (weak, nonatomic) IBOutlet UIButton *buBack;
-@property (weak, nonatomic) IBOutlet UITextField *tfSearch;
+@property (weak, nonatomic) IBOutlet MLPAutoCompleteTextField *searchBox;
 
 @end
 
@@ -40,7 +41,7 @@ ViewController *vcAdsum;
     [_buFloors setHidden:YES];
     [_buSearch setHidden:YES];
     [_buBack setHidden:YES];
-    [_tfSearch setHidden:YES];
+    [_searchBox setHidden:YES];
 }
 
 - (void)didReceiveMemoryWarning {
@@ -66,16 +67,22 @@ ViewController *vcAdsum;
     
 }
 
+// mktodo: laisser "home" et que çà recentre la carte si on reclique dessus
 
 -(void)showUI:(BOOL)b
 {
-    [_tfSearch setHidden:NO]; // toujours visible
+    [_searchBox setHidden:NO]; // toujours visible
     [_buSearch setHidden:NO]; // toujours visible
     [_bu3d setHidden:NO];  // toujours visible
     [_buFloors setHidden:!b];
-    [_buBack setHidden:!b];
+    [_buBack setHidden:NO]; // toujours visible
 }
 
+-(void)initSearchBox
+{
+    
+    //[_searchBox autoCompleteDataSource:nil];
+}
 
 + (void)applyCustomButtonStyle:(UIButton*)bu
 {

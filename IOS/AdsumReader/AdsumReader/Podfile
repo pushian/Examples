@@ -5,3 +5,4 @@ xcodeproj '../AdsumReader.xcodeproj'
 workspace 'AdsumReader'
 
 pod 'ActionSheetPicker-3.0'
+pod 'MLPAutoCompleteTextField'

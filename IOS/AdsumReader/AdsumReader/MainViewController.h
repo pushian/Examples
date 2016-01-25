@@ -11,5 +11,6 @@
 @interface MainViewController : UIViewController
 
 -(void)showUI:(BOOL)b;
+-(void)initSearchBox;
 
 @end

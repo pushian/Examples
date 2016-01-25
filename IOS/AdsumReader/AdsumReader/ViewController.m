@@ -259,10 +259,14 @@ MainViewController *vcMain;
                                                          multiplier:1.0
                                                            constant:0]];*/
     
+
     
     // parent view controller
     vcMain = (MainViewController*)[self parentViewController];
     [vcMain showUI:YES];
+    
+    // init search box
+    [vcMain initSearchBox];
     
     // done
     [_progressCircle stopAnimating];
