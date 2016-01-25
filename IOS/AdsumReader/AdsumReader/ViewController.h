@@ -15,5 +15,9 @@
 
 @property (weak, nonatomic) IBOutlet UIActivityIndicatorView *progressCircle;
 
+-(NSString*)switch2D3D;
+-(void)changeFloorsButtonClicked:(UIButton*)button;
+-(void)backButtonClicked;
+
 @end
 

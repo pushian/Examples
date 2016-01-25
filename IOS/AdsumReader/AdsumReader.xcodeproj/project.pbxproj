@@ -8,6 +8,10 @@
 
 /* Begin PBXBuildFile section */
 		4D3118091C5627980061D54B /* AdsumFont.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 4D3118081C5627980061D54B /* AdsumFont.ttf */; };
+		4DCB7C481C563B3600982B23 /* MainViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4DCB7C471C563B3600982B23 /* MainViewController.m */; };
+		4DCB7C4C1C5655A500982B23 /* home.png in Resources */ = {isa = PBXBuildFile; fileRef = 4DCB7C491C5655A500982B23 /* home.png */; };
+		4DCB7C4D1C5655A500982B23 /* layer.png in Resources */ = {isa = PBXBuildFile; fileRef = 4DCB7C4A1C5655A500982B23 /* layer.png */; };
+		4DCB7C4E1C5655A500982B23 /* magnifier.png in Resources */ = {isa = PBXBuildFile; fileRef = 4DCB7C4B1C5655A500982B23 /* magnifier.png */; };
 		4DD9BF431C56306900A29F29 /* AdsumIOSAPI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4DCB22ED1C521D6F00CDD4AF /* AdsumIOSAPI.framework */; };
 		4DF032661C51153000472603 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 4DF032651C51153000472603 /* main.m */; };
 		4DF032691C51153000472603 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 4DF032681C51153000472603 /* AppDelegate.m */; };
@@ -35,6 +39,11 @@
 		4D3118061C5625920061D54B /* AdsumIOSAPI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AdsumIOSAPI.framework; path = "../../../../adsum-core/Wrappers/IOS/IOS_step_2/build/Debug-iphoneos/AdsumIOSAPI.framework"; sourceTree = "<group>"; };
 		4D3118081C5627980061D54B /* AdsumFont.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = AdsumFont.ttf; path = AdsumReader/AdsumFont.ttf; sourceTree = "<group>"; };
 		4DCB22ED1C521D6F00CDD4AF /* AdsumIOSAPI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AdsumIOSAPI.framework; path = "../../../../../Library/Developer/Xcode/DerivedData/AdsumReader-ftltctqmnpjirieuyzlxvifzxuyd/Build/Products/Debug-iphoneos/AdsumIOSAPI.framework"; sourceTree = "<group>"; };
+		4DCB7C461C563B3600982B23 /* MainViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MainViewController.h; sourceTree = "<group>"; };
+		4DCB7C471C563B3600982B23 /* MainViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MainViewController.m; sourceTree = "<group>"; };
+		4DCB7C491C5655A500982B23 /* home.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = home.png; path = AdsumReader/Images/home.png; sourceTree = "<group>"; };
+		4DCB7C4A1C5655A500982B23 /* layer.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = layer.png; path = AdsumReader/Images/layer.png; sourceTree = "<group>"; };
+		4DCB7C4B1C5655A500982B23 /* magnifier.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = magnifier.png; path = AdsumReader/Images/magnifier.png; sourceTree = "<group>"; };
 		4DD9BF401C562A7200A29F29 /* AdsumIOSAPI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AdsumIOSAPI.framework; path = AdsumReader/AdsumIOSAPI.framework; sourceTree = "<group>"; };
 		4DF032611C51153000472603 /* AdsumReader.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AdsumReader.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		4DF032651C51153000472603 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -96,6 +105,9 @@
 		4DF032581C51153000472603 = {
 			isa = PBXGroup;
 			children = (
+				4DCB7C491C5655A500982B23 /* home.png */,
+				4DCB7C4A1C5655A500982B23 /* layer.png */,
+				4DCB7C4B1C5655A500982B23 /* magnifier.png */,
 				4DD9BF401C562A7200A29F29 /* AdsumIOSAPI.framework */,
 				4D3118081C5627980061D54B /* AdsumFont.ttf */,
 				4DF0328D1C5115D000472603 /* libc++.1.dylib */,
@@ -135,6 +147,8 @@
 				4DF032721C51153000472603 /* LaunchScreen.storyboard */,
 				4DF032751C51153000472603 /* Info.plist */,
 				4DF032641C51153000472603 /* Supporting Files */,
+				4DCB7C461C563B3600982B23 /* MainViewController.h */,
+				4DCB7C471C563B3600982B23 /* MainViewController.m */,
 			);
 			path = AdsumReader;
 			sourceTree = "<group>";
@@ -216,6 +230,9 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4DCB7C4C1C5655A500982B23 /* home.png in Resources */,
+				4DCB7C4D1C5655A500982B23 /* layer.png in Resources */,
+				4DCB7C4E1C5655A500982B23 /* magnifier.png in Resources */,
 				4D3118091C5627980061D54B /* AdsumFont.ttf in Resources */,
 				4DF032741C51153000472603 /* LaunchScreen.storyboard in Resources */,
 				4DF0327D1C51156900472603 /* AdsumCaCert.pem in Resources */,
@@ -283,6 +300,7 @@
 				4DF0326C1C51153000472603 /* ViewController.m in Sources */,
 				4DF032691C51153000472603 /* AppDelegate.m in Sources */,
 				4DF032661C51153000472603 /* main.m in Sources */,
+				4DCB7C481C563B3600982B23 /* MainViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

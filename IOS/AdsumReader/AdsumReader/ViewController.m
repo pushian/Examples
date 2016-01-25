@@ -7,39 +7,49 @@
 //
 
 #import "ViewController.h"
+#import "MainViewController.h"
 #import "Pods/ActionSheetPicker-3.0/Pickers/ActionSheetPicker.h"
 
 @interface ViewController ()
 
 @end
 
-// mktodo :mettre progress circle au démarrage
-// mktodo: faire ce qu'il manque par rapport à la version android
+
 
 CameraMode currentCameraMode = FULL;
-UIButton *bu3d, *buChangeFloors, *buBack;
+MainViewController *vcMain;
 
 @implementation ViewController
 
 - (IBAction)bu3d:(id)sender {
-    
+    // mktodo: deprecated, supprimer
+}
+
+-(NSString*) switch2D3D
+{
+    NSString *newButtonText;
     
     if (currentCameraMode==FULL)
     {
         currentCameraMode = ORTHO;
-        [bu3d setTitle:@"3D" forState:UIControlStateNormal];
+        newButtonText = @"3D"; //[bu3d setTitle:@"3D" forState:UIControlStateNormal];
     }
     else
     {
         currentCameraMode = FULL;
-        [bu3d setTitle:@"2D" forState:UIControlStateNormal];
+        newButtonText = @"2D"; //[bu3d setTitle:@"2D" forState:UIControlStateNormal];
     }
     
     [self.adSumMapViewController setCameraMode:currentCameraMode];
+    
+    return newButtonText;
 }
 
-- (IBAction)buBack:(id)sender {
-    [self showButtons:false];
+
+//- (IBAction)buBack:(id)sender {
+-(void)backButtonClicked
+{
+    [vcMain showUI:NO];
     [self.adSumMapViewController setSiteView];
 }
 
@@ -49,19 +59,11 @@ UIButton *bu3d, *buChangeFloors, *buBack;
            OnBuildingClicked:		(long) 	buildingId
 {
     [self.adSumMapViewController setCurrentBuilding:buildingId];
-    [self showButtons:true];
+    [vcMain showUI:YES];
 }
 
--(void)showButtons:(bool)b
+-(void)changeFloorsButtonClicked:(UIButton*)button
 {
-    [bu3d setHidden:!b];
-    [buChangeFloors setHidden:!b];
-    [buBack setHidden:!b];
-}
-
-- (IBAction)buChangeFloors:(id)sender {
-    
-    
     long buildingId = [self.adSumMapViewController getCurrentBuilding];
     NSArray *adsumFloors = [self.adSumMapViewController getBuildingFloors:buildingId];
     long currentFloorId = [self.adSumMapViewController getCurrentFloor];
@@ -82,48 +84,21 @@ UIButton *bu3d, *buChangeFloors, *buBack;
         pos++;
     }
     
-    
-    
     [ActionSheetStringPicker showPickerWithTitle:@"Select a floor"
-                                            rows:floorsArray
-                                initialSelection:currentFloorPositionInFloorsArray
-                                       doneBlock:^(ActionSheetStringPicker *picker, NSInteger selectedIndex, id selectedValue) {
-                                           // NSLog(@"Picker: %@, Index: %@, value: %@",
-                                           //     picker, selectedIndex, selectedValue);
+                                        rows:floorsArray
+                                        initialSelection:currentFloorPositionInFloorsArray
+                                        doneBlock:^(ActionSheetStringPicker *picker, NSInteger selectedIndex, id selectedValue)
+                                        {
+                                           // NSLog(@"Picker: %@, Index: %@, value: %@", picker, selectedIndex, selectedValue);
                                            NSString *s = (NSString*)selectedValue;
                                            long floorId = [s intValue];
                                            [self.adSumMapViewController setCurrentFloor:floorId];
-                                       }
-                                     cancelBlock:^(ActionSheetStringPicker *picker) {
-                                         NSLog(@"Block Picker Canceled");
-                                     }
-                                          origin:sender];
-    // You can also use self.view if you don't have a sender
-    
-    // mktodo: ok d'utiliser getBuildingFloors ou bien faudrait utiliser getSortedFloors ? à réfléchir et discuter avec l'équipe
-    //long buildingId = [self.adSumMapViewController getCurrentBuilding];
-    //NSArray *floors = [self.adSumMapViewController getBuildingFloors:buildingId];
-    //long floorId = [self.adSumMapViewController getCurrentFloor];
-    
-    
-    // mktodo: si on fait les boutons flottants comme sur android le code sera plus simple que là
-    // mktodo : si on reste comme çà : faut gérer le enabled/disabled des boutons up et down
-    // mktodo : virer ce code
-    /* bool getNext=NO;
-     for (NSNumber *a_floorId in floors) {
-     
-     if (getNext==YES)
-     {
-     floorId = [a_floorId longValue];
-     break;
-     }
-     if ([a_floorId longValue] == floorId)
-     getNext=YES;
-     }*/
-    
-    // UIButton * bu = (UIButton*)sender;
-    // long floorId = [bu.titleLabel.text intValue];
-    //[self.adSumMapViewController setCurrentFloor:floorId];
+                                        }
+                                        cancelBlock:^(ActionSheetStringPicker *picker)
+                                        {
+                                            // NSLog(@"Block Picker Canceled");
+                                        }
+                                        origin:button];  // You can also use self.view if you don't have a sender
 }
 
 
@@ -147,6 +122,7 @@ UIButton *bu3d, *buChangeFloors, *buBack;
     [self.view addSubview:self.adSumMapViewController.view];
     //Launch the downloading or update of the map data
     [self.adSumMapViewController update];
+    
     
     // go
     [_progressCircle startAnimating];
@@ -244,15 +220,15 @@ UIButton *bu3d, *buChangeFloors, *buBack;
     
     
     // init button 2D/3D
-    bu3d = [UIButton buttonWithType: UIButtonTypeRoundedRect];
+    /*bu3d = [UIButton buttonWithType: UIButtonTypeRoundedRect];
     bu3d.frame = CGRectMake(20, 50, 150, 30);
     [bu3d setTitle:@"2D" forState:UIControlStateNormal];
     [bu3d addTarget:self action:@selector(bu3d:) forControlEvents:UIControlEventTouchUpInside];
     [ViewController applyCustomButtonStyle:bu3d];
-    [self.view addSubview:bu3d];
+    [self.view addSubview:bu3d];*/
     
     // init change floor button
-    buChangeFloors = [UIButton buttonWithType: UIButtonTypeRoundedRect];
+    /*buChangeFloors = [UIButton buttonWithType: UIButtonTypeRoundedRect];
     buChangeFloors.frame = CGRectMake(20, 100, 150, 30);
     [buChangeFloors setTitle:@"Change floor" forState:UIControlStateNormal];
     [buChangeFloors addTarget:self action:@selector(buChangeFloors:) forControlEvents:UIControlEventTouchUpInside];
@@ -265,38 +241,35 @@ UIButton *bu3d, *buChangeFloors, *buBack;
     [buBack setTitle:@"Back" forState:UIControlStateNormal];
     [buBack addTarget:self action:@selector(buBack:) forControlEvents:UIControlEventTouchUpInside];
     [ViewController applyCustomButtonStyle:buBack];
-    [self.view addSubview:buBack];
+    [self.view addSubview:buBack];*/
     
     // "powered by adactive"
-    UILabel *label = [[UILabel alloc] initWithFrame:CGRectMake(20,500, 0,0) ];
+   /* UILabel *label = [[UILabel alloc] initWithFrame:CGRectMake(20,500, 0,0) ];
     label.text = @"Powered by Adactive";
     [label sizeToFit];
     [self.view addSubview:label];
-    
+    */
     // auto layout
+    /* temporaire, marche pas, à virer (mktodo)
     [self.view addConstraint:[NSLayoutConstraint constraintWithItem:label
                                                           attribute:NSLayoutAttributeRight
                                                           relatedBy:NSLayoutRelationEqual
                                                              toItem:self.view
                                                           attribute:NSLayoutAttributeRight
                                                          multiplier:1.0
-                                                           constant:0]];
+                                                           constant:0]];*/
+    
+    
+    // parent view controller
+    vcMain = (MainViewController*)[self parentViewController];
+    [vcMain showUI:YES];
     
     // done
     [_progressCircle stopAnimating];
     [_progressCircle setHidden:YES];
 }
 
-// mktodo: mettre çà ailleurs ou différemment
-+ (void)applyCustomButtonStyle:(UIButton*)bu
-{
-    bu.layer.borderWidth=1.0f;
-    bu.layer.borderColor=[[UIColor blackColor] CGColor];
-    bu.layer.cornerRadius = 10;
-    bu.titleLabel.font = [UIFont systemFontOfSize:20];
-    bu.titleLabel.backgroundColor = [UIColor whiteColor];
-    bu.backgroundColor = [UIColor whiteColor];
-}
+
 
 - (void)adSumViewController:(id)adSumViewController OnPOIClicked:(NSArray *)poiIDs placeId:(long)placeId
 {
