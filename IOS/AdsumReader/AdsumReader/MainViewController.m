@@ -23,6 +23,7 @@
 @end
 
 ViewController *vcAdsum;
+bool mapIsReady=false;
 
 @implementation MainViewController
 
@@ -44,7 +45,7 @@ ViewController *vcAdsum;
     //[_buFloors  setHidden:YES];
     //[_buSearch setHidden:YES];
     //[_buBack setHidden:YES];
-    [_searchBox setHidden:YES];
+    //[_searchBox setHidden:YES];
     
     // hide "floors" button
     /*[self.navigationItem.rightBarButtonItem setEnabled:NO];
@@ -57,19 +58,25 @@ ViewController *vcAdsum;
 }
 
 
-
+-(void)mapIsReady
+{
+    mapIsReady = true;
+}
 
 - (IBAction)buFloors:(id)sender {
+    if (!mapIsReady) return;
     [vcAdsum changeFloorsButtonClicked:sender];
 }
 
 - (IBAction)bu3d:(id)sender {
+    if (!mapIsReady) return;
     NSString *newButtonText = [vcAdsum switch2D3D];
     [_bu3d setTitle:newButtonText];
 }
 
 
 - (IBAction)buBack:(id)sender {
+    if (!mapIsReady) return;
     [vcAdsum backButtonClicked];
 }
 
@@ -77,7 +84,7 @@ ViewController *vcAdsum;
 
 -(void)showUI:(BOOL)b
 {
-    [_searchBox setHidden:NO]; // toujours visible
+ //   [_searchBox setHidden:NO]; // toujours visible
     
    // [_bu3d setHidden:NO];  // toujours visible
   //  [_buFloors setHidden:!b];

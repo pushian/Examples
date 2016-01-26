@@ -12,5 +12,6 @@
 
 -(void)showUI:(BOOL)b;
 -(void)initSearchBox;
+-(void)mapIsReady;
 
 @end
