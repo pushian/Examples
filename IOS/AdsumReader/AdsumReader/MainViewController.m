@@ -11,11 +11,14 @@
 #import "MLPAutoCompleteTextField/MLPAutoCompleteTextField.h"
 
 @interface MainViewController ()
-@property (weak, nonatomic) IBOutlet UIButton *buSearch;
-@property (weak, nonatomic) IBOutlet UIButton *buFloors;
-@property (weak, nonatomic) IBOutlet UIButton *bu3d;
-@property (weak, nonatomic) IBOutlet UIButton *buBack;
+//@property (weak, nonatomic) IBOutlet UIButton *buSearch;
+//@property (weak, nonatomic) IBOutlet UIButton *buFloors;
+//@property (weak, nonatomic) IBOutlet UIButton *bu3d;
+//@property (weak, nonatomic) IBOutlet UIButton *buBack;
 @property (weak, nonatomic) IBOutlet MLPAutoCompleteTextField *searchBox;
+@property (weak, nonatomic) IBOutlet UIBarButtonItem *buFloors;
+@property (weak, nonatomic) IBOutlet UIBarButtonItem *buBack;
+@property (weak, nonatomic) IBOutlet UIBarButtonItem *bu3d;
 
 @end
 
@@ -37,11 +40,15 @@ ViewController *vcAdsum;
    // [MainViewController applyCustomButtonStyle:_buBack];
     
     // hide all UI at start
-    [_bu3d setHidden:YES];
-    [_buFloors setHidden:YES];
-    [_buSearch setHidden:YES];
-    [_buBack setHidden:YES];
+   // [_bu3d setHidden:YES];
+    //[_buFloors  setHidden:YES];
+    //[_buSearch setHidden:YES];
+    //[_buBack setHidden:YES];
     [_searchBox setHidden:YES];
+    
+    // hide "floors" button
+    /*[self.navigationItem.rightBarButtonItem setEnabled:NO];
+    [self.navigationItem.rightBarButtonItem setImage:nil];*/
 }
 
 - (void)didReceiveMemoryWarning {
@@ -49,22 +56,21 @@ ViewController *vcAdsum;
     // Dispose of any resources that can be recreated.
 }
 
-- (IBAction)buSearch:(id)sender {
-    // deprecated: çà n'est pas un bouton maintenant (juste une image: mktodo: cleaner)
-    
-}
+
+
+
 - (IBAction)buFloors:(id)sender {
     [vcAdsum changeFloorsButtonClicked:sender];
 }
 
 - (IBAction)bu3d:(id)sender {
     NSString *newButtonText = [vcAdsum switch2D3D];
-    [_bu3d setTitle:newButtonText forState:UIControlStateNormal];
+    [_bu3d setTitle:newButtonText];
 }
+
 
 - (IBAction)buBack:(id)sender {
     [vcAdsum backButtonClicked];
-    
 }
 
 // mktodo: laisser "home" et que çà recentre la carte si on reclique dessus
@@ -72,10 +78,10 @@ ViewController *vcAdsum;
 -(void)showUI:(BOOL)b
 {
     [_searchBox setHidden:NO]; // toujours visible
-    [_buSearch setHidden:NO]; // toujours visible
-    [_bu3d setHidden:NO];  // toujours visible
-    [_buFloors setHidden:!b];
-    [_buBack setHidden:NO]; // toujours visible
+    
+   // [_bu3d setHidden:NO];  // toujours visible
+  //  [_buFloors setHidden:!b];
+   // [_buBack setHidden:NO]; // toujours visible
 }
 
 -(void)initSearchBox
