@@ -204,9 +204,7 @@ MainViewController *vcMain;
 - (void)mapDidFinishLoading:(id)adSumViewController
 {
     // init
-    [self.adSumMapViewController customizeInactivePlaces:[UIColor redColor]];
     [self.adSumMapViewController setCameraMode:FULL];
-    [self.adSumMapViewController setCurrentFloor:0];
     [self initFloorsButtons];
     
     // parent view controller
