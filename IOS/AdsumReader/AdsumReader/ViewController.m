@@ -15,7 +15,7 @@
 @end
 
 
-
+AdsumCoreDataManager *dataManager;
 CameraMode currentCameraMode = FULL;
 MainViewController *vcMain;
 
@@ -203,72 +203,27 @@ MainViewController *vcMain;
 
 - (void)mapDidFinishLoading:(id)adSumViewController
 {
-    //Customize the color of the inactive places to show the user those places don't behave like the others
+    // init
     [self.adSumMapViewController customizeInactivePlaces:[UIColor redColor]];
-    //Setup the type of camera you want (here 3D)
     [self.adSumMapViewController setCameraMode:FULL];
-    
     [self.adSumMapViewController setCurrentFloor:0];
-    
-    // inutile maintenant, virer (mktodo)
-    // petite bidouille pour que la vue 3D ne s'affiche pas par dessus les boutons de l'UI
-    // mktodo: faire un meilleur système (mettre la vue 3D dans une vue enfant?)
-    //self.view.layer.zPosition = -1; // note: ceci ne marche pas pour placer la vue map "en dessous" du reste
-    //_buUpFloor.layer.zPosition = 100;
-    
     [self initFloorsButtons];
-    
-    
-    // init button 2D/3D
-    /*bu3d = [UIButton buttonWithType: UIButtonTypeRoundedRect];
-    bu3d.frame = CGRectMake(20, 50, 150, 30);
-    [bu3d setTitle:@"2D" forState:UIControlStateNormal];
-    [bu3d addTarget:self action:@selector(bu3d:) forControlEvents:UIControlEventTouchUpInside];
-    [ViewController applyCustomButtonStyle:bu3d];
-    [self.view addSubview:bu3d];*/
-    
-    // init change floor button
-    /*buChangeFloors = [UIButton buttonWithType: UIButtonTypeRoundedRect];
-    buChangeFloors.frame = CGRectMake(20, 100, 150, 30);
-    [buChangeFloors setTitle:@"Change floor" forState:UIControlStateNormal];
-    [buChangeFloors addTarget:self action:@selector(buChangeFloors:) forControlEvents:UIControlEventTouchUpInside];
-    [ViewController applyCustomButtonStyle:buChangeFloors];
-    [self.view addSubview:buChangeFloors];
-    
-    // init button "back"
-    buBack = [UIButton buttonWithType: UIButtonTypeRoundedRect];
-    buBack.frame = CGRectMake(20, 150, 150, 30);
-    [buBack setTitle:@"Back" forState:UIControlStateNormal];
-    [buBack addTarget:self action:@selector(buBack:) forControlEvents:UIControlEventTouchUpInside];
-    [ViewController applyCustomButtonStyle:buBack];
-    [self.view addSubview:buBack];*/
-    
-    // "powered by adactive"
-   /* UILabel *label = [[UILabel alloc] initWithFrame:CGRectMake(20,500, 0,0) ];
-    label.text = @"Powered by Adactive";
-    [label sizeToFit];
-    [self.view addSubview:label];
-    */
-    // auto layout
-    /* temporaire, marche pas, à virer (mktodo)
-    [self.view addConstraint:[NSLayoutConstraint constraintWithItem:label
-                                                          attribute:NSLayoutAttributeRight
-                                                          relatedBy:NSLayoutRelationEqual
-                                                             toItem:self.view
-                                                          attribute:NSLayoutAttributeRight
-                                                         multiplier:1.0
-                                                           constant:0]];*/
-    
-
     
     // parent view controller
     vcMain = (MainViewController*)[self parentViewController];
     [vcMain showUI:YES];
     
+    // get data manager
+    dataManager = [adSumViewController getDataManager];
+    
+    // data for search box
+    _pois = [dataManager getAllADSPois];
+    
     // init search box
     [vcMain initSearchBox];
     
     // done
+    [vcMain mapIsReady];
     [_progressCircle stopAnimating];
     [_progressCircle setHidden:YES];
 }
@@ -283,6 +238,16 @@ MainViewController *vcMain;
     [self.adSumMapViewController centerOnPlace:placeId];
     //HighLight the first POI linked to the place the user clicked
     [self.adSumMapViewController highLightPlace:placeId color:[UIColor greenColor]];
+}
+
+-(void)centerOnPlace:(NSNumber*)placeId
+{
+    //Unlight all the POIs previously highlighted
+    [self.adSumMapViewController unLightAll];
+    //Center the camera on the place
+    [self.adSumMapViewController centerOnPlace:[placeId longValue]];
+    //HighLight the first POI linked to the place
+    [self.adSumMapViewController highLightPlace:[placeId longValue] color:[UIColor greenColor]];
 }
 
 @end

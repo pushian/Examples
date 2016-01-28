@@ -7,11 +7,17 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "MPGTextField.h"
 
-@interface MainViewController : UIViewController
+@interface MainViewController : UIViewController<MPGTextFieldDelegate, UITextFieldDelegate>
 
 -(void)showUI:(BOOL)b;
 -(void)initSearchBox;
 -(void)mapIsReady;
+@property (weak, nonatomic) IBOutlet MPGTextField *searchBox;
+
+- (void)textField:(MPGTextField *)textField didEndEditingWithSelection:(NSDictionary *)result;
+- (BOOL)textFieldShouldSelect:(MPGTextField *)textField;
+
 
 @end

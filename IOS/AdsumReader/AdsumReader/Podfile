@@ -5,4 +5,5 @@ xcodeproj '../AdsumReader.xcodeproj'
 workspace 'AdsumReader'
 
 pod 'ActionSheetPicker-3.0'
-pod 'MLPAutoCompleteTextField'
+#pod 'MLPAutoCompleteTextField'
+#pod 'MLPAutoCompleteTextField', :git => 'https://github.com/EddyBorja/MLPAutoCompleteTextField.git'

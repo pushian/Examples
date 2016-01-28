@@ -8,14 +8,18 @@
 
 #import "MainViewController.h"
 #import "ViewController.h"
-#import "MLPAutoCompleteTextField/MLPAutoCompleteTextField.h"
+
+
+//#import "MLPAutoCompleteTextFieldDataSource.h"
+
+
+
 
 @interface MainViewController ()
 //@property (weak, nonatomic) IBOutlet UIButton *buSearch;
 //@property (weak, nonatomic) IBOutlet UIButton *buFloors;
 //@property (weak, nonatomic) IBOutlet UIButton *bu3d;
 //@property (weak, nonatomic) IBOutlet UIButton *buBack;
-@property (weak, nonatomic) IBOutlet MLPAutoCompleteTextField *searchBox;
 @property (weak, nonatomic) IBOutlet UIBarButtonItem *buFloors;
 @property (weak, nonatomic) IBOutlet UIBarButtonItem *buBack;
 @property (weak, nonatomic) IBOutlet UIBarButtonItem *bu3d;
@@ -61,6 +65,7 @@ bool mapIsReady=false;
 -(void)mapIsReady
 {
     mapIsReady = true;
+
 }
 
 - (IBAction)buFloors:(id)sender {
@@ -91,10 +96,52 @@ bool mapIsReady=false;
    // [_buBack setHidden:NO]; // toujours visible
 }
 
+
+
 -(void)initSearchBox
 {
+   // self.searchBox.autoCompleteDataSource = self;
+   // self.searchBox.autoCompleteDelegate = self;
+    self.searchBox.delegate = self;
+    //[self.searchBox setRequireAutoCompleteSuggestionsToMatchInputExactly:YES];
+}
+
+-(BOOL)textFieldShouldSelect:(MPGTextField *)textField
+{
+    return YES;
+}
+
+-(void)textField:(MPGTextField *)textField didEndEditingWithSelection:(NSDictionary *)result
+{
+    ADSPoi *poi = (ADSPoi*)[result valueForKey:@"CustomObject"];
+    NSArray<NSNumber*> *places = poi.placesIds;
+    if ([places count]>0)
+        [vcAdsum centerOnPlace:places[0]]; // mktodo: plusieurs places possible?
+}
+
+-(NSArray *)dataForPopoverInTextField:(MPGTextField *)textField
+{
+    NSMutableArray *data = [[NSMutableArray alloc] init];
     
-    //[_searchBox autoCompleteDataSource:nil];
+    /* décommenter et tester
+    for (ADSPoi *poi in vcAdsum.pois)
+    {
+        if ([poi isKindOfClass:[ADSStore class]])
+        {
+            ADSStore *store = (ADSStore*)poi;
+            
+            NSMutableDictionary *d = [NSMutableDictionary dictionary];
+            [d setValue:store.name forKey:@"DisplayText"];
+            [d setValue:@"store" forKey:@"DisplaySubText"]; // optionnel
+            [d setValue:store forKey:@"CustomObject"]; // optionnel
+        
+            [data addObject:d];
+        }
+
+    }*/
+    
+    
+    return data;
 }
 
 + (void)applyCustomButtonStyle:(UIButton*)bu
