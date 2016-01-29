@@ -8,6 +8,10 @@
 
 /* Begin PBXBuildFile section */
 		4D1361561C4F9075004F0554 /* libz.1.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 4D779B751C4F8CEC008E3579 /* libz.1.dylib */; };
+		4D6809DC1C5B64C700DDCAEA /* marker.png in Resources */ = {isa = PBXBuildFile; fileRef = 4D6809D91C5B64C700DDCAEA /* marker.png */; };
+		4D6809DD1C5B64C700DDCAEA /* path.png in Resources */ = {isa = PBXBuildFile; fileRef = 4D6809DA1C5B64C700DDCAEA /* path.png */; };
+		4D6809DE1C5B64C700DDCAEA /* AdsumFont.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 4D6809DB1C5B64C700DDCAEA /* AdsumFont.ttf */; };
+		4D6809E91C5BA64100DDCAEA /* AdsumIOSAPI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4D9127D01C4F8C8B0088CDBC /* AdsumIOSAPI.framework */; };
 		4D779B791C4F8D7F008E3579 /* AdsumConfig.xml in Resources */ = {isa = PBXBuildFile; fileRef = 4D779B771C4F8D7F008E3579 /* AdsumConfig.xml */; };
 		4D779B7A1C4F8D7F008E3579 /* AdsumCaCert.pem in Resources */ = {isa = PBXBuildFile; fileRef = 4D779B781C4F8D7F008E3579 /* AdsumCaCert.pem */; };
 		4D779B7C1C4F8E7F008E3579 /* libc++.1.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 4D779B7B1C4F8E7F008E3579 /* libc++.1.dylib */; };
@@ -18,7 +22,6 @@
 		4D9127C41C4F8C3C0088CDBC /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4D9127C31C4F8C3C0088CDBC /* Assets.xcassets */; };
 		4D9127C71C4F8C3C0088CDBC /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4D9127C51C4F8C3C0088CDBC /* LaunchScreen.storyboard */; };
 		4D9127CF1C4F8C560088CDBC /* Accelerate.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4D9127CE1C4F8C560088CDBC /* Accelerate.framework */; };
-		4D9127D11C4F8C8B0088CDBC /* AdsumIOSAPI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4D9127D01C4F8C8B0088CDBC /* AdsumIOSAPI.framework */; };
 		4D9127D41C4F8C990088CDBC /* CoreFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4D9127D21C4F8C990088CDBC /* CoreFoundation.framework */; };
 		4D9127D51C4F8C990088CDBC /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4D9127D31C4F8C990088CDBC /* Foundation.framework */; };
 		4D9127D71C4F8C9F0088CDBC /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4D9127D61C4F8C9F0088CDBC /* UIKit.framework */; };
@@ -27,10 +30,14 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		4D6809D91C5B64C700DDCAEA /* marker.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = marker.png; path = BasicDemo/marker.png; sourceTree = "<group>"; };
+		4D6809DA1C5B64C700DDCAEA /* path.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = path.png; path = BasicDemo/path.png; sourceTree = "<group>"; };
+		4D6809DB1C5B64C700DDCAEA /* AdsumFont.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = AdsumFont.ttf; path = BasicDemo/AdsumFont.ttf; sourceTree = "<group>"; };
 		4D779B751C4F8CEC008E3579 /* libz.1.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libz.1.dylib; path = ../../../../../../../usr/lib/libz.1.dylib; sourceTree = "<group>"; };
 		4D779B771C4F8D7F008E3579 /* AdsumConfig.xml */ = {isa = PBXFileReference; lastKnownFileType = text.xml; name = AdsumConfig.xml; path = BasicDemo/AdsumConfig.xml; sourceTree = "<group>"; };
 		4D779B781C4F8D7F008E3579 /* AdsumCaCert.pem */ = {isa = PBXFileReference; lastKnownFileType = text; name = AdsumCaCert.pem; path = BasicDemo/AdsumCaCert.pem; sourceTree = "<group>"; };
 		4D779B7B1C4F8E7F008E3579 /* libc++.1.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = "libc++.1.dylib"; path = "../../../../../../../usr/lib/libc++.1.dylib"; sourceTree = "<group>"; };
+		4D7B47D81C5A1A2A002FA73B /* AdsumIOSAPI */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = AdsumIOSAPI; path = BasicDemo/AdsumIOSAPI; sourceTree = "<group>"; };
 		4D9127B41C4F8C3C0088CDBC /* BasicDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BasicDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		4D9127B81C4F8C3C0088CDBC /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		4D9127BA1C4F8C3C0088CDBC /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -55,6 +62,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4D6809E91C5BA64100DDCAEA /* AdsumIOSAPI.framework in Frameworks */,
 				4D1361561C4F9075004F0554 /* libz.1.dylib in Frameworks */,
 				4D779B7C1C4F8E7F008E3579 /* libc++.1.dylib in Frameworks */,
 				4D9127DB1C4F8CB00088CDBC /* ImageIO.framework in Frameworks */,
@@ -62,7 +70,6 @@
 				4D9127D71C4F8C9F0088CDBC /* UIKit.framework in Frameworks */,
 				4D9127D41C4F8C990088CDBC /* CoreFoundation.framework in Frameworks */,
 				4D9127D51C4F8C990088CDBC /* Foundation.framework in Frameworks */,
-				4D9127D11C4F8C8B0088CDBC /* AdsumIOSAPI.framework in Frameworks */,
 				4D9127CF1C4F8C560088CDBC /* Accelerate.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -73,6 +80,10 @@
 		4D9127AB1C4F8C3C0088CDBC = {
 			isa = PBXGroup;
 			children = (
+				4D6809D91C5B64C700DDCAEA /* marker.png */,
+				4D6809DA1C5B64C700DDCAEA /* path.png */,
+				4D6809DB1C5B64C700DDCAEA /* AdsumFont.ttf */,
+				4D7B47D81C5A1A2A002FA73B /* AdsumIOSAPI */,
 				4D779B7B1C4F8E7F008E3579 /* libc++.1.dylib */,
 				4D779B771C4F8D7F008E3579 /* AdsumConfig.xml */,
 				4D779B781C4F8D7F008E3579 /* AdsumCaCert.pem */,
@@ -179,6 +190,9 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4D6809DC1C5B64C700DDCAEA /* marker.png in Resources */,
+				4D6809DD1C5B64C700DDCAEA /* path.png in Resources */,
+				4D6809DE1C5B64C700DDCAEA /* AdsumFont.ttf in Resources */,
 				4D779B791C4F8D7F008E3579 /* AdsumConfig.xml in Resources */,
 				4D779B7A1C4F8D7F008E3579 /* AdsumCaCert.pem in Resources */,
 				4D9127C71C4F8C3C0088CDBC /* LaunchScreen.storyboard in Resources */,
@@ -319,6 +333,11 @@
 				INFOPLIST_FILE = BasicDemo/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/BasicDemo/AdsumIOSAPI.framework",
+					"$(PROJECT_DIR)/BasicDemo",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.adactive.BasicDemo;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
@@ -340,6 +359,11 @@
 				INFOPLIST_FILE = BasicDemo/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/BasicDemo/AdsumIOSAPI.framework",
+					"$(PROJECT_DIR)/BasicDemo",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.adactive.BasicDemo;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
