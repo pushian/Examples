@@ -31,6 +31,8 @@
     [self.view addSubview:self.adSumMapViewController.view];
     //Launch the downloading or update of the map data
     [self.adSumMapViewController update];
+    
+    [_progressCircle startAnimating];
 }
 
 - (void)didReceiveMemoryWarning {
@@ -63,12 +65,9 @@
 
 - (void)mapDidFinishLoading:(id)adSumViewController
 {
-    //Customize the color of the inactive places to show the user those places don't behave like the others
-    [self.adSumMapViewController customizeInactivePlaces:[UIColor redColor]];
-    //Setup the type of camera you want (here 3D)
     [self.adSumMapViewController setCameraMode:FULL];
-    
-    [self.adSumMapViewController setCurrentFloor:0];
+    [_progressCircle stopAnimating];
+    [_progressCircle setHidden:YES];
 }
 
 - (void)adSumViewController:(id)adSumViewController OnPOIClicked:(NSArray *)poiIDs placeId:(long)placeId
