@@ -8,6 +8,7 @@
 
 #import "MainViewController.h"
 #import "ViewController.h"
+#import "DrawPathViewController.h"
 
 
 
@@ -177,14 +178,23 @@ bool mapIsReady=false;
     bu.layer.shadowOffset = CGSizeMake(2.0f, 2.0f);*/
 }
 
-/*
+
 #pragma mark - Navigation
 
 // In a storyboard-based application, you will often want to do a little preparation before navigation
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
+    
+    if ([[segue identifier] isEqualToString:@"segueDrawPath"])
+    {
+        // Get reference to the destination view controller
+        DrawPathViewController *vc = [segue destinationViewController];
+        
+        vc.mvc = self;
+        vc.vc = vcAdsum;
+    }
     // Get the new view controller using [segue destinationViewController].
     // Pass the selected object to the new view controller.
 }
-*/
+
 
 @end

@@ -128,9 +128,9 @@ MainViewController *vcMain;
     
     //Launch the downloading or update of the map data
     if (forceUpdate)
-        [self.adSumMapViewController forceUpdateWithExData:YES];
+        [self.adSumMapViewController forceUpdateWithExData:NO];
     else
-        [self.adSumMapViewController updateWithExData:YES];
+        [self.adSumMapViewController updateWithExData:NO];
     
     // go
     [_progressCircle setHidden:NO];
@@ -237,11 +237,11 @@ MainViewController *vcMain;
     dataManager = [adSumViewController getDataManager];
     
     // data for search box
-    _pois = [dataManager getAllADSPois];
+    //_pois = [dataManager getAllADSPois];
     
     // other data (pour test)
-    NSArray<ADSCategory*> *categories = [dataManager getAllADSCategories];
-    NSArray<ADSMedia*> *medias = [dataManager getAllADSMedias];
+    //NSArray<ADSCategory*> *categories = [dataManager getAllADSCategories];
+    //NSArray<ADSMedia*> *medias = [dataManager getAllADSMedias];
     
     // init search box
     [vcMain initSearchBox];

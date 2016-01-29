@@ -12,6 +12,7 @@
 		4D6809E31C5B65CB00DDCAEA /* path.png in Resources */ = {isa = PBXBuildFile; fileRef = 4D6809E01C5B65CB00DDCAEA /* path.png */; };
 		4D6809E61C5B797500DDCAEA /* FirstPageViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4D6809E51C5B797500DDCAEA /* FirstPageViewController.m */; };
 		4D6809E81C5B9FF500DDCAEA /* adactive_logo.png in Resources */ = {isa = PBXBuildFile; fileRef = 4D6809E71C5B9FF500DDCAEA /* adactive_logo.png */; };
+		4D6809EC1C5BAE3500DDCAEA /* DrawPathViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4D6809EB1C5BAE3500DDCAEA /* DrawPathViewController.m */; };
 		4DAC79D11C58E16A0064A6E3 /* MPGTextField.m in Sources */ = {isa = PBXBuildFile; fileRef = 4DAC79CF1C58E16A0064A6E3 /* MPGTextField.m */; };
 		4DCB7C481C563B3600982B23 /* MainViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4DCB7C471C563B3600982B23 /* MainViewController.m */; };
 		4DCB7C4C1C5655A500982B23 /* home.png in Resources */ = {isa = PBXBuildFile; fileRef = 4DCB7C491C5655A500982B23 /* home.png */; };
@@ -49,6 +50,8 @@
 		4D6809E41C5B797500DDCAEA /* FirstPageViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FirstPageViewController.h; sourceTree = "<group>"; };
 		4D6809E51C5B797500DDCAEA /* FirstPageViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FirstPageViewController.m; sourceTree = "<group>"; };
 		4D6809E71C5B9FF500DDCAEA /* adactive_logo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = adactive_logo.png; path = AdsumReader/adactive_logo.png; sourceTree = "<group>"; };
+		4D6809EA1C5BAE3500DDCAEA /* DrawPathViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DrawPathViewController.h; sourceTree = "<group>"; };
+		4D6809EB1C5BAE3500DDCAEA /* DrawPathViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DrawPathViewController.m; sourceTree = "<group>"; };
 		4DAC79CF1C58E16A0064A6E3 /* MPGTextField.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MPGTextField.m; sourceTree = "<group>"; };
 		4DAC79D01C58E16A0064A6E3 /* MPGTextField.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MPGTextField.h; sourceTree = "<group>"; };
 		4DCB22ED1C521D6F00CDD4AF /* AdsumIOSAPI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AdsumIOSAPI.framework; path = "../../../../../Library/Developer/Xcode/DerivedData/AdsumReader-ftltctqmnpjirieuyzlxvifzxuyd/Build/Products/Debug-iphoneos/AdsumIOSAPI.framework"; sourceTree = "<group>"; };
@@ -170,6 +173,8 @@
 				4DCB7C471C563B3600982B23 /* MainViewController.m */,
 				4D6809E41C5B797500DDCAEA /* FirstPageViewController.h */,
 				4D6809E51C5B797500DDCAEA /* FirstPageViewController.m */,
+				4D6809EA1C5BAE3500DDCAEA /* DrawPathViewController.h */,
+				4D6809EB1C5BAE3500DDCAEA /* DrawPathViewController.m */,
 			);
 			path = AdsumReader;
 			sourceTree = "<group>";
@@ -321,6 +326,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4D6809EC1C5BAE3500DDCAEA /* DrawPathViewController.m in Sources */,
 				4DAC79D11C58E16A0064A6E3 /* MPGTextField.m in Sources */,
 				4DF0326C1C51153000472603 /* ViewController.m in Sources */,
 				4D6809E61C5B797500DDCAEA /* FirstPageViewController.m in Sources */,
