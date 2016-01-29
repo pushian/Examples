@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9531" systemVersion="15C50" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="l4H-6W-BVb">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9531" systemVersion="15C50" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="FLj-Cw-nO6">
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9529"/>
@@ -113,6 +113,62 @@
             </objects>
             <point key="canvasLocation" x="1549" y="386.5"/>
         </scene>
+        <!--First Page View Controller-->
+        <scene sceneID="2zD-4N-f3t">
+            <objects>
+                <viewController id="FLj-Cw-nO6" customClass="FirstPageViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="zqL-BQ-bLU"/>
+                        <viewControllerLayoutGuide type="bottom" id="Aqk-tE-kGw"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="6nu-w7-0xV">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="WoC-pP-DXe">
+                                <rect key="frame" x="244" y="216" width="112" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="H9A-t0-NQm"/>
+                                </constraints>
+                                <state key="normal" title="Load saved map"/>
+                                <connections>
+                                    <action selector="buLoadSavedMap:" destination="FLj-Cw-nO6" eventType="touchUpInside" id="8DM-8R-JMN"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5IE-Pf-6Ce">
+                                <rect key="frame" x="250" y="285" width="100" height="30"/>
+                                <state key="normal" title="Load new map"/>
+                                <connections>
+                                    <action selector="buLoadNewMap:" destination="FLj-Cw-nO6" eventType="touchUpInside" id="Q0m-XT-vby"/>
+                                </connections>
+                            </button>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="adactive_logo.png" translatesAutoresizingMaskIntoConstraints="NO" id="80G-4J-qiI">
+                                <rect key="frame" x="180" y="28" width="240" height="128"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="240" id="9c5-mQ-T6a"/>
+                                </constraints>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="5IE-Pf-6Ce" firstAttribute="centerY" secondItem="6nu-w7-0xV" secondAttribute="centerY" id="2h3-cQ-L2Q"/>
+                            <constraint firstItem="80G-4J-qiI" firstAttribute="top" secondItem="zqL-BQ-bLU" secondAttribute="bottom" constant="8" symbolic="YES" id="7ND-IB-AXX"/>
+                            <constraint firstItem="WoC-pP-DXe" firstAttribute="centerX" secondItem="80G-4J-qiI" secondAttribute="centerX" id="Dh0-vg-KQN"/>
+                            <constraint firstItem="WoC-pP-DXe" firstAttribute="centerX" secondItem="6nu-w7-0xV" secondAttribute="centerX" id="LLS-J9-9RO"/>
+                            <constraint firstItem="WoC-pP-DXe" firstAttribute="centerX" secondItem="5IE-Pf-6Ce" secondAttribute="centerX" id="bgB-rS-tHO"/>
+                            <constraint firstItem="5IE-Pf-6Ce" firstAttribute="top" secondItem="WoC-pP-DXe" secondAttribute="bottom" constant="39" id="cWc-wB-CdS"/>
+                            <constraint firstItem="WoC-pP-DXe" firstAttribute="top" secondItem="80G-4J-qiI" secondAttribute="bottom" constant="60" id="vHk-Kd-aOy"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="buLoadSavedMap" destination="WoC-pP-DXe" id="Zd9-a2-h7w"/>
+                        <segue destination="l4H-6W-BVb" kind="show" identifier="segueGo" id="Zks-co-VB9"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="fyP-8Q-FHP" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-849" y="360"/>
+        </scene>
         <!--Navigation Controller-->
         <scene sceneID="9f6-za-Dad">
             <objects>
@@ -136,4 +192,7 @@
             <point key="canvasLocation" x="42" y="387"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="adactive_logo.png" width="820" height="374"/>
+    </resources>
 </document>

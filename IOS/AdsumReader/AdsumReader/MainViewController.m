@@ -10,9 +10,6 @@
 #import "ViewController.h"
 
 
-//#import "MLPAutoCompleteTextFieldDataSource.h"
-
-
 
 
 @interface MainViewController ()
@@ -35,11 +32,16 @@ bool mapIsReady=false;
     [super viewDidLoad];
     // Do any additional setup after loading the view.
     
+    
+    
     vcAdsum = (ViewController*)[[self childViewControllers] lastObject];
     
+    NSUserDefaults *prefs = [NSUserDefaults standardUserDefaults];
+    NSString *xml = [prefs stringForKey:@"configXml"];
+    [vcAdsum loadMap:xml forceUpdate:_forceUpdate];
     
     // apply custom button style
-    [MainViewController applyCustomButtonStyle:_bu3d];
+   // [MainViewController applyCustomButtonStyle:_bu3d];
    // [MainViewController applyCustomButtonStyle:_buFloors];
    // [MainViewController applyCustomButtonStyle:_buSearch];
    // [MainViewController applyCustomButtonStyle:_buBack];
@@ -62,11 +64,23 @@ bool mapIsReady=false;
 }
 
 
--(void)mapIsReady
+-(void)mapIsReady:(BOOL)b
 {
-    mapIsReady = true;
+    mapIsReady = b;
 
+    
 }
+
+/*
+- (IBAction)buQrCode:(id)sender
+{
+    if (!mapIsReady) return;
+    [self initQrCodeReaderIfNeeded];
+    [self presentViewController:vcQrCodeReader animated:YES completion:NULL];
+}*/
+
+
+
 
 - (IBAction)buFloors:(id)sender {
     if (!mapIsReady) return;
@@ -85,7 +99,7 @@ bool mapIsReady=false;
     [vcAdsum backButtonClicked];
 }
 
-// mktodo: laisser "home" et que çà recentre la carte si on reclique dessus
+
 
 -(void)showUI:(BOOL)b
 {
@@ -100,10 +114,7 @@ bool mapIsReady=false;
 
 -(void)initSearchBox
 {
-   // self.searchBox.autoCompleteDataSource = self;
-   // self.searchBox.autoCompleteDelegate = self;
     self.searchBox.delegate = self;
-    //[self.searchBox setRequireAutoCompleteSuggestionsToMatchInputExactly:YES];
 }
 
 -(BOOL)textFieldShouldSelect:(MPGTextField *)textField
@@ -117,33 +128,28 @@ bool mapIsReady=false;
     NSArray<NSNumber*> *places = poi.placesIds;
     if ([places count]>0)
         [vcAdsum centerOnPlace:places[0]]; // mktodo: plusieurs places possible?
+    
+    self.searchBox.text=@"";
 }
 
 -(NSArray *)dataForPopoverInTextField:(MPGTextField *)textField
 {
     NSMutableArray *data = [[NSMutableArray alloc] init];
     
-    /* décommenter et tester
     for (ADSPoi *poi in vcAdsum.pois)
     {
-        if ([poi isKindOfClass:[ADSStore class]])
-        {
-            ADSStore *store = (ADSStore*)poi;
-            
-            NSMutableDictionary *d = [NSMutableDictionary dictionary];
-            [d setValue:store.name forKey:@"DisplayText"];
-            [d setValue:@"store" forKey:@"DisplaySubText"]; // optionnel
-            [d setValue:store forKey:@"CustomObject"]; // optionnel
+        NSMutableDictionary *d = [NSMutableDictionary dictionary];
+        [d setValue:poi.name forKey:@"DisplayText"];
+        [d setValue:poi.className forKey:@"DisplaySubText"]; // optionnel
+        [d setValue:poi forKey:@"CustomObject"];
         
-            [data addObject:d];
-        }
-
-    }*/
-    
+        [data addObject:d];
+    }
     
     return data;
 }
 
+// deprecated, virer, mktodo
 + (void)applyCustomButtonStyle:(UIButton*)bu
 {
     // marche moyen selon les cas, pas très beau

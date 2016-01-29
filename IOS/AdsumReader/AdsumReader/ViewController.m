@@ -21,9 +21,7 @@ MainViewController *vcMain;
 
 @implementation ViewController
 
-- (IBAction)bu3d:(id)sender {
-    // mktodo: deprecated, supprimer
-}
+
 
 -(NSString*) switch2D3D
 {
@@ -61,6 +59,7 @@ MainViewController *vcMain;
     [self.adSumMapViewController setCurrentBuilding:buildingId];
     [vcMain showUI:YES];
 }
+
 
 -(void)changeFloorsButtonClicked:(UIButton*)button
 {
@@ -107,8 +106,11 @@ MainViewController *vcMain;
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+}
 
-
+-(void)loadMap:(NSString*)newXml forceUpdate:(BOOL)forceUpdate
+{
+   
     //Allocate memory to the ADSumMapViewController
     self.adSumMapViewController = [[ADSumMapViewController alloc] init];
     //Setup the size of the ADSumMapViewController display
@@ -120,13 +122,33 @@ MainViewController *vcMain;
     self.view.backgroundColor = [ UIColor whiteColor];
     //Add the ADSumMapViewController view to your ViewController view
     [self.view addSubview:self.adSumMapViewController.view];
-    //Launch the downloading or update of the map data
-    [self.adSumMapViewController update];
     
+    // on ne lit jamais le xml du bundle
+    self.adSumMapViewController.loadThisXmlInsteadOfBundleXml = newXml;
+    
+    //Launch the downloading or update of the map data
+    if (forceUpdate)
+        [self.adSumMapViewController forceUpdateWithExData:YES];
+    else
+        [self.adSumMapViewController updateWithExData:YES];
     
     // go
+    [_progressCircle setHidden:NO];
     [_progressCircle startAnimating];
 }
+
+/*
+-(void)loadNewMap:(NSString *)xml
+{
+    //
+    //if(!FilesUtils::Instance()->copyFile(std::string(path)+"/"+ADSUM_CONFIG, dirFiles.string()+"/"+"config.xml")){
+    //    std::cout<< "ADSUM_ERROR Missing"<< ADSUM_CONFIG <<" file in your app bundle" <<std::endl;
+    
+    [self.adSumMapViewController updateConfigXmlFile:(NSString*)xml];
+    
+    [vcMain mapIsReady:NO];
+    [self loadMap:YES];
+}*/
 
 /*
 -(void)viewWillLayoutSubviews
@@ -217,11 +239,15 @@ MainViewController *vcMain;
     // data for search box
     _pois = [dataManager getAllADSPois];
     
+    // other data (pour test)
+    NSArray<ADSCategory*> *categories = [dataManager getAllADSCategories];
+    NSArray<ADSMedia*> *medias = [dataManager getAllADSMedias];
+    
     // init search box
     [vcMain initSearchBox];
     
     // done
-    [vcMain mapIsReady];
+    [vcMain mapIsReady:YES];
     [_progressCircle stopAnimating];
     [_progressCircle setHidden:YES];
 }

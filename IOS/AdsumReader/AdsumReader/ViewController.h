@@ -21,6 +21,7 @@
 -(void)changeFloorsButtonClicked:(UIButton*)button;
 -(void)backButtonClicked;
 -(void)centerOnPlace:(NSNumber*)placeId;
+-(void)loadMap:(NSString*)xml forceUpdate:(BOOL)forceUpdate;
 
 @end
 
