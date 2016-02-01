@@ -237,7 +237,7 @@ MainViewController *vcMain;
     dataManager = [adSumViewController getDataManager];
     
     // data for search box
-    //_pois = [dataManager getAllADSPois];
+    _pois = [dataManager getAllADSPois];
     
     // other data (pour test)
     //NSArray<ADSCategory*> *categories = [dataManager getAllADSCategories];

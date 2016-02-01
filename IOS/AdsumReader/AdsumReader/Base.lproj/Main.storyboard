@@ -30,6 +30,14 @@
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="4Bt-DH-tcE" customClass="MPGTextField">
+                                <rect key="frame" x="20" y="72" width="240" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="240" id="32X-gM-9Ba"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocorrectionType="no" spellCheckingType="no"/>
+                            </textField>
                         </subviews>
                         <constraints>
                             <constraint firstItem="vPK-38-djX" firstAttribute="top" secondItem="crd-lm-e32" secondAttribute="bottom" id="0Gf-yR-1uZ"/>
@@ -63,15 +71,6 @@
                                 <action selector="buBack:" destination="pmW-QJ-aJ5" id="Pcm-lh-KPG"/>
                             </connections>
                         </barButtonItem>
-                        <textField key="titleView" opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" id="4Bt-DH-tcE" customClass="MPGTextField">
-                            <rect key="frame" x="180" y="7" width="240" height="30"/>
-                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                            <constraints>
-                                <constraint firstAttribute="width" constant="240" id="32X-gM-9Ba"/>
-                            </constraints>
-                            <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                            <textInputTraits key="textInputTraits" autocorrectionType="no" spellCheckingType="no"/>
-                        </textField>
                         <barButtonItem key="rightBarButtonItem" image="layers-show" id="svy-we-yOC">
                             <connections>
                                 <action selector="buFloors:" destination="pmW-QJ-aJ5" id="Dgw-Vj-edH"/>
