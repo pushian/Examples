@@ -15,9 +15,6 @@
 		4D6809EC1C5BAE3500DDCAEA /* DrawPathViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4D6809EB1C5BAE3500DDCAEA /* DrawPathViewController.m */; };
 		4DAC79D11C58E16A0064A6E3 /* MPGTextField.m in Sources */ = {isa = PBXBuildFile; fileRef = 4DAC79CF1C58E16A0064A6E3 /* MPGTextField.m */; };
 		4DCB7C481C563B3600982B23 /* MainViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4DCB7C471C563B3600982B23 /* MainViewController.m */; };
-		4DCB7C4C1C5655A500982B23 /* home.png in Resources */ = {isa = PBXBuildFile; fileRef = 4DCB7C491C5655A500982B23 /* home.png */; };
-		4DCB7C4D1C5655A500982B23 /* layer.png in Resources */ = {isa = PBXBuildFile; fileRef = 4DCB7C4A1C5655A500982B23 /* layer.png */; };
-		4DCB7C4E1C5655A500982B23 /* magnifier.png in Resources */ = {isa = PBXBuildFile; fileRef = 4DCB7C4B1C5655A500982B23 /* magnifier.png */; };
 		4DD9BF431C56306900A29F29 /* AdsumIOSAPI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4DCB22ED1C521D6F00CDD4AF /* AdsumIOSAPI.framework */; };
 		4DF032661C51153000472603 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 4DF032651C51153000472603 /* main.m */; };
 		4DF032691C51153000472603 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 4DF032681C51153000472603 /* AppDelegate.m */; };
@@ -260,9 +257,6 @@
 				4D6809E21C5B65CB00DDCAEA /* marker.png in Resources */,
 				4D6809E31C5B65CB00DDCAEA /* path.png in Resources */,
 				4D3118091C5627980061D54B /* AdsumFont.ttf in Resources */,
-				4DCB7C4C1C5655A500982B23 /* home.png in Resources */,
-				4DCB7C4D1C5655A500982B23 /* layer.png in Resources */,
-				4DCB7C4E1C5655A500982B23 /* magnifier.png in Resources */,
 				4DF032741C51153000472603 /* LaunchScreen.storyboard in Resources */,
 				4DF0327D1C51156900472603 /* AdsumCaCert.pem in Resources */,
 				4DF0327E1C51156900472603 /* AdsumConfig.xml in Resources */,

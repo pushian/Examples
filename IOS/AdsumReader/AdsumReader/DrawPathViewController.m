@@ -43,7 +43,7 @@
 {
     if (poiFrom==nil || poiTo==nil) return;
     
-    // mktodo: draw the path between "from" and "to"
+    // mktodo: draw the path between "from" and "to" -> marche pas?
     [self.vc.adSumMapViewController drawPathFrom:[poiFrom.uid longValue] to:[poiTo.uid longValue]];
     
     // highlight "from" and "to"

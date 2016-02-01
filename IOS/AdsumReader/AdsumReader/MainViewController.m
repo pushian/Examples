@@ -150,33 +150,6 @@ bool mapIsReady=false;
     return data;
 }
 
-// deprecated, virer, mktodo
-+ (void)applyCustomButtonStyle:(UIButton*)bu
-{
-    // marche moyen selon les cas, pas très beau
- 
-    /*
-    bu.layer.borderWidth=1.0f;
-    bu.layer.borderColor=[[UIColor blackColor] CGColor];
-    bu.layer.cornerRadius = 10;
-    bu.titleLabel.font = [UIFont systemFontOfSize:25];
-    bu.titleLabel.backgroundColor = [UIColor whiteColor];
-    bu.backgroundColor = [UIColor whiteColor];
-    
-    
-    //NSString *title = [bu titleForState:UIControlStateNormal];
-    //NSMutableString *ms = [NSMutableString stringWithString:title];
-    //[ms insertString:@" " atIndex:0];
-    //[ms appendString:@" "];
-    //[bu setTitle:ms forState:UIControlStateNormal];
-
-    
-    // shadow
-    bu.layer.shadowColor = [UIColor grayColor].CGColor;
-    bu.layer.shadowOpacity = 0.8;
-    bu.layer.shadowRadius = 2;
-    bu.layer.shadowOffset = CGSizeMake(2.0f, 2.0f);*/
-}
 
 
 #pragma mark - Navigation
