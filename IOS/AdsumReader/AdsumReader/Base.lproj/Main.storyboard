@@ -30,20 +30,10 @@
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="4Bt-DH-tcE" customClass="MPGTextField">
-                                <rect key="frame" x="20" y="72" width="240" height="30"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="240" id="32X-gM-9Ba"/>
-                                </constraints>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits" autocorrectionType="no" spellCheckingType="no"/>
-                            </textField>
                         </subviews>
                         <constraints>
                             <constraint firstItem="vPK-38-djX" firstAttribute="top" secondItem="crd-lm-e32" secondAttribute="bottom" id="0Gf-yR-1uZ"/>
                             <constraint firstAttribute="bottomMargin" secondItem="vPK-38-djX" secondAttribute="bottom" constant="-44" id="5u6-03-Tzv"/>
-                            <constraint firstItem="4Bt-DH-tcE" firstAttribute="leading" secondItem="BoG-gz-mUW" secondAttribute="leadingMargin" id="Juf-Q2-Vfe"/>
-                            <constraint firstItem="4Bt-DH-tcE" firstAttribute="top" secondItem="crd-lm-e32" secondAttribute="bottom" constant="8" symbolic="YES" id="OZk-gn-hot"/>
                             <constraint firstItem="vPK-38-djX" firstAttribute="leading" secondItem="BoG-gz-mUW" secondAttribute="leading" id="RXk-7A-Gi7"/>
                             <constraint firstAttribute="trailing" secondItem="vPK-38-djX" secondAttribute="trailing" id="Tgi-yB-xBM"/>
                             <constraint firstItem="w8b-Ex-fOA" firstAttribute="trailing" secondItem="BoG-gz-mUW" secondAttribute="trailingMargin" id="kQX-3I-FX3"/>
@@ -73,6 +63,15 @@
                                 <action selector="buBack:" destination="pmW-QJ-aJ5" id="Pcm-lh-KPG"/>
                             </connections>
                         </barButtonItem>
+                        <textField key="titleView" opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" id="4Bt-DH-tcE" customClass="MPGTextField">
+                            <rect key="frame" x="180" y="7" width="240" height="30"/>
+                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <constraints>
+                                <constraint firstAttribute="width" constant="240" id="32X-gM-9Ba"/>
+                            </constraints>
+                            <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                            <textInputTraits key="textInputTraits" autocorrectionType="no" spellCheckingType="no"/>
+                        </textField>
                         <barButtonItem key="rightBarButtonItem" image="layers-show" id="svy-we-yOC">
                             <connections>
                                 <action selector="buFloors:" destination="pmW-QJ-aJ5" id="Dgw-Vj-edH"/>
