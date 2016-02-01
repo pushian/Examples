@@ -16,6 +16,8 @@
 @property (weak, nonatomic) IBOutlet UIActivityIndicatorView *progressCircle;
 
 @property NSArray<ADSPoi*> *pois;
+@property long currentPoiId;
+@property AdsumCoreDataManager *dataManager;
 
 -(NSString*)switch2D3D;
 -(void)changeFloorsButtonClicked:(UIButton*)button;

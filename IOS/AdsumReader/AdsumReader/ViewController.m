@@ -15,8 +15,8 @@
 @end
 
 
-AdsumCoreDataManager *dataManager;
-CameraMode currentCameraMode = FULL;
+
+CameraMode currentCameraMode = CameraMode_FULL;
 MainViewController *vcMain;
 
 @implementation ViewController
@@ -27,14 +27,14 @@ MainViewController *vcMain;
 {
     NSString *newButtonText;
     
-    if (currentCameraMode==FULL)
+    if (currentCameraMode==CameraMode_FULL)
     {
-        currentCameraMode = ORTHO;
+        currentCameraMode = CameraMode_ORTHO;
         newButtonText = @"3D"; //[bu3d setTitle:@"3D" forState:UIControlStateNormal];
     }
     else
     {
-        currentCameraMode = FULL;
+        currentCameraMode = CameraMode_FULL;
         newButtonText = @"2D"; //[bu3d setTitle:@"2D" forState:UIControlStateNormal];
     }
     
@@ -106,6 +106,8 @@ MainViewController *vcMain;
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    
+    _currentPoiId = -1;
 }
 
 -(void)loadMap:(NSString*)newXml forceUpdate:(BOOL)forceUpdate
@@ -128,9 +130,9 @@ MainViewController *vcMain;
     
     //Launch the downloading or update of the map data
     if (forceUpdate)
-        [self.adSumMapViewController forceUpdateWithExData:NO];
+        [self.adSumMapViewController forceUpdateWithExData:YES];
     else
-        [self.adSumMapViewController updateWithExData:NO];
+        [self.adSumMapViewController updateWithExData:YES];
     
     // go
     [_progressCircle setHidden:NO];
@@ -226,7 +228,7 @@ MainViewController *vcMain;
 - (void)mapDidFinishLoading:(id)adSumViewController
 {
     // init
-    [self.adSumMapViewController setCameraMode:FULL];
+    [self.adSumMapViewController setCameraMode:CameraMode_FULL];
     [self initFloorsButtons];
     
     // parent view controller
@@ -234,10 +236,10 @@ MainViewController *vcMain;
     [vcMain showUI:YES];
     
     // get data manager
-    dataManager = [adSumViewController getDataManager];
+    _dataManager = [adSumViewController getDataManager];
     
     // data for search box
-    _pois = [dataManager getAllADSPois];
+    _pois = [_dataManager getAllADSPois];
     
     // other data (pour test)
     //NSArray<ADSCategory*> *categories = [dataManager getAllADSCategories];
@@ -256,6 +258,11 @@ MainViewController *vcMain;
 
 - (void)adSumViewController:(id)adSumViewController OnPOIClicked:(NSArray *)poiIDs placeId:(long)placeId
 {
+    if ([poiIDs count]>0)
+    {
+        _currentPoiId = [[poiIDs firstObject] longValue];
+    }
+    
     //Unlight all the POIs previously highlighted
     [self.adSumMapViewController unLightAll];
     //Center the camera on the place the user clicked

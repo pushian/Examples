@@ -33,6 +33,13 @@
     
     // mktodo: si un poi est sélectionné sur la map quand on ouvre "drawpath" : from doit etre préselectionné (c'est dans le cahier des charges)
     
+    if (_vc.currentPoiId!=-1)
+    {
+        ADSPoi *poi = [_dataManager getADSPoiFromId:_vc.currentPoiId];
+        poiFrom = poi;
+        _tfFrom.text = [poi name];
+    }
+    
 }
 
 - (void)didReceiveMemoryWarning {

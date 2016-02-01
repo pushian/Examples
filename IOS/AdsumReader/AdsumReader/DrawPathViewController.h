@@ -10,10 +10,13 @@
 #import "MPGTextField.h"
 #import "MainViewController.h"
 #import "ViewController.h"
+#import "AdsumCoreDataManager.h"
+
 
 @interface DrawPathViewController : UIViewController<MPGTextFieldDelegate, UITextFieldDelegate>
 
 @property MainViewController *mvc;
 @property ViewController *vc;
+@property AdsumCoreDataManager *dataManager;
 
 @end

@@ -164,6 +164,7 @@ bool mapIsReady=false;
         
         vc.mvc = self;
         vc.vc = vcAdsum;
+        vc.dataManager = [vcAdsum dataManager];
     }
     // Get the new view controller using [segue destinationViewController].
     // Pass the selected object to the new view controller.
