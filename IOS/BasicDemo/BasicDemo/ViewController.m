@@ -65,7 +65,7 @@
 
 - (void)mapDidFinishLoading:(id)adSumViewController
 {
-    [self.adSumMapViewController setCameraMode:FULL];
+    [self.adSumMapViewController setCameraMode:CameraMode_FULL];
     [_progressCircle stopAnimating];
     [_progressCircle setHidden:YES];
 }
