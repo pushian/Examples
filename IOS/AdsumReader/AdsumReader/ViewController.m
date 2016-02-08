@@ -110,6 +110,12 @@ MainViewController *vcMain;
     _currentPoiId = -1;
 }
 
+-(void)viewWillLayoutSubviews
+{
+    CGRect rect = CGRectMake(0, 0, self.view.frame.size.width, self.view.frame.size.height);
+    self.adSumMapViewController.view.frame = rect;
+}
+
 -(void)loadMap:(NSString*)newXml forceUpdate:(BOOL)forceUpdate
 {
    

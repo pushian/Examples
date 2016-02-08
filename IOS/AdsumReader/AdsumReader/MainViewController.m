@@ -118,6 +118,11 @@ bool mapIsReady=false;
     self.searchBox.delegate = self;
 }
 
+- (BOOL)textFieldShouldReturn:(UITextField *)textField {
+    [textField resignFirstResponder];
+    return NO;
+}
+
 -(BOOL)textFieldShouldSelect:(MPGTextField *)textField
 {
     return YES;
