@@ -39,7 +39,6 @@
                                 <textInputTraits key="textInputTraits" autocorrectionType="no" spellCheckingType="no"/>
                             </textField>
                         </subviews>
-                        <color key="backgroundColor" red="0.34645917339999999" green="0.93348705379999997" blue="0.35497926950000003" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
                             <constraint firstAttribute="bottomMargin" secondItem="vPK-38-djX" secondAttribute="bottom" constant="-44" id="8Ov-xs-4BZ"/>
                             <constraint firstAttribute="trailing" secondItem="vPK-38-djX" secondAttribute="trailing" id="NVU-ie-Zk7"/>

@@ -134,12 +134,8 @@ MainViewController *vcMain;
     // on ne lit jamais le xml du bundle
     //deprecated mktodo virer self.adSumMapViewController.loadThisXmlInsteadOfBundleXml = newXml;
     
-    //Launch the downloading or update of the map data
-    bool forceUpdate=false;
-    if (forceUpdate)
-        [self.adSumMapViewController forceUpdateWithExData:NO];
-    else
-        [self.adSumMapViewController updateWithExData:NO];
+    // Launch the loading of the map
+    [self.adSumMapViewController updateWithLocalFiles];
     
     // go
     [_progressCircle setHidden:NO];

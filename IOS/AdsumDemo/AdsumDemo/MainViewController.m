@@ -29,11 +29,51 @@ bool mapIsReady=false;
 
 @implementation MainViewController
 
+-(void) copyDataDirectory:(NSString *)theDirectory {
+    
+    // copy files
+    NSFileManager *fileManager = [NSFileManager defaultManager];
+    NSError *error;
+    NSArray *paths = NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES);
+    NSString *documentsDirectory = [paths objectAtIndex:0];
+    NSString *documentDBFolderPath = [documentsDirectory stringByAppendingPathComponent:theDirectory];
+    NSString *resourceDBFolderPath = [[[NSBundle mainBundle] resourcePath] stringByAppendingPathComponent:theDirectory];
+    
+    // erase all previous files
+    BOOL success = [fileManager removeItemAtPath:documentDBFolderPath error:&error];
+    if (!success || error) {
+        // it failed.
+        NSLog(@"copyDataDirectory : delete directory failed! %@", documentDBFolderPath);
+    }
+    
+    // directory
+    if (![fileManager fileExistsAtPath:documentDBFolderPath]) {
+        //Create Directory!
+        [fileManager createDirectoryAtPath:documentDBFolderPath withIntermediateDirectories:NO attributes:nil error:&error];
+    } else {
+        NSLog(@"copyDataDirectory : Directory exists! %@", documentDBFolderPath);
+    }
+    
+    // copy all files
+    NSArray *fileList = [fileManager contentsOfDirectoryAtPath:resourceDBFolderPath error:&error];
+    for (NSString *s in fileList) {
+        NSString *newFilePath = [documentDBFolderPath stringByAppendingPathComponent:s];
+        NSString *oldFilePath = [resourceDBFolderPath stringByAppendingPathComponent:s];
+        if (![fileManager fileExistsAtPath:newFilePath]) {
+            //File does not exist, copy it
+            [fileManager copyItemAtPath:oldFilePath toPath:newFilePath error:&error];
+        } else {
+            NSLog(@"copyDataDirectory : File exists: %@", newFilePath);
+        }
+    }
+}
+
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
     
     
+    [self copyDataDirectory:@"files"];
     
     vcAdsum = (ViewController*)[[self childViewControllers] lastObject];
     

@@ -9,12 +9,11 @@
 /* Begin PBXBuildFile section */
 		4D6809E61C5B797500DDCAEA /* FirstPageViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4D6809E51C5B797500DDCAEA /* FirstPageViewController.m */; };
 		4D6809EC1C5BAE3500DDCAEA /* DrawPathViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4D6809EB1C5BAE3500DDCAEA /* DrawPathViewController.m */; };
+		4D69AF881C6898CA0003059E /* files in Resources */ = {isa = PBXBuildFile; fileRef = 4D69AF871C6898CA0003059E /* files */; };
 		4DA0459A1C6890EC00845605 /* adactive_logo.png in Resources */ = {isa = PBXBuildFile; fileRef = 4DA045931C6890EC00845605 /* adactive_logo.png */; };
 		4DA0459B1C6890EC00845605 /* marker.png in Resources */ = {isa = PBXBuildFile; fileRef = 4DA045941C6890EC00845605 /* marker.png */; };
 		4DA0459C1C6890EC00845605 /* path.png in Resources */ = {isa = PBXBuildFile; fileRef = 4DA045951C6890EC00845605 /* path.png */; };
 		4DA0459D1C6890EC00845605 /* AdsumFont.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 4DA045961C6890EC00845605 /* AdsumFont.ttf */; };
-		4DA0459E1C6890EC00845605 /* AdsumConfig.xml in Resources */ = {isa = PBXBuildFile; fileRef = 4DA045971C6890EC00845605 /* AdsumConfig.xml */; };
-		4DA0459F1C6890EC00845605 /* AdsumCaCert.pem in Resources */ = {isa = PBXBuildFile; fileRef = 4DA045981C6890EC00845605 /* AdsumCaCert.pem */; };
 		4DA045A01C6890EC00845605 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4DA045991C6890EC00845605 /* Assets.xcassets */; };
 		4DA045A21C68910400845605 /* AdsumIOSAPI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4DA045A11C68910400845605 /* AdsumIOSAPI.framework */; };
 		4DAC79D11C58E16A0064A6E3 /* MPGTextField.m in Sources */ = {isa = PBXBuildFile; fileRef = 4DAC79CF1C58E16A0064A6E3 /* MPGTextField.m */; };
@@ -44,12 +43,11 @@
 		4D6809E51C5B797500DDCAEA /* FirstPageViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FirstPageViewController.m; sourceTree = "<group>"; };
 		4D6809EA1C5BAE3500DDCAEA /* DrawPathViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DrawPathViewController.h; sourceTree = "<group>"; };
 		4D6809EB1C5BAE3500DDCAEA /* DrawPathViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DrawPathViewController.m; sourceTree = "<group>"; };
+		4D69AF871C6898CA0003059E /* files */ = {isa = PBXFileReference; lastKnownFileType = folder; name = files; path = AdsumDemo/AdsumMapData/files; sourceTree = "<group>"; };
 		4DA045931C6890EC00845605 /* adactive_logo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = adactive_logo.png; path = AdsumDemo/adactive_logo.png; sourceTree = "<group>"; };
 		4DA045941C6890EC00845605 /* marker.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = marker.png; path = AdsumDemo/marker.png; sourceTree = "<group>"; };
 		4DA045951C6890EC00845605 /* path.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = path.png; path = AdsumDemo/path.png; sourceTree = "<group>"; };
 		4DA045961C6890EC00845605 /* AdsumFont.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = AdsumFont.ttf; path = AdsumDemo/AdsumFont.ttf; sourceTree = "<group>"; };
-		4DA045971C6890EC00845605 /* AdsumConfig.xml */ = {isa = PBXFileReference; lastKnownFileType = text.xml; name = AdsumConfig.xml; path = AdsumDemo/AdsumConfig.xml; sourceTree = "<group>"; };
-		4DA045981C6890EC00845605 /* AdsumCaCert.pem */ = {isa = PBXFileReference; lastKnownFileType = text; name = AdsumCaCert.pem; path = AdsumDemo/AdsumCaCert.pem; sourceTree = "<group>"; };
 		4DA045991C6890EC00845605 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = Assets.xcassets; path = AdsumDemo/Assets.xcassets; sourceTree = "<group>"; };
 		4DA045A11C68910400845605 /* AdsumIOSAPI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AdsumIOSAPI.framework; path = "../../../../adsum-core/Wrappers/IOS/IOS_step_2/build/Release-iphoneos/AdsumIOSAPI.framework"; sourceTree = "<group>"; };
 		4DAC79CF1C58E16A0064A6E3 /* MPGTextField.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MPGTextField.m; sourceTree = "<group>"; };
@@ -116,12 +114,11 @@
 		4DF032581C51153000472603 = {
 			isa = PBXGroup;
 			children = (
+				4D69AF871C6898CA0003059E /* files */,
 				4DA045931C6890EC00845605 /* adactive_logo.png */,
 				4DA045941C6890EC00845605 /* marker.png */,
 				4DA045951C6890EC00845605 /* path.png */,
 				4DA045961C6890EC00845605 /* AdsumFont.ttf */,
-				4DA045971C6890EC00845605 /* AdsumConfig.xml */,
-				4DA045981C6890EC00845605 /* AdsumCaCert.pem */,
 				4DA045991C6890EC00845605 /* Assets.xcassets */,
 				4DF0328D1C5115D000472603 /* libc++.1.dylib */,
 				4DF0328E1C5115D000472603 /* libz.1.dylib */,
@@ -251,10 +248,9 @@
 				4DA0459B1C6890EC00845605 /* marker.png in Resources */,
 				4DA0459C1C6890EC00845605 /* path.png in Resources */,
 				4DA0459D1C6890EC00845605 /* AdsumFont.ttf in Resources */,
-				4DA0459E1C6890EC00845605 /* AdsumConfig.xml in Resources */,
-				4DA0459F1C6890EC00845605 /* AdsumCaCert.pem in Resources */,
 				4DA045A01C6890EC00845605 /* Assets.xcassets in Resources */,
 				4DF032741C51153000472603 /* LaunchScreen.storyboard in Resources */,
+				4D69AF881C6898CA0003059E /* files in Resources */,
 				4DF0326F1C51153000472603 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
