@@ -75,7 +75,7 @@ public class ListePolesActivity extends AppCompatActivity {
         SetupButton("Espace Retail", R.drawable.ic_2843444bb5e0ac8272dce54f229ae8f5c635763c, bu1);
         SetupButton("Espace WorkSpace", R.drawable.ic_5b4a86343de5240f934a40ed87e39bcaa55816af, bu2);
         SetupButton("Espace Hospitality", R.drawable.ic_ba652f4a0794ba5b76088581c1f2975a58712bfd, bu3);
-        SetupButton("Espace Santé", R.drawable.ic_5796908a3dc4e6826e4ec33dbce210e95190e3c8, bu4);
+        SetupButton("Espace Sante", R.drawable.ic_5796908a3dc4e6826e4ec33dbce210e95190e3c8, bu4);
     }
 
 }

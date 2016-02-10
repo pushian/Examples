@@ -324,7 +324,7 @@ public class MapFragment extends MainActivity.PlaceholderFragment implements NAO
         stopHandlingFireNaoAlert = true;
 
         Intent intent = new Intent(getActivity(), PoleDetailActivity.class);
-        intent.putExtra(PoleDetailActivity.EXTRA_POLE_ID, alert.getName()); // A_MODIFIER ? -> getName() getId() ? autre?
+        intent.putExtra(PoleDetailActivity.EXTRA_POLE_ID, alert.getName());
         startActivityForResult(intent, REQUEST_CODE_POLE_DETAIL_ACTIVITY);
     }
 

@@ -47,7 +47,7 @@ public class PoleDetailActivity extends AppCompatActivity {
 
         if (poleId.compareTo("Espace Workspace")==0)  // A_MODIFIER -> selon ce que l'alerte envoie
         {
-            tvTitle.setText("Espace Workspace");
+            tvTitle.setText("Espace WorkSpace");
             tvDesc.setText("Welcome to pole 1!\nNunc vero inanes flatus quorundam vile esse quicquid extra urbis pomerium nascitur aestimant praeter orbos et caelibes, nec credi potest qua obsequiorum diversitate coluntur homines sine liberis Romae.\n" +
                     "\n" +
                     "Sin autem ad adulescentiam perduxissent, dirimi tamen interdum contentione vel uxoriae condicionis vel commodi alicuius, quod idem adipisci uterque non posset. Quod si qui longius in amicitia provecti essent, tamen saepe labefactari, si in honoris contentionem incidissent; pestem enim nullam maiorem esse amicitiis quam in plerisque pecuniae cupiditatem, in optimis quibusque honoris certamen et gloriae; ex quo inimicitias maximas saepe inter amicissimos exstitisse.\n" +
@@ -65,7 +65,7 @@ public class PoleDetailActivity extends AppCompatActivity {
                     "Quod si rectum statuerimus vel concedere amicis, quidquid velint, vel impetrare ab iis, quidquid velimus, perfecta quidem sapientia si simus, nihil habeat res vitii; sed loquimur de iis amicis qui ante oculos sunt, quos vidimus aut de quibus memoriam accepimus, quos novit vita communis. Ex hoc numero nobis exempla sumenda sunt, et eorum quidem maxime qui ad sapientiam proxime accedunt.");
         }
 
-        if (poleId.compareTo("Espace Santé")==0)  // A_MODIFIER -> selon ce que l'alerte envoie
+        if (poleId.compareTo("Espace Sante")==0)  // A_MODIFIER -> selon ce que l'alerte envoie
         {
             tvTitle.setText("Espace Santé");
             tvDesc.setText("Welcome to pole 1!\nNunc vero inanes flatus quorundam vile esse quicquid extra urbis pomerium nascitur aestimant praeter orbos et caelibes, nec credi potest qua obsequiorum diversitate coluntur homines sine liberis Romae.\n" +
