@@ -1,42 +1,61 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<TableLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    android:orientation="vertical"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
+    android:layout_height="wrap_content"
     android:fitsSystemWindows="true"
-    tools:context="com.adactive.SamsungDemo.ListePolesActivity">
+    tools:context="com.adactive.SamsungDemo.ListePolesActivity"
+    android:stretchColumns="2">
 
 
-    <Button
+    <TableRow
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="Pole 1"
-        android:drawableLeft="@drawable/ic_launcher"
-        android:id="@+id/buPole1" />
+        android:layout_height="match_parent"
+        android:layout_weight="1">
 
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:text="Pole 1"
+            android:drawableTop="@drawable/ic_launcher"
+            android:id="@+id/buPole1"
+            android:layout_weight="1"
+            android:layout_column="0" />
 
-    <Button
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:text="Pole 2"
+            android:drawableTop="@drawable/ic_launcher"
+            android:id="@+id/buPole2"
+            android:layout_column="1"
+            android:layout_weight="1" />
+    </TableRow>
+
+    <TableRow
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="Pole 2"
-        android:drawableLeft="@drawable/ic_launcher"
-        android:id="@+id/buPole2" />
+        android:layout_height="match_parent"
+        android:layout_weight="1">
 
-    <Button
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="Pole 3"
-        android:drawableLeft="@drawable/ic_launcher"
-        android:id="@+id/buPole3" />
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:text="Pole 3"
+            android:drawableTop="@drawable/ic_launcher"
+            android:id="@+id/buPole3"
+            android:layout_weight="1"
+            android:layout_column="0" />
 
-    <Button
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="Pole 4"
-        android:drawableLeft="@drawable/ic_launcher"
-        android:id="@+id/buPole4" />
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:text="Pole 4"
+            android:drawableTop="@drawable/ic_launcher"
+            android:id="@+id/buPole4"
+            android:layout_column="1"
+            android:layout_weight="1" />
+    </TableRow>
 
 
-</LinearLayout>
+</TableLayout>

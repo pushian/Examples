@@ -30,8 +30,8 @@ public class ListePolesActivity extends AppCompatActivity {
         Drawable drawable = getResources().getDrawable(drawableId);
         //int h = drawable.getIntrinsicHeight();
         //int w = drawable.getIntrinsicWidth();
-        drawable.setBounds( 0, 0, 96, 96 );
-        b.setCompoundDrawables(drawable, null, null, null);
+        drawable.setBounds( 0, 0, 128, 128 );
+        b.setCompoundDrawables(null, drawable,  null, null);
 
         b.setText(title);
     }
