@@ -1,0 +1,11 @@
+<?xml version='1.0' encoding='us-ascii'?>
+
+<Adsum>
+    <siteId>283</siteId>
+    <kioskId>260</kioskId>
+    <WSURL>https://api.adsum.io/1.1</WSURL>
+    <APIKEY>2105714d932b9862c13adaaf5590cfb46e7fc146f682e6714673567244764c92</APIKEY>
+    <PIWIKKEY>08a2cb10f1126cb8d43c7e4e7c71f92e</PIWIKKEY>
+    <PIWIKURL>http://analytics.adsum.io/piwik.php</PIWIKURL>
+    <PIWIKSITEID>186</PIWIKSITEID>
+</Adsum>

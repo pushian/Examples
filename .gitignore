@@ -38,3 +38,5 @@ xcuserdata
 ## Obj-C/Swift specific
 *.hmap
 *.ipa
+ANDROID/SamsungDemo/.idea/
+*.iml

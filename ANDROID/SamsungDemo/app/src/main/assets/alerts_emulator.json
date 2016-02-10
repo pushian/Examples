@@ -1,0 +1,9 @@
+{
+  "period": "20",
+  "alerts": [
+    {
+      "name": "Enter office",
+      "content": "Welcome boss!"
+    }
+  ]
+}
