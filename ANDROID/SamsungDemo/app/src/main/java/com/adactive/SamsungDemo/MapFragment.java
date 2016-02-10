@@ -34,6 +34,7 @@ import com.polestar.naosdk.api.external.NAOGeofencingListener;
 import com.polestar.naosdk.api.external.NAOLocationHandle;
 import com.polestar.naosdk.api.external.NAOLocationListener;
 import com.polestar.naosdk.api.external.NAOSensorsListener;
+import com.polestar.naosdk.api.external.NAOSyncListener;
 //import com.quinny898.library.persistentsearch.SearchBox;
 //import com.quinny898.library.persistentsearch.SearchResult;
 
@@ -43,7 +44,7 @@ import java.util.Map;
 
 //import com.adactive.nativeapi.DataObject.Store;
 
-public class MapFragment extends MainActivity.PlaceholderFragment implements NAOLocationListener, NAOSensorsListener, NAOGeofencingListener {
+public class MapFragment extends MainActivity.PlaceholderFragment implements NAOLocationListener, NAOSensorsListener, NAOGeofencingListener, NAOSyncListener {
 
     static private boolean isMapLoaded = false;
     static private MapView.CameraMode currentCameraMode = MapView.CameraMode.FULL;
@@ -253,10 +254,14 @@ public class MapFragment extends MainActivity.PlaceholderFragment implements NAO
 
         // sdk nao
         naoLocationHandle = new NAOLocationHandle(getActivity(), MyNaoService.class, naoApiKey, this, this);
-        naoLocationHandle.start();
-
         naoGeofencingHandle = new NAOGeofencingHandle(getActivity(), MyNaoService.class, naoApiKey, this, this);
+
+        naoLocationHandle.synchronizeData(this);
+        naoGeofencingHandle.synchronizeData(this);
+
+        naoLocationHandle.start();
         naoGeofencingHandle.start();
+
         // mktodo: penser à utilser les "utils" dans l'exemple du sdk ?
 
         return rootView;
@@ -328,16 +333,17 @@ public class MapFragment extends MainActivity.PlaceholderFragment implements NAO
         Log.e(this.getClass().getName(), "onError " + msg);
         notifyUser("onError " + errCode + " " + msg);
     }
-/*
+
     @Override
     public void onSynchronizationSuccess() {
-        // Your code here
+        notifyUser("onSynchronizationSuccess");
     }
 
     @Override
     public void onSynchronizationFailure(NAOERRORCODE code, String message) {
         //
-    }*/
+        notifyUser("onSynchronizationFailure:" + message + " / code: " + code);
+    }
 
 
 
