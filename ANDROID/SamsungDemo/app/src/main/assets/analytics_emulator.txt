@@ -1,6 +1,0 @@
-enter : zone 1
-exit : zone 1
-enter : zone 2
-exit : zone 2
-enter : zone 3
-exit : zone 3
