@@ -73,7 +73,7 @@ NSString *currentSearchText;
     return 1;
 }
 
-int gg=3;
+
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
 //#warning Incomplete implementation, return the number of rows
@@ -121,6 +121,56 @@ int gg=3;
     // Configure the cell...
     
     return cell;
+}
+
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    //NSLog(@"%d", indexPath.row); // you can see selected row number in your console;
+    
+    ADSPoi *poi;
+    
+    if ([currentSearchText length]==0)
+        poi = pois[indexPath.row];
+    else
+    {
+        int n=0;
+        for (int i=0; i<[pois count]; i++)
+        {
+            ADSPoi *p = pois[i];
+            if ([[p.name lowercaseString] rangeOfString:currentSearchText].location != NSNotFound)
+            {
+                if (n==indexPath.row)
+                {
+                    poi = pois[i];
+                    break;
+                }
+                
+                n++;
+            }
+        }
+    }
+    
+    NSArray<NSNumber*> *places = poi.placesIds;
+    if ([places count]>0)
+    {
+        // center view on selected place
+        [_vc centerOnPlace:places[0]];
+        
+        // close search view
+        [self.navigationController popViewControllerAnimated:YES];
+    }
+    else
+    {
+        // mktodo: on doit gérer çà comment? çà ne devrait pas etre visible dans "search" ?
+        UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Not a place"
+                                                        message:@"No place associated with this POI"
+                                                       delegate:nil
+                                              cancelButtonTitle:@"OK"
+                                              otherButtonTitles:nil];
+        [alert show];
+    }
+    
+    
 }
 
 - (void)searchBar:(UISearchBar *)searchBar textDidChange:(NSString *)searchText{

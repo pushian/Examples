@@ -9,6 +9,7 @@
 #import "MainViewController.h"
 #import "ViewController.h"
 #import "DrawPathViewController.h"
+#import "SearchFeatureTableViewController.h"
 
 
 
@@ -75,7 +76,8 @@ bool mapIsReady=false;
     
     [self copyDataDirectory:@"files"];
     
-    vcAdsum = (ViewController*)[[self childViewControllers] lastObject];
+    id children = [self childViewControllers];
+    vcAdsum = (ViewController*)[children lastObject];
     
    
     [vcAdsum loadMap];
@@ -255,7 +257,7 @@ bool mapIsReady=false;
     if ([[segue identifier] isEqualToString:@"segueSearch"])
     {
         // Get reference to the destination view controller
-        DrawPathViewController *vc = [segue destinationViewController];
+        SearchFeatureTableViewController *vc = [segue destinationViewController];
         
         vc.mvc = self;
         vc.vc = vcAdsum;
