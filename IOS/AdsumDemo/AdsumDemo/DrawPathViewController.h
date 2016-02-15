@@ -11,7 +11,7 @@
 #import "ViewController.h"
 #import "AdsumCoreDataManager.h"
 
-@interface DrawPathViewController : UIViewController
+@interface DrawPathViewController : UIViewController<UITableViewDataSource, UITableViewDelegate, UISearchBarDelegate>
 
 @property MainViewController *mvc;
 @property ViewController *vc;

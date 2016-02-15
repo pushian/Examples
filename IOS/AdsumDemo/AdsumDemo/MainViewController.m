@@ -234,11 +234,6 @@ bool mapIsReady=false;
     return data;
 }*/
 
-// ok: on peut pas fermer "display path" sur iphone
-// ok: pb de viewport sur iphone -> pas le pb avec BasicDemo (le container est en cause?)
-// mktodo: en paysage sur iphone : le logo sur la 1ere ecran est tout petit
-// ok: iphone: on peut pas fermer le clavier sur "search" ?
-// mktodo: utiliser "displaypath" et seach sur iphone avec extra : crash (idem sur ipad?)
 
 #pragma mark - Navigation
 

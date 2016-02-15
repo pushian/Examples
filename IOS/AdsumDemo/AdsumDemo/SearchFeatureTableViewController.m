@@ -19,7 +19,7 @@
 @implementation SearchFeatureTableViewController
 
 
-//UISearchController *searchController;
+NSArray<ADSPoi*> *poisFull;
 NSArray<ADSPoi*> *pois;
 NSString *currentSearchText;
 
@@ -27,25 +27,11 @@ NSString *currentSearchText;
 - (void)viewDidLoad {
     [super viewDidLoad];
     
-    // Uncomment the following line to preserve selection between presentations.
-    // self.clearsSelectionOnViewWillAppear = NO;
-    
-    // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
-    // self.navigationItem.rightBarButtonItem = self.editButtonItem;
-    
-    /*
-    searchController = [[UISearchController alloc] initWithSearchResultsController:self];
-    // Use the current view controller to update the search results.
-    searchController.searchResultsUpdater = self;
-    // Install the search bar as the table header.
-    self.navigationItem.titleView = searchController.searchBar;
-    // It is usually good to set the presentation context.
-    self.definesPresentationContext = YES;
-    */
-    
     currentSearchText = @"";
     
-    pois = [_dataManager getAllADSPois];
+    poisFull = [_dataManager getAllADSPois];
+    
+    pois = [NSArray<ADSPoi*> arrayWithArray:poisFull];
     
     self.tableView.delegate=self;
     self.tableView.dataSource=self;
@@ -69,27 +55,13 @@ NSString *currentSearchText;
 #pragma mark - Table view data source
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
-//#warning Incomplete implementation, return the number of sections
     return 1;
 }
 
 
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
-//#warning Incomplete implementation, return the number of rows
-    
-    if ([currentSearchText length]==0)
-        return [pois count];
-    
-    int n=0;
-    for (int i=0; i<[pois count]; i++)
-    {
-        ADSPoi *p = pois[i];
-        if ([[p.name lowercaseString] rangeOfString:currentSearchText].location != NSNotFound) {
-            n++;
-        }
-    }
-    return n;
+    return [pois count];
 }
 
 
@@ -97,58 +69,15 @@ NSString *currentSearchText;
 {
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"ri" forIndexPath:indexPath];
     
-    if ([currentSearchText length]==0)
-        cell.textLabel.text = pois[indexPath.row].name;
-    else
-    {
-        int n=0;
-        for (int i=0; i<[pois count]; i++)
-        {
-            ADSPoi *p = pois[i];
-            if ([[p.name lowercaseString] rangeOfString:currentSearchText].location != NSNotFound)
-            {
-                if (n==indexPath.row)
-                {
-                    cell.textLabel.text = pois[i].name;
-                    break;
-                }
-            
-                n++;
-            }
-        }
-    }
+    cell.textLabel.text = pois[indexPath.row].name;
     
-    // Configure the cell...
     
     return cell;
 }
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    //NSLog(@"%d", indexPath.row); // you can see selected row number in your console;
-    
-    ADSPoi *poi;
-    
-    if ([currentSearchText length]==0)
-        poi = pois[indexPath.row];
-    else
-    {
-        int n=0;
-        for (int i=0; i<[pois count]; i++)
-        {
-            ADSPoi *p = pois[i];
-            if ([[p.name lowercaseString] rangeOfString:currentSearchText].location != NSNotFound)
-            {
-                if (n==indexPath.row)
-                {
-                    poi = pois[i];
-                    break;
-                }
-                
-                n++;
-            }
-        }
-    }
+    ADSPoi *poi = pois[indexPath.row];
     
     NSArray<NSNumber*> *places = poi.placesIds;
     if ([places count]>0)
@@ -161,7 +90,7 @@ NSString *currentSearchText;
     }
     else
     {
-        // mktodo: on doit gérer çà comment? çà ne devrait pas etre visible dans "search" ?
+        // mktodo: on doit gérer çà comment? ces items ne devraient pas ne pas etre visible comme resultat de la recherche ?
         UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Not a place"
                                                         message:@"No place associated with this POI"
                                                        delegate:nil
@@ -169,103 +98,33 @@ NSString *currentSearchText;
                                               otherButtonTitles:nil];
         [alert show];
     }
-    
-    
 }
 
 - (void)searchBar:(UISearchBar *)searchBar textDidChange:(NSString *)searchText{
-    //NSLog(@"%@",searchText);
     
     currentSearchText = [[searchText stringByTrimmingCharactersInSet:[NSCharacterSet whitespaceCharacterSet]] lowercaseString];
     
-    
-    /*NSMutableArray *data = [[NSMutableArray alloc] init];
-    
-    
-    for (ADSPoi *poi in pois)
+    if ([currentSearchText length]==0)
+        pois = [NSArray<ADSPoi*> arrayWithArray:poisFull];
+    else
     {
-        NSMutableDictionary *d = [NSMutableDictionary dictionary];
-        [d setValue:poi.name forKey:@"DisplayText"];
-        [d setValue:poi.className forKey:@"DisplaySubText"]; // optionnel
-        [d setValue:poi forKey:@"CustomObject"];
-        
-        [data addObject:d];
+        NSMutableArray *ma = [[NSMutableArray alloc] init];
+        for (int i=0; i<[pois count]; i++)
+        {
+            ADSPoi *p = pois[i];
+            if ([[p.name lowercaseString] rangeOfString:currentSearchText].location != NSNotFound)
+            {
+                [ma addObject:p];
+            }
+        }
+        pois = ma;
     }
     
-    return data;*/
+   
     
     
     [self.tableView reloadData];
 }
 
-//helper method
-/*
-- (void)updateFilteredContentWithSearchText:(NSString*)searchText
-{
-    
- 
-     [self.specialtySearchResultsTVC.filteredSpecialties removeAllObjects];
-     for (Specialty *specialty in self.specialties)
-     {
-     NSRange nameRange = [specialty.name rangeOfString:searchText options:NSCaseInsensitiveSearch];
-     if (nameRange.location != NSNotFound)
-     {
-     [self.specialtySearchResultsTVC.filteredSpecialties addObject:specialty];
-     }
-     }
-}
-
-- (void)updateSearchResultsForSearchController:(UISearchController *)searchController
-{
-    //make sure model has only results that correspond to the search
-    //[self updateFilteredContentWithSearchText:[searchController.searchBar text]];
-    gg=1;
-    //update the table now that the model has been updated
-    [self.tableView reloadData];
-}*/
-
-/*
-// Override to support conditional editing of the table view.
-- (BOOL)tableView:(UITableView *)tableView canEditRowAtIndexPath:(NSIndexPath *)indexPath {
-    // Return NO if you do not want the specified item to be editable.
-    return YES;
-}
-*/
-
-/*
-// Override to support editing the table view.
-- (void)tableView:(UITableView *)tableView commitEditingStyle:(UITableViewCellEditingStyle)editingStyle forRowAtIndexPath:(NSIndexPath *)indexPath {
-    if (editingStyle == UITableViewCellEditingStyleDelete) {
-        // Delete the row from the data source
-        [tableView deleteRowsAtIndexPaths:@[indexPath] withRowAnimation:UITableViewRowAnimationFade];
-    } else if (editingStyle == UITableViewCellEditingStyleInsert) {
-        // Create a new instance of the appropriate class, insert it into the array, and add a new row to the table view
-    }   
-}
-*/
-
-/*
-// Override to support rearranging the table view.
-- (void)tableView:(UITableView *)tableView moveRowAtIndexPath:(NSIndexPath *)fromIndexPath toIndexPath:(NSIndexPath *)toIndexPath {
-}
-*/
-
-/*
-// Override to support conditional rearranging of the table view.
-- (BOOL)tableView:(UITableView *)tableView canMoveRowAtIndexPath:(NSIndexPath *)indexPath {
-    // Return NO if you do not want the item to be re-orderable.
-    return YES;
-}
-*/
-
-/*
-#pragma mark - Navigation
-
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
-}
-*/
 
 @end
