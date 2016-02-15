@@ -131,9 +131,6 @@ MainViewController *vcMain;
     //Add the ADSumMapViewController view to your ViewController view
     [self.view addSubview:self.adSumMapViewController.view];
     
-    // on ne lit jamais le xml du bundle
-    //deprecated mktodo virer self.adSumMapViewController.loadThisXmlInsteadOfBundleXml = newXml;
-    
     // Launch the loading of the map
     [self.adSumMapViewController updateWithLocalFiles];
     
@@ -141,41 +138,6 @@ MainViewController *vcMain;
     [_progressCircle setHidden:NO];
     [_progressCircle startAnimating];
 }
-
-/*
--(void)loadNewMap:(NSString *)xml
-{
-    //
-    //if(!FilesUtils::Instance()->copyFile(std::string(path)+"/"+ADSUM_CONFIG, dirFiles.string()+"/"+"config.xml")){
-    //    std::cout<< "ADSUM_ERROR Missing"<< ADSUM_CONFIG <<" file in your app bundle" <<std::endl;
-    
-    [self.adSumMapViewController updateConfigXmlFile:(NSString*)xml];
-    
-    [vcMain mapIsReady:NO];
-    [self loadMap:YES];
-}*/
-
-/*
--(void)viewWillLayoutSubviews
-{
-    CGRect rect = CGRectMake(0, 0, self.view.frame.size.width, self.view.frame.size.height);
-
-    AdsumCoreView *acv = [self.adSumMapViewController getAdsumCoreView];
-    
-    acv.frame = rect;
-    
-    
-    //self.adSumMapViewController.AdactiveParentRect = rect;
-   // [self.adSumMapViewController
-   // [self.adSumMapViewController update];
-    
-   // AdsumCoreView *acv = (AdsumCoreView *)self.adSumMapViewController.;
-    
-    //acv=acv;
-    //[self.adSumMapViewController. AdsumCoreView setupView];
-    
-    //[acv resizeViewportWithWidth:self.view.frame.size.width height:self.view.frame.size.height];
-}*/
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
@@ -205,34 +167,11 @@ MainViewController *vcMain;
     }
 }
 
-- (void)initFloorsButtons
-{
-    /* deprecated
-     long buildingId = [self.adSumMapViewController getCurrentBuilding];
-     NSArray *floors = [self.adSumMapViewController getBuildingFloors:buildingId];
-     //long floorId = [self.adSumMapViewController getCurrentFloor];
-     
-     int y = 200;
-     for (NSNumber *a_floorId in floors)
-     {
-     NSString *floorName = [a_floorId stringValue];
-     
-     UIButton *buTest = [UIButton buttonWithType: UIButtonTypeRoundedRect];
-     buTest.frame = CGRectMake(20, y, 100, 18);
-     [buTest setTitle:floorName forState:UIControlStateNormal];
-     [buTest addTarget:self action:@selector(buChangeFloor:) forControlEvents:UIControlEventTouchUpInside];
-     [self.view addSubview:buTest];
-     
-     y+=30;
-     }
-     */
-}
 
 - (void)mapDidFinishLoading:(id)adSumViewController
 {
     // init
     [self.adSumMapViewController setCameraMode:CameraMode_FULL];
-    [self initFloorsButtons];
     
     // parent view controller
     vcMain = (MainViewController*)[self parentViewController];
@@ -257,7 +196,10 @@ MainViewController *vcMain;
     [_progressCircle setHidden:YES];
 }
 
-
+-(void)drawPathFrom:(long)fromPoiId to:(long)toPoiId
+{
+    [self.adSumMapViewController drawPathFrom:fromPoiId to:toPoiId];
+}
 
 - (void)adSumViewController:(id)adSumViewController OnPOIClicked:(NSArray *)poiIDs placeId:(long)placeId
 {

@@ -30,7 +30,6 @@ NSString *currentSearchText;
     currentSearchText = @"";
     
     poisFull = [_dataManager getAllADSPois];
-    
     pois = [NSArray<ADSPoi*> arrayWithArray:poisFull];
     
     self.tableView.delegate=self;
@@ -109,9 +108,9 @@ NSString *currentSearchText;
     else
     {
         NSMutableArray *ma = [[NSMutableArray alloc] init];
-        for (int i=0; i<[pois count]; i++)
+        for (int i=0; i<[poisFull count]; i++)
         {
-            ADSPoi *p = pois[i];
+            ADSPoi *p = poisFull[i];
             if ([[p.name lowercaseString] rangeOfString:currentSearchText].location != NSNotFound)
             {
                 [ma addObject:p];

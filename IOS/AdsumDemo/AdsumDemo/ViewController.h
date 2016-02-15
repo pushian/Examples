@@ -24,6 +24,7 @@
 -(void)backButtonClicked;
 -(void)centerOnPlace:(NSNumber*)placeId;
 -(void)loadMap;
+-(void)drawPathFrom:(long)fromPoiId to:(long)toPoiId;
 
 @end
 

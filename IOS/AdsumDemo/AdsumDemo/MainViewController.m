@@ -201,38 +201,7 @@ bool mapIsReady=false;
     return NO;
 }
 
-/*
--(BOOL)textFieldShouldSelect:(MPGTextField *)textField
-{
-    return YES;
-}
 
--(void)textField:(MPGTextField *)textField didEndEditingWithSelection:(NSDictionary *)result
-{
-    ADSPoi *poi = (ADSPoi*)[result valueForKey:@"CustomObject"];
-    NSArray<NSNumber*> *places = poi.placesIds;
-    if ([places count]>0)
-        [vcAdsum centerOnPlace:places[0]]; // mktodo: plusieurs places possible?
-    
-    self.searchBox.text=@"";
-}
-
--(NSArray *)dataForPopoverInTextField:(MPGTextField *)textField
-{
-    NSMutableArray *data = [[NSMutableArray alloc] init];
-    
-    for (ADSPoi *poi in vcAdsum.pois)
-    {
-        NSMutableDictionary *d = [NSMutableDictionary dictionary];
-        [d setValue:poi.name forKey:@"DisplayText"];
-        [d setValue:poi.className forKey:@"DisplaySubText"]; // optionnel
-        [d setValue:poi forKey:@"CustomObject"];
-        
-        [data addObject:d];
-    }
-    
-    return data;
-}*/
 
 
 #pragma mark - Navigation
@@ -240,19 +209,22 @@ bool mapIsReady=false;
 // In a storyboard-based application, you will often want to do a little preparation before navigation
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
     
+    
     if ([[segue identifier] isEqualToString:@"segueDrawPath"])
     {
         // Get reference to the destination view controller
-        DrawPathViewController *vc = [segue destinationViewController];
+        DrawPathViewController *dvc = (DrawPathViewController*)[segue destinationViewController];
         
-        vc.mvc = self;
-        vc.vc = vcAdsum;
-        vc.dataManager = [vcAdsum dataManager];
+        if ([dvc isKindOfClass:[DrawPathViewController class]]) {
+            dvc.mvc = self;
+            dvc.vc = vcAdsum;
+            dvc.dataManager = [vcAdsum dataManager];
+        }
     }
     if ([[segue identifier] isEqualToString:@"segueSearch"])
     {
         // Get reference to the destination view controller
-        SearchFeatureTableViewController *vc = [segue destinationViewController];
+        SearchFeatureTableViewController *vc = (SearchFeatureTableViewController*)[segue destinationViewController];
         
         vc.mvc = self;
         vc.vc = vcAdsum;
