@@ -150,18 +150,56 @@ bool mapIsReady=false;
    // [_buBack setHidden:NO]; // toujours visible
 }
 
+/*
+-(void)didPresentSearchController:(UISearchController *)searchController
+{
+    
+}*/
 
+//helper method
+/*
+- (void)updateFilteredContentWithSearchText:(NSString*)searchText
+{
+    
+    
+    [self.specialtySearchResultsTVC.filteredSpecialties removeAllObjects];
+    for (Specialty *specialty in self.specialties)
+    {
+        NSRange nameRange = [specialty.name rangeOfString:searchText options:NSCaseInsensitiveSearch];
+        if (nameRange.location != NSNotFound)
+        {
+            [self.specialtySearchResultsTVC.filteredSpecialties addObject:specialty];
+        }
+    }
+}
+
+- (void)updateSearchResultsForSearchController:(UISearchController *)searchController
+{
+    //make sure model has only results that correspond to the search
+    [self updateFilteredContentWithSearchText:[self.searchController.searchBar text]];
+    //update the table now that the model has been updated
+    [self.specialtySearchResultsTVC.tableView reloadData];
+}*/
 
 -(void)initSearchBox
 {
-    self.searchBox.delegate = self;
-}
+    /*
+    UISearchController *searchController = [[UISearchController alloc] initWithSearchResultsController:self];
+    // Use the current view controller to update the search results.
+    searchController.searchResultsUpdater = self;
+    // Install the search bar as the table header.
+    self.navigationItem.titleView = searchController.searchBar;
+    // It is usually good to set the presentation context.
+    self.definesPresentationContext = YES;
+    */
+    }
 
 - (BOOL)textFieldShouldReturn:(UITextField *)textField {
     [textField resignFirstResponder];
     return NO;
 }
 
+/*
 -(BOOL)textFieldShouldSelect:(MPGTextField *)textField
 {
     return YES;
@@ -192,7 +230,7 @@ bool mapIsReady=false;
     }
     
     return data;
-}
+}*/
 
 // ok: on peut pas fermer "display path" sur iphone
 // ok: pb de viewport sur iphone -> pas le pb avec BasicDemo (le container est en cause?)
@@ -206,6 +244,15 @@ bool mapIsReady=false;
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
     
     if ([[segue identifier] isEqualToString:@"segueDrawPath"])
+    {
+        // Get reference to the destination view controller
+        DrawPathViewController *vc = [segue destinationViewController];
+        
+        vc.mvc = self;
+        vc.vc = vcAdsum;
+        vc.dataManager = [vcAdsum dataManager];
+    }
+    if ([[segue identifier] isEqualToString:@"segueSearch"])
     {
         // Get reference to the destination view controller
         DrawPathViewController *vc = [segue destinationViewController];

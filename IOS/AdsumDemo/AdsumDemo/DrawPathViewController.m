@@ -11,8 +11,8 @@
 #import "ViewController.h"
 
 @interface DrawPathViewController ()
-@property (weak, nonatomic) IBOutlet MPGTextField *tfFrom;
-@property (weak, nonatomic) IBOutlet MPGTextField *tfTo;
+//@property (weak, nonatomic) IBOutlet MPGTextField *tfFrom;
+//@property (weak, nonatomic) IBOutlet MPGTextField *tfTo;
 
 @end
 
@@ -28,16 +28,15 @@
     self.preferredContentSize = size;
     
     // init text fields
-    _tfFrom.delegate = self;
-    _tfTo.delegate = self;
+    //_tfFrom.delegate = self;
+    //_tfTo.delegate = self;
     
-    // mktodo: si un poi est sélectionné sur la map quand on ouvre "drawpath" : from doit etre préselectionné (c'est dans le cahier des charges)
-    
+    // mktodo: si un poi est sélectionné sur la map quand on ouvre "drawpath" : from doit etre préselectionné
     if (_vc.currentPoiId!=-1)
     {
         ADSPoi *poi = [_dataManager getADSPoiFromId:_vc.currentPoiId];
-        poiFrom = poi;
-        _tfFrom.text = [poi name];
+        //poiFrom = poi;
+       // _tfFrom.text = [poi name];
     }
     
 }
@@ -53,7 +52,7 @@
 
 - (IBAction)buDisplayPath:(id)sender
 {
-    if (poiFrom==nil || poiTo==nil) return;
+   /* if (poiFrom==nil || poiTo==nil) return;
     
     // mktodo: draw the path between "from" and "to" -> marche pas?
     [self.vc.adSumMapViewController drawPathFrom:[poiFrom.uid longValue] to:[poiTo.uid longValue]];
@@ -67,10 +66,11 @@
     
     // close this viewcontroller
     [self dismissViewControllerAnimated:YES completion:Nil];
+    */
 }
 
 
-
+/*
 -(BOOL)textFieldShouldSelect:(MPGTextField *)textField
 {
     return YES;
@@ -106,7 +106,7 @@ ADSPoi *poiFrom, *poiTo;
     }
     
     return data;
-}
+}*/
 
 /*
 #pragma mark - Navigation

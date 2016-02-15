@@ -16,8 +16,8 @@
 		4DA0459C1C6890EC00845605 /* path.png in Resources */ = {isa = PBXBuildFile; fileRef = 4DA045951C6890EC00845605 /* path.png */; };
 		4DA0459D1C6890EC00845605 /* AdsumFont.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 4DA045961C6890EC00845605 /* AdsumFont.ttf */; };
 		4DA045A21C68910400845605 /* AdsumIOSAPI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4DA045A11C68910400845605 /* AdsumIOSAPI.framework */; };
-		4DAC79D11C58E16A0064A6E3 /* MPGTextField.m in Sources */ = {isa = PBXBuildFile; fileRef = 4DAC79CF1C58E16A0064A6E3 /* MPGTextField.m */; };
 		4DCB7C481C563B3600982B23 /* MainViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4DCB7C471C563B3600982B23 /* MainViewController.m */; };
+		4DE061361C71D5E4001DAFA7 /* SearchFeatureTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4DE061351C71D5E4001DAFA7 /* SearchFeatureTableViewController.m */; };
 		4DF032661C51153000472603 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 4DF032651C51153000472603 /* main.m */; };
 		4DF032691C51153000472603 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 4DF032681C51153000472603 /* AppDelegate.m */; };
 		4DF0326C1C51153000472603 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4DF0326B1C51153000472603 /* ViewController.m */; };
@@ -49,11 +49,11 @@
 		4DA045951C6890EC00845605 /* path.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = path.png; path = AdsumDemo/path.png; sourceTree = "<group>"; };
 		4DA045961C6890EC00845605 /* AdsumFont.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = AdsumFont.ttf; path = AdsumDemo/AdsumFont.ttf; sourceTree = "<group>"; };
 		4DA045A11C68910400845605 /* AdsumIOSAPI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AdsumIOSAPI.framework; path = "../../../../adsum-core/Wrappers/IOS/IOS_step_2/build/Release-iphoneos/AdsumIOSAPI.framework"; sourceTree = "<group>"; };
-		4DAC79CF1C58E16A0064A6E3 /* MPGTextField.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MPGTextField.m; sourceTree = "<group>"; };
-		4DAC79D01C58E16A0064A6E3 /* MPGTextField.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MPGTextField.h; sourceTree = "<group>"; };
 		4DCB22ED1C521D6F00CDD4AF /* AdsumIOSAPI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AdsumIOSAPI.framework; path = "../../../../../Library/Developer/Xcode/DerivedData/AdsumDemo-ftltctqmnpjirieuyzlxvifzxuyd/Build/Products/Debug-iphoneos/AdsumIOSAPI.framework"; sourceTree = "<group>"; };
 		4DCB7C461C563B3600982B23 /* MainViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MainViewController.h; sourceTree = "<group>"; };
 		4DCB7C471C563B3600982B23 /* MainViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MainViewController.m; sourceTree = "<group>"; };
+		4DE061341C71D5E4001DAFA7 /* SearchFeatureTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SearchFeatureTableViewController.h; sourceTree = "<group>"; };
+		4DE061351C71D5E4001DAFA7 /* SearchFeatureTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SearchFeatureTableViewController.m; sourceTree = "<group>"; };
 		4DF032611C51153000472603 /* AdsumDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AdsumDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		4DF032651C51153000472603 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		4DF032671C51153000472603 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -144,8 +144,6 @@
 		4DF032631C51153000472603 /* AdsumDemo */ = {
 			isa = PBXGroup;
 			children = (
-				4DAC79CF1C58E16A0064A6E3 /* MPGTextField.m */,
-				4DAC79D01C58E16A0064A6E3 /* MPGTextField.h */,
 				4DF032671C51153000472603 /* AppDelegate.h */,
 				4DF032681C51153000472603 /* AppDelegate.m */,
 				4DF0326A1C51153000472603 /* ViewController.h */,
@@ -161,6 +159,8 @@
 				4D6809E51C5B797500DDCAEA /* FirstPageViewController.m */,
 				4D6809EA1C5BAE3500DDCAEA /* DrawPathViewController.h */,
 				4D6809EB1C5BAE3500DDCAEA /* DrawPathViewController.m */,
+				4DE061341C71D5E4001DAFA7 /* SearchFeatureTableViewController.h */,
+				4DE061351C71D5E4001DAFA7 /* SearchFeatureTableViewController.m */,
 			);
 			path = AdsumDemo;
 			sourceTree = "<group>";
@@ -310,9 +310,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				4D6809EC1C5BAE3500DDCAEA /* DrawPathViewController.m in Sources */,
-				4DAC79D11C58E16A0064A6E3 /* MPGTextField.m in Sources */,
 				4DF0326C1C51153000472603 /* ViewController.m in Sources */,
 				4D6809E61C5B797500DDCAEA /* FirstPageViewController.m in Sources */,
+				4DE061361C71D5E4001DAFA7 /* SearchFeatureTableViewController.m in Sources */,
 				4DF032691C51153000472603 /* AppDelegate.m in Sources */,
 				4DF032661C51153000472603 /* main.m in Sources */,
 				4DCB7C481C563B3600982B23 /* MainViewController.m in Sources */,
@@ -442,7 +442,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.adactive.AdsumDemo;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -465,7 +465,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.adactive.AdsumDemo;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};

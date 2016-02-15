@@ -6,6 +6,51 @@
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
+        <!--Search Feature Table View Controller-->
+        <scene sceneID="bjR-3R-FWD">
+            <objects>
+                <tableViewController id="jWj-qD-8yQ" customClass="SearchFeatureTableViewController" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" id="UaM-j6-KV8">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="556"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="ri" id="d51-NY-9lX">
+                                <rect key="frame" x="0.0" y="92" width="600" height="44"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="d51-NY-9lX" id="Wbf-c2-yOy">
+                                    <rect key="frame" x="0.0" y="0.0" width="600" height="43"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                </tableViewCellContentView>
+                            </tableViewCell>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="pxa-FT-rra">
+                                <rect key="frame" x="0.0" y="136" width="600" height="44"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="pxa-FT-rra" id="tx9-aU-0Sz">
+                                    <rect key="frame" x="0.0" y="0.0" width="600" height="43"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                </tableViewCellContentView>
+                            </tableViewCell>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="Ad0-Cm-CWQ">
+                                <rect key="frame" x="0.0" y="180" width="600" height="44"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="Ad0-Cm-CWQ" id="jKb-dv-caL">
+                                    <rect key="frame" x="0.0" y="0.0" width="600" height="43"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                </tableViewCellContentView>
+                            </tableViewCell>
+                        </prototypes>
+                        <sections/>
+                        <connections>
+                            <outlet property="dataSource" destination="jWj-qD-8yQ" id="eBj-RS-xBW"/>
+                            <outlet property="delegate" destination="jWj-qD-8yQ" id="r5O-y3-Haa"/>
+                        </connections>
+                    </tableView>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="cjj-3f-t34" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="620" y="-362"/>
+        </scene>
         <!--Main View Controller-->
         <scene sceneID="VCa-8d-0ST">
             <objects>
@@ -30,23 +75,13 @@
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="4Bt-DH-tcE" customClass="MPGTextField">
-                                <rect key="frame" x="20" y="72" width="240" height="30"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="240" id="aU2-pO-nCF"/>
-                                </constraints>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits" autocorrectionType="no" spellCheckingType="no"/>
-                            </textField>
                         </subviews>
                         <constraints>
                             <constraint firstAttribute="bottomMargin" secondItem="vPK-38-djX" secondAttribute="bottom" constant="-44" id="8Ov-xs-4BZ"/>
                             <constraint firstAttribute="trailing" secondItem="vPK-38-djX" secondAttribute="trailing" id="NVU-ie-Zk7"/>
                             <constraint firstItem="vPK-38-djX" firstAttribute="leading" secondItem="BoG-gz-mUW" secondAttribute="leading" id="Pjq-rh-2GK"/>
                             <constraint firstItem="w8b-Ex-fOA" firstAttribute="trailing" secondItem="BoG-gz-mUW" secondAttribute="trailingMargin" id="e9F-Tc-Fdh"/>
-                            <constraint firstItem="4Bt-DH-tcE" firstAttribute="top" secondItem="crd-lm-e32" secondAttribute="bottom" constant="8" symbolic="YES" id="gwj-zh-UHM"/>
                             <constraint firstItem="vPK-38-djX" firstAttribute="top" secondItem="crd-lm-e32" secondAttribute="bottom" id="ixn-1U-OcG"/>
-                            <constraint firstItem="4Bt-DH-tcE" firstAttribute="leading" secondItem="BoG-gz-mUW" secondAttribute="leadingMargin" id="l9i-QY-PbY"/>
                             <constraint firstItem="ifZ-4Z-tRw" firstAttribute="top" secondItem="w8b-Ex-fOA" secondAttribute="bottom" constant="8" symbolic="YES" id="oEP-Zd-dGV"/>
                         </constraints>
                     </view>
@@ -54,9 +89,7 @@
                         <barButtonItem id="hgB-Od-MGf"/>
                         <barButtonItem image="map-direction" id="CV7-6J-HeI">
                             <connections>
-                                <segue destination="ikn-Km-tIg" kind="popoverPresentation" identifier="segueDrawPath" popoverAnchorBarButtonItem="CV7-6J-HeI" id="WHo-P0-RdI">
-                                    <popoverArrowDirection key="popoverArrowDirection" up="YES" down="YES" left="YES" right="YES"/>
-                                </segue>
+                                <segue destination="jWj-qD-8yQ" kind="show" identifier="segueSearch" id="Msm-xu-ju6"/>
                             </connections>
                         </barButtonItem>
                         <barButtonItem style="plain" systemItem="flexibleSpace" id="Ksk-xm-kQT"/>
@@ -83,7 +116,6 @@
                         <outlet property="bu3d" destination="yfQ-eT-jnO" id="koT-uS-yUK"/>
                         <outlet property="buBack" destination="zyh-jK-jzF" id="ooA-bI-EWc"/>
                         <outlet property="buFloors" destination="svy-we-yOC" id="fm9-Pq-Rc8"/>
-                        <outlet property="searchBox" destination="4Bt-DH-tcE" id="ZjO-L1-mHI"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="jmI-1o-NXq" userLabel="First Responder" sceneMemberID="firstResponder"/>
