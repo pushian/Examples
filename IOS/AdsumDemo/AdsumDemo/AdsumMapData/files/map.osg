@@ -44,6 +44,33 @@ PositionAttitudeTransform {
               emissionColor 0 0 0 1
               shininess 0
             }
+            textureUnit 0 {
+            }
+            textureUnit 1 {
+              GL_TEXTURE_2D ON
+              Texture2D {
+                file "texture/reference/415928467b21db4dac6884c3dd37aecd9f8040aa.png"
+                wrap_s CLAMP_TO_BORDER
+                wrap_t CLAMP_TO_BORDER
+                wrap_r CLAMP
+                min_filter LINEAR_MIPMAP_LINEAR
+                mag_filter LINEAR
+                maxAnisotropy 1
+                borderColor 0 0 0 0
+                borderWidth 0
+                useHardwareMipMapGeneration TRUE
+                unRefImageDataAfterApply TRUE
+                internalFormatMode USE_IMAGE_DATA_FORMAT
+                resizeNonPowerOfTwo TRUE
+                shadowComparison FALSE
+                shadowCompareFunc GL_LEQUAL
+                shadowTextureMode GL_LUMINANCE
+              }
+              TexEnv {
+                UniqueID TexEnv_1
+                mode REPLACE
+              }
+            }
           }
           useDisplayList TRUE
           useVertexBufferObjects FALSE
@@ -56,12 +83,12 @@ PositionAttitudeTransform {
           }
           VertexArray Vec3Array 6
           {
-            -3966.96 1925.52 0
-            -3966.96 1925.52 0
-            3620.54 1942.73 0
-            3630.96 -2181.15 0
-            3630.96 -2181.15 0
-            -3974.93 -2192.41 0
+            -3800 1800 0
+            -3800 1800 0
+            3500 1800 0
+            3500 -2100 0
+            3500 -2100 0
+            -3800 -2100 0
           }
           NormalBinding PER_VERTEX
           NormalArray Vec3Array 6
@@ -72,6 +99,15 @@ PositionAttitudeTransform {
             0 0 1
             0 0 1
             0 0 1
+          }
+          TexCoordArray 1 Vec2Array 6
+          {
+            0.00119431 0.986966
+            0.00119431 0.986966
+            0.759321 0.986966
+            0.759321 0.176913
+            0.759321 0.176913
+            0.00119431 0.176913
           }
         }
       }
@@ -95,6 +131,7 @@ PositionAttitudeTransform {
             DataVariance STATIC
             name "ExtrudeMesh_3_material"
             StateSet {
+              UniqueID StateSet_2
               DataVariance STATIC
               rendering_hint DEFAULT_BIN
               renderBinMode INHERIT
@@ -102,7 +139,7 @@ PositionAttitudeTransform {
               Material {
                 ColorMode OFF
                 ambientColor 0 0 0 1
-                diffuseColor 0 0 0 1
+                diffuseColor 1 1 1 1
                 specularColor 0.6 0.6 0.6 1
                 emissionColor 0 0 0 1
                 shininess 10
@@ -121,70 +158,70 @@ PositionAttitudeTransform {
             }
             VertexArray Vec3Array 30
             {
-              -3966.96 1925.52 0
-              -3966.96 1925.52 0
-              -3966.96 1925.52 0
-              -3966.96 1925.52 0
-              -3966.96 1925.52 0
-              3620.54 1942.73 0
-              3620.54 1942.73 0
-              3620.54 1942.73 0
-              3620.54 1942.73 0
-              3630.96 -2181.15 0
-              3630.96 -2181.15 0
-              3630.96 -2181.15 0
-              3630.96 -2181.15 0
-              3630.96 -2181.15 0
-              -3974.93 -2192.41 0
-              -3974.93 -2192.41 0
-              -3974.93 -2192.41 0
-              -3974.93 -2192.41 0
-              -3966.96 1925.52 5
-              -3966.96 1925.52 5
-              -3966.96 1925.52 5
-              3620.54 1942.73 5
-              3620.54 1942.73 5
-              3620.54 1942.73 5
-              3630.96 -2181.15 5
-              3630.96 -2181.15 5
-              3630.96 -2181.15 5
-              -3974.93 -2192.41 5
-              -3974.93 -2192.41 5
-              -3974.93 -2192.41 5
+              -3800 1800 0
+              -3800 1800 0
+              -3800 1800 0
+              -3800 1800 0
+              -3800 1800 0
+              3500 1800 0
+              3500 1800 0
+              3500 1800 0
+              3500 1800 0
+              3500 -2100 0
+              3500 -2100 0
+              3500 -2100 0
+              3500 -2100 0
+              3500 -2100 0
+              -3800 -2100 0
+              -3800 -2100 0
+              -3800 -2100 0
+              -3800 -2100 0
+              -3800 1800 5
+              -3800 1800 5
+              -3800 1800 5
+              3500 1800 5
+              3500 1800 5
+              3500 1800 5
+              3500 -2100 5
+              3500 -2100 5
+              3500 -2100 5
+              -3800 -2100 5
+              -3800 -2100 5
+              -3800 -2100 5
             }
             NormalBinding PER_VERTEX
             NormalArray Vec3Array 30
             {
               0 0 -1
               0 0 -1
-              -0.00226842 0.999997 0
-              -0.00226842 0.999997 0
-              -0.999998 0.00193553 0
+              0 1 0
+              0 1 0
+              -1 0 0
               0 0 -1
-              0.999997 0.0025286 0
-              0.999997 0.0025286 0
-              -0.00226842 0.999997 0
+              1 0 0
+              1 0 0
+              0 1 0
               0 0 -1
               0 0 -1
-              0.00148107 -0.999999 0
-              0.00148107 -0.999999 0
-              0.999997 0.0025286 0
+              0 -1 0
+              0 -1 0
+              1 0 0
               0 0 -1
-              0.00148107 -0.999999 0
-              -0.999998 0.00193553 0
-              -0.999998 0.00193553 0
-              -0.00226842 0.999997 0
-              -0.999998 0.00193553 0
-              -0.999998 0.00193553 0
-              0.999997 0.0025286 0
-              -0.00226842 0.999997 0
-              -0.00226842 0.999997 0
-              0.00148107 -0.999999 0
-              0.999997 0.0025286 0
-              0.999997 0.0025286 0
-              0.00148107 -0.999999 0
-              0.00148107 -0.999999 0
-              -0.999998 0.00193553 0
+              0 -1 0
+              -1 0 0
+              -1 0 0
+              0 1 0
+              -1 0 0
+              -1 0 0
+              1 0 0
+              0 1 0
+              0 1 0
+              0 -1 0
+              1 0 0
+              1 0 0
+              0 -1 0
+              0 -1 0
+              -1 0 0
             }
           }
         }
@@ -202,7 +239,7 @@ PositionAttitudeTransform {
             DataVariance STATIC
             name "BUILDING_1_Building_1_4_material"
             StateSet {
-              UniqueID StateSet_1
+              UniqueID StateSet_3
               DataVariance STATIC
               rendering_hint DEFAULT_BIN
               renderBinMode INHERIT
@@ -547,7 +584,7 @@ PositionAttitudeTransform {
             0 0 1 0
             0 0 30 1
           }
-          num_children 17
+          num_children 15
           Geode {
             nodeMask 0xffffffff
             cullingActive TRUE
@@ -566,7 +603,7 @@ PositionAttitudeTransform {
                 textureUnit 1 {
                   GL_TEXTURE_2D ON
                   Texture2D {
-                    file "texture/reference/0c70dd9f87b7c1afb25b44bfd7567b2836cd08f6.png"
+                    file "texture/reference/08c1df1b196f6d15aa5c9aeb14218c2325e8ab69.png"
                     wrap_s CLAMP_TO_BORDER
                     wrap_t CLAMP_TO_BORDER
                     wrap_r CLAMP
@@ -583,10 +620,7 @@ PositionAttitudeTransform {
                     shadowCompareFunc GL_LEQUAL
                     shadowTextureMode GL_LUMINANCE
                   }
-                  TexEnv {
-                    UniqueID TexEnv_2
-                    mode REPLACE
-                  }
+                  Use TexEnv_1
                 }
               }
               useDisplayList TRUE
@@ -1028,20 +1062,7 @@ PositionAttitudeTransform {
               Geometry {
                 DataVariance STATIC
                 name "ExtrudeMesh_6_material"
-                StateSet {
-                  DataVariance STATIC
-                  rendering_hint DEFAULT_BIN
-                  renderBinMode INHERIT
-                  GL_CULL_FACE ON
-                  Material {
-                    ColorMode OFF
-                    ambientColor 0 0 0 1
-                    diffuseColor 1 1 1 1
-                    specularColor 0.6 0.6 0.6 1
-                    emissionColor 0 0 0 1
-                    shininess 10
-                  }
-                }
+                Use StateSet_2
                 useDisplayList TRUE
                 useVertexBufferObjects FALSE
                 PrimitiveSets 1
@@ -1910,7 +1931,7 @@ PositionAttitudeTransform {
               Geometry {
                 DataVariance STATIC
                 name "SHAPE_319_Store_7_material"
-                Use StateSet_1
+                Use StateSet_3
                 useDisplayList TRUE
                 useVertexBufferObjects FALSE
                 PrimitiveSets 1
@@ -2181,7 +2202,7 @@ PositionAttitudeTransform {
               Geometry {
                 DataVariance STATIC
                 name "SHAPE_320_Store_8_material"
-                Use StateSet_1
+                Use StateSet_3
                 useDisplayList TRUE
                 useVertexBufferObjects FALSE
                 PrimitiveSets 1
@@ -2490,7 +2511,7 @@ PositionAttitudeTransform {
               Geometry {
                 DataVariance STATIC
                 name "SHAPE_321_Store_9_material"
-                Use StateSet_1
+                Use StateSet_3
                 useDisplayList TRUE
                 useVertexBufferObjects FALSE
                 PrimitiveSets 1
@@ -2597,7 +2618,7 @@ PositionAttitudeTransform {
               Geometry {
                 DataVariance STATIC
                 name "SHAPE_322_Store_10_material"
-                Use StateSet_1
+                Use StateSet_3
                 useDisplayList TRUE
                 useVertexBufferObjects FALSE
                 PrimitiveSets 1
@@ -2754,7 +2775,7 @@ PositionAttitudeTransform {
               Geometry {
                 DataVariance STATIC
                 name "SHAPE_323_Store_11_material"
-                Use StateSet_1
+                Use StateSet_3
                 useDisplayList TRUE
                 useVertexBufferObjects FALSE
                 PrimitiveSets 1
@@ -2861,7 +2882,7 @@ PositionAttitudeTransform {
               Geometry {
                 DataVariance STATIC
                 name "SHAPE_324_Store_12_material"
-                Use StateSet_1
+                Use StateSet_3
                 useDisplayList TRUE
                 useVertexBufferObjects FALSE
                 PrimitiveSets 1
@@ -3044,7 +3065,7 @@ PositionAttitudeTransform {
               Geometry {
                 DataVariance STATIC
                 name "SHAPE_325_Store_13_material"
-                Use StateSet_1
+                Use StateSet_3
                 useDisplayList TRUE
                 useVertexBufferObjects FALSE
                 PrimitiveSets 1
@@ -3201,7 +3222,7 @@ PositionAttitudeTransform {
               Geometry {
                 DataVariance STATIC
                 name "SHAPE_326_Store_14_material"
-                Use StateSet_1
+                Use StateSet_3
                 useDisplayList TRUE
                 useVertexBufferObjects FALSE
                 PrimitiveSets 1
@@ -3358,7 +3379,7 @@ PositionAttitudeTransform {
               Geometry {
                 DataVariance STATIC
                 name "SHAPE_327_Store_15_material"
-                Use StateSet_1
+                Use StateSet_3
                 useDisplayList TRUE
                 useVertexBufferObjects FALSE
                 PrimitiveSets 1
@@ -3515,7 +3536,7 @@ PositionAttitudeTransform {
               Geometry {
                 DataVariance STATIC
                 name "SHAPE_328_Store_16_material"
-                Use StateSet_1
+                Use StateSet_3
                 useDisplayList TRUE
                 useVertexBufferObjects FALSE
                 PrimitiveSets 1
@@ -3672,7 +3693,7 @@ PositionAttitudeTransform {
               Geometry {
                 DataVariance STATIC
                 name "SHAPE_329_Store_17_material"
-                Use StateSet_1
+                Use StateSet_3
                 useDisplayList TRUE
                 useVertexBufferObjects FALSE
                 PrimitiveSets 1
@@ -3779,7 +3800,7 @@ PositionAttitudeTransform {
               Geometry {
                 DataVariance STATIC
                 name "SHAPE_330_Store_18_material"
-                Use StateSet_1
+                Use StateSet_3
                 useDisplayList TRUE
                 useVertexBufferObjects FALSE
                 PrimitiveSets 1
@@ -3886,7 +3907,7 @@ PositionAttitudeTransform {
               Geometry {
                 DataVariance STATIC
                 name "SHAPE_331_Store_19_material"
-                Use StateSet_1
+                Use StateSet_3
                 useDisplayList TRUE
                 useVertexBufferObjects FALSE
                 PrimitiveSets 1
@@ -4157,38 +4178,6 @@ PositionAttitudeTransform {
               }
             }
           }
-          MatrixTransform {
-            name "Model"
-            nodeMask 0xffffffff
-            cullingActive TRUE
-            StateSet {
-              UniqueID StateSet_3
-              DataVariance STATIC
-              rendering_hint DEFAULT_BIN
-              renderBinMode INHERIT
-              GL_NORMALIZE OVERRIDE|ON
-            }
-            referenceFrame RELATIVE
-            Matrix {
-              2.77556e-17 -0.125 0 0
-              0.1 2.22045e-17 0 0
-              0 0 0.2002 0
-              -325.5 -239 -4 1
-            }
-          }
-          MatrixTransform {
-            name "Model"
-            nodeMask 0xffffffff
-            cullingActive TRUE
-            Use StateSet_3
-            referenceFrame RELATIVE
-            Matrix {
-              2.77556e-17 0.125 0 0
-              -0.1 2.22045e-17 0 0
-              0 0 0.2 0
-              -266 -253 -4 1
-            }
-          }
         }
         MatrixTransform {
           name "FLOOR_4_1"
@@ -4201,14 +4190,14 @@ PositionAttitudeTransform {
             0 0 1 0
             0 0 60 1
           }
-          num_children 66
+          num_children 64
           Geode {
             nodeMask 0xffffffff
             cullingActive TRUE
             num_drawables 1
             Geometry {
               DataVariance STATIC
-              name "FLOOR_4_1_22_material"
+              name "FLOOR_4_1_20_material"
               StateSet {
                 DataVariance STATIC
                 rendering_hint DEFAULT_BIN
@@ -4220,7 +4209,7 @@ PositionAttitudeTransform {
                 textureUnit 1 {
                   GL_TEXTURE_2D ON
                   Texture2D {
-                    file "texture/reference/d90d56b75f26a718c822e88003b4cf328a2c3180.png"
+                    file "texture/reference/ff8650d7b7c771b39351cf5971c3e1fa55506bd5.png"
                     wrap_s CLAMP_TO_BORDER
                     wrap_t CLAMP_TO_BORDER
                     wrap_r CLAMP
@@ -4237,7 +4226,7 @@ PositionAttitudeTransform {
                     shadowCompareFunc GL_LEQUAL
                     shadowTextureMode GL_LUMINANCE
                   }
-                  Use TexEnv_2
+                  Use TexEnv_1
                 }
               }
               useDisplayList TRUE
@@ -4771,7 +4760,7 @@ PositionAttitudeTransform {
               num_drawables 1
               Geometry {
                 DataVariance STATIC
-                name "ExtrudeMesh_23_material"
+                name "ExtrudeMesh_21_material"
                 StateSet {
                   DataVariance STATIC
                   rendering_hint DEFAULT_BIN
@@ -5855,8 +5844,8 @@ PositionAttitudeTransform {
               num_drawables 1
               Geometry {
                 DataVariance STATIC
-                name "SHAPE_259_Store_24_material"
-                Use StateSet_1
+                name "SHAPE_259_Store_22_material"
+                Use StateSet_3
                 useDisplayList TRUE
                 useVertexBufferObjects FALSE
                 PrimitiveSets 1
@@ -6063,8 +6052,8 @@ PositionAttitudeTransform {
               num_drawables 1
               Geometry {
                 DataVariance STATIC
-                name "SHAPE_260_Store_25_material"
-                Use StateSet_1
+                name "SHAPE_260_Store_23_material"
+                Use StateSet_3
                 useDisplayList TRUE
                 useVertexBufferObjects FALSE
                 PrimitiveSets 1
@@ -6472,8 +6461,8 @@ PositionAttitudeTransform {
               num_drawables 1
               Geometry {
                 DataVariance STATIC
-                name "SHAPE_261_Store_26_material"
-                Use StateSet_1
+                name "SHAPE_261_Store_24_material"
+                Use StateSet_3
                 useDisplayList TRUE
                 useVertexBufferObjects FALSE
                 PrimitiveSets 1
@@ -6579,8 +6568,8 @@ PositionAttitudeTransform {
               num_drawables 1
               Geometry {
                 DataVariance STATIC
-                name "SHAPE_262_Store_27_material"
-                Use StateSet_1
+                name "SHAPE_262_Store_25_material"
+                Use StateSet_3
                 useDisplayList TRUE
                 useVertexBufferObjects FALSE
                 PrimitiveSets 1
@@ -6736,8 +6725,8 @@ PositionAttitudeTransform {
               num_drawables 1
               Geometry {
                 DataVariance STATIC
-                name "SHAPE_263_Store_28_material"
-                Use StateSet_1
+                name "SHAPE_263_Store_26_material"
+                Use StateSet_3
                 useDisplayList TRUE
                 useVertexBufferObjects FALSE
                 PrimitiveSets 1
@@ -6843,8 +6832,8 @@ PositionAttitudeTransform {
               num_drawables 1
               Geometry {
                 DataVariance STATIC
-                name "SHAPE_264_Store_29_material"
-                Use StateSet_1
+                name "SHAPE_264_Store_27_material"
+                Use StateSet_3
                 useDisplayList TRUE
                 useVertexBufferObjects FALSE
                 PrimitiveSets 1
@@ -6950,8 +6939,8 @@ PositionAttitudeTransform {
               num_drawables 1
               Geometry {
                 DataVariance STATIC
-                name "SHAPE_265_Store_30_material"
-                Use StateSet_1
+                name "SHAPE_265_Store_28_material"
+                Use StateSet_3
                 useDisplayList TRUE
                 useVertexBufferObjects FALSE
                 PrimitiveSets 1
@@ -7133,8 +7122,8 @@ PositionAttitudeTransform {
               num_drawables 1
               Geometry {
                 DataVariance STATIC
-                name "SHAPE_266_Store_31_material"
-                Use StateSet_1
+                name "SHAPE_266_Store_29_material"
+                Use StateSet_3
                 useDisplayList TRUE
                 useVertexBufferObjects FALSE
                 PrimitiveSets 1
@@ -7290,8 +7279,8 @@ PositionAttitudeTransform {
               num_drawables 1
               Geometry {
                 DataVariance STATIC
-                name "SHAPE_267_Store_32_material"
-                Use StateSet_1
+                name "SHAPE_267_Store_30_material"
+                Use StateSet_3
                 useDisplayList TRUE
                 useVertexBufferObjects FALSE
                 PrimitiveSets 1
@@ -7699,8 +7688,8 @@ PositionAttitudeTransform {
               num_drawables 1
               Geometry {
                 DataVariance STATIC
-                name "SHAPE_268_Store_33_material"
-                Use StateSet_1
+                name "SHAPE_268_Store_31_material"
+                Use StateSet_3
                 useDisplayList TRUE
                 useVertexBufferObjects FALSE
                 PrimitiveSets 1
@@ -7932,8 +7921,8 @@ PositionAttitudeTransform {
               num_drawables 1
               Geometry {
                 DataVariance STATIC
-                name "SHAPE_269_Store_34_material"
-                Use StateSet_1
+                name "SHAPE_269_Store_32_material"
+                Use StateSet_3
                 useDisplayList TRUE
                 useVertexBufferObjects FALSE
                 PrimitiveSets 1
@@ -8190,8 +8179,8 @@ PositionAttitudeTransform {
               num_drawables 1
               Geometry {
                 DataVariance STATIC
-                name "SHAPE_270_Store_35_material"
-                Use StateSet_1
+                name "SHAPE_270_Store_33_material"
+                Use StateSet_3
                 useDisplayList TRUE
                 useVertexBufferObjects FALSE
                 PrimitiveSets 1
@@ -8524,8 +8513,8 @@ PositionAttitudeTransform {
               num_drawables 1
               Geometry {
                 DataVariance STATIC
-                name "SHAPE_271_Store_36_material"
-                Use StateSet_1
+                name "SHAPE_271_Store_34_material"
+                Use StateSet_3
                 useDisplayList TRUE
                 useVertexBufferObjects FALSE
                 PrimitiveSets 1
@@ -8933,8 +8922,8 @@ PositionAttitudeTransform {
               num_drawables 1
               Geometry {
                 DataVariance STATIC
-                name "SHAPE_272_Store_37_material"
-                Use StateSet_1
+                name "SHAPE_272_Store_35_material"
+                Use StateSet_3
                 useDisplayList TRUE
                 useVertexBufferObjects FALSE
                 PrimitiveSets 1
@@ -9216,8 +9205,8 @@ PositionAttitudeTransform {
               num_drawables 1
               Geometry {
                 DataVariance STATIC
-                name "SHAPE_273_Store_38_material"
-                Use StateSet_1
+                name "SHAPE_273_Store_36_material"
+                Use StateSet_3
                 useDisplayList TRUE
                 useVertexBufferObjects FALSE
                 PrimitiveSets 1
@@ -9449,8 +9438,8 @@ PositionAttitudeTransform {
               num_drawables 1
               Geometry {
                 DataVariance STATIC
-                name "SHAPE_274_Store_39_material"
-                Use StateSet_1
+                name "SHAPE_274_Store_37_material"
+                Use StateSet_3
                 useDisplayList TRUE
                 useVertexBufferObjects FALSE
                 PrimitiveSets 1
@@ -9758,8 +9747,8 @@ PositionAttitudeTransform {
               num_drawables 1
               Geometry {
                 DataVariance STATIC
-                name "SHAPE_275_Store_40_material"
-                Use StateSet_1
+                name "SHAPE_275_Store_38_material"
+                Use StateSet_3
                 useDisplayList TRUE
                 useVertexBufferObjects FALSE
                 PrimitiveSets 1
@@ -10016,8 +10005,8 @@ PositionAttitudeTransform {
               num_drawables 1
               Geometry {
                 DataVariance STATIC
-                name "SHAPE_276_Store_41_material"
-                Use StateSet_1
+                name "SHAPE_276_Store_39_material"
+                Use StateSet_3
                 useDisplayList TRUE
                 useVertexBufferObjects FALSE
                 PrimitiveSets 1
@@ -10123,8 +10112,8 @@ PositionAttitudeTransform {
               num_drawables 1
               Geometry {
                 DataVariance STATIC
-                name "SHAPE_277_Store_42_material"
-                Use StateSet_1
+                name "SHAPE_277_Store_40_material"
+                Use StateSet_3
                 useDisplayList TRUE
                 useVertexBufferObjects FALSE
                 PrimitiveSets 1
@@ -10306,8 +10295,8 @@ PositionAttitudeTransform {
               num_drawables 1
               Geometry {
                 DataVariance STATIC
-                name "SHAPE_278_Store_43_material"
-                Use StateSet_1
+                name "SHAPE_278_Store_41_material"
+                Use StateSet_3
                 useDisplayList TRUE
                 useVertexBufferObjects FALSE
                 PrimitiveSets 1
@@ -10413,8 +10402,8 @@ PositionAttitudeTransform {
               num_drawables 1
               Geometry {
                 DataVariance STATIC
-                name "SHAPE_279_Store_44_material"
-                Use StateSet_1
+                name "SHAPE_279_Store_42_material"
+                Use StateSet_3
                 useDisplayList TRUE
                 useVertexBufferObjects FALSE
                 PrimitiveSets 1
@@ -10520,8 +10509,8 @@ PositionAttitudeTransform {
               num_drawables 1
               Geometry {
                 DataVariance STATIC
-                name "SHAPE_280_Store_45_material"
-                Use StateSet_1
+                name "SHAPE_280_Store_43_material"
+                Use StateSet_3
                 useDisplayList TRUE
                 useVertexBufferObjects FALSE
                 PrimitiveSets 1
@@ -10677,8 +10666,8 @@ PositionAttitudeTransform {
               num_drawables 1
               Geometry {
                 DataVariance STATIC
-                name "SHAPE_281_Store_46_material"
-                Use StateSet_1
+                name "SHAPE_281_Store_44_material"
+                Use StateSet_3
                 useDisplayList TRUE
                 useVertexBufferObjects FALSE
                 PrimitiveSets 1
@@ -11338,8 +11327,8 @@ PositionAttitudeTransform {
               num_drawables 1
               Geometry {
                 DataVariance STATIC
-                name "SHAPE_282_Store_47_material"
-                Use StateSet_1
+                name "SHAPE_282_Store_45_material"
+                Use StateSet_3
                 useDisplayList TRUE
                 useVertexBufferObjects FALSE
                 PrimitiveSets 1
@@ -11546,8 +11535,8 @@ PositionAttitudeTransform {
               num_drawables 1
               Geometry {
                 DataVariance STATIC
-                name "SHAPE_283_Store_48_material"
-                Use StateSet_1
+                name "SHAPE_283_Store_46_material"
+                Use StateSet_3
                 useDisplayList TRUE
                 useVertexBufferObjects FALSE
                 PrimitiveSets 1
@@ -11653,8 +11642,8 @@ PositionAttitudeTransform {
               num_drawables 1
               Geometry {
                 DataVariance STATIC
-                name "SHAPE_284_Store_49_material"
-                Use StateSet_1
+                name "SHAPE_284_Store_47_material"
+                Use StateSet_3
                 useDisplayList TRUE
                 useVertexBufferObjects FALSE
                 PrimitiveSets 1
@@ -11760,8 +11749,8 @@ PositionAttitudeTransform {
               num_drawables 1
               Geometry {
                 DataVariance STATIC
-                name "SHAPE_285_Store_50_material"
-                Use StateSet_1
+                name "SHAPE_285_Store_48_material"
+                Use StateSet_3
                 useDisplayList TRUE
                 useVertexBufferObjects FALSE
                 PrimitiveSets 1
@@ -11867,8 +11856,8 @@ PositionAttitudeTransform {
               num_drawables 1
               Geometry {
                 DataVariance STATIC
-                name "SHAPE_286_Store_51_material"
-                Use StateSet_1
+                name "SHAPE_286_Store_49_material"
+                Use StateSet_3
                 useDisplayList TRUE
                 useVertexBufferObjects FALSE
                 PrimitiveSets 1
@@ -12024,8 +12013,8 @@ PositionAttitudeTransform {
               num_drawables 1
               Geometry {
                 DataVariance STATIC
-                name "SHAPE_287_Store_52_material"
-                Use StateSet_1
+                name "SHAPE_287_Store_50_material"
+                Use StateSet_3
                 useDisplayList TRUE
                 useVertexBufferObjects FALSE
                 PrimitiveSets 1
@@ -12131,8 +12120,8 @@ PositionAttitudeTransform {
               num_drawables 1
               Geometry {
                 DataVariance STATIC
-                name "SHAPE_288_Store_53_material"
-                Use StateSet_1
+                name "SHAPE_288_Store_51_material"
+                Use StateSet_3
                 useDisplayList TRUE
                 useVertexBufferObjects FALSE
                 PrimitiveSets 1
@@ -12238,8 +12227,8 @@ PositionAttitudeTransform {
               num_drawables 1
               Geometry {
                 DataVariance STATIC
-                name "SHAPE_289_Store_54_material"
-                Use StateSet_1
+                name "SHAPE_289_Store_52_material"
+                Use StateSet_3
                 useDisplayList TRUE
                 useVertexBufferObjects FALSE
                 PrimitiveSets 1
@@ -12370,8 +12359,8 @@ PositionAttitudeTransform {
               num_drawables 1
               Geometry {
                 DataVariance STATIC
-                name "SHAPE_290_Store_55_material"
-                Use StateSet_1
+                name "SHAPE_290_Store_53_material"
+                Use StateSet_3
                 useDisplayList TRUE
                 useVertexBufferObjects FALSE
                 PrimitiveSets 1
@@ -12477,8 +12466,8 @@ PositionAttitudeTransform {
               num_drawables 1
               Geometry {
                 DataVariance STATIC
-                name "SHAPE_291_Store_56_material"
-                Use StateSet_1
+                name "SHAPE_291_Store_54_material"
+                Use StateSet_3
                 useDisplayList TRUE
                 useVertexBufferObjects FALSE
                 PrimitiveSets 1
@@ -12634,8 +12623,8 @@ PositionAttitudeTransform {
               num_drawables 1
               Geometry {
                 DataVariance STATIC
-                name "SHAPE_292_Store_57_material"
-                Use StateSet_1
+                name "SHAPE_292_Store_55_material"
+                Use StateSet_3
                 useDisplayList TRUE
                 useVertexBufferObjects FALSE
                 PrimitiveSets 1
@@ -12842,8 +12831,8 @@ PositionAttitudeTransform {
               num_drawables 1
               Geometry {
                 DataVariance STATIC
-                name "SHAPE_293_Store_58_material"
-                Use StateSet_1
+                name "SHAPE_293_Store_56_material"
+                Use StateSet_3
                 useDisplayList TRUE
                 useVertexBufferObjects FALSE
                 PrimitiveSets 1
@@ -12949,8 +12938,8 @@ PositionAttitudeTransform {
               num_drawables 1
               Geometry {
                 DataVariance STATIC
-                name "SHAPE_294_Store_59_material"
-                Use StateSet_1
+                name "SHAPE_294_Store_57_material"
+                Use StateSet_3
                 useDisplayList TRUE
                 useVertexBufferObjects FALSE
                 PrimitiveSets 1
@@ -13081,8 +13070,8 @@ PositionAttitudeTransform {
               num_drawables 1
               Geometry {
                 DataVariance STATIC
-                name "SHAPE_295_Store_60_material"
-                Use StateSet_1
+                name "SHAPE_295_Store_58_material"
+                Use StateSet_3
                 useDisplayList TRUE
                 useVertexBufferObjects FALSE
                 PrimitiveSets 1
@@ -13213,8 +13202,8 @@ PositionAttitudeTransform {
               num_drawables 1
               Geometry {
                 DataVariance STATIC
-                name "SHAPE_296_Store_61_material"
-                Use StateSet_1
+                name "SHAPE_296_Store_59_material"
+                Use StateSet_3
                 useDisplayList TRUE
                 useVertexBufferObjects FALSE
                 PrimitiveSets 1
@@ -13320,8 +13309,8 @@ PositionAttitudeTransform {
               num_drawables 1
               Geometry {
                 DataVariance STATIC
-                name "SHAPE_297_Store_62_material"
-                Use StateSet_1
+                name "SHAPE_297_Store_60_material"
+                Use StateSet_3
                 useDisplayList TRUE
                 useVertexBufferObjects FALSE
                 PrimitiveSets 1
@@ -13452,8 +13441,8 @@ PositionAttitudeTransform {
               num_drawables 1
               Geometry {
                 DataVariance STATIC
-                name "SHAPE_298_Store_63_material"
-                Use StateSet_1
+                name "SHAPE_298_Store_61_material"
+                Use StateSet_3
                 useDisplayList TRUE
                 useVertexBufferObjects FALSE
                 PrimitiveSets 1
@@ -13584,8 +13573,8 @@ PositionAttitudeTransform {
               num_drawables 1
               Geometry {
                 DataVariance STATIC
-                name "SHAPE_299_Store_64_material"
-                Use StateSet_1
+                name "SHAPE_299_Store_62_material"
+                Use StateSet_3
                 useDisplayList TRUE
                 useVertexBufferObjects FALSE
                 PrimitiveSets 1
@@ -13741,8 +13730,8 @@ PositionAttitudeTransform {
               num_drawables 1
               Geometry {
                 DataVariance STATIC
-                name "SHAPE_300_Store_65_material"
-                Use StateSet_1
+                name "SHAPE_300_Store_63_material"
+                Use StateSet_3
                 useDisplayList TRUE
                 useVertexBufferObjects FALSE
                 PrimitiveSets 1
@@ -13898,8 +13887,8 @@ PositionAttitudeTransform {
               num_drawables 1
               Geometry {
                 DataVariance STATIC
-                name "SHAPE_301_Store_66_material"
-                Use StateSet_1
+                name "SHAPE_301_Store_64_material"
+                Use StateSet_3
                 useDisplayList TRUE
                 useVertexBufferObjects FALSE
                 PrimitiveSets 1
@@ -14055,8 +14044,8 @@ PositionAttitudeTransform {
               num_drawables 1
               Geometry {
                 DataVariance STATIC
-                name "SHAPE_302_Store_67_material"
-                Use StateSet_1
+                name "SHAPE_302_Store_65_material"
+                Use StateSet_3
                 useDisplayList TRUE
                 useVertexBufferObjects FALSE
                 PrimitiveSets 1
@@ -14212,8 +14201,8 @@ PositionAttitudeTransform {
               num_drawables 1
               Geometry {
                 DataVariance STATIC
-                name "SHAPE_303_Store_68_material"
-                Use StateSet_1
+                name "SHAPE_303_Store_66_material"
+                Use StateSet_3
                 useDisplayList TRUE
                 useVertexBufferObjects FALSE
                 PrimitiveSets 1
@@ -14395,8 +14384,8 @@ PositionAttitudeTransform {
               num_drawables 1
               Geometry {
                 DataVariance STATIC
-                name "SHAPE_304_Store_69_material"
-                Use StateSet_1
+                name "SHAPE_304_Store_67_material"
+                Use StateSet_3
                 useDisplayList TRUE
                 useVertexBufferObjects FALSE
                 PrimitiveSets 1
@@ -14527,8 +14516,8 @@ PositionAttitudeTransform {
               num_drawables 1
               Geometry {
                 DataVariance STATIC
-                name "SHAPE_305_Store_70_material"
-                Use StateSet_1
+                name "SHAPE_305_Store_68_material"
+                Use StateSet_3
                 useDisplayList TRUE
                 useVertexBufferObjects FALSE
                 PrimitiveSets 1
@@ -14684,8 +14673,8 @@ PositionAttitudeTransform {
               num_drawables 1
               Geometry {
                 DataVariance STATIC
-                name "SHAPE_306_Store_71_material"
-                Use StateSet_1
+                name "SHAPE_306_Store_69_material"
+                Use StateSet_3
                 useDisplayList TRUE
                 useVertexBufferObjects FALSE
                 PrimitiveSets 1
@@ -14867,8 +14856,8 @@ PositionAttitudeTransform {
               num_drawables 1
               Geometry {
                 DataVariance STATIC
-                name "SHAPE_307_Store_72_material"
-                Use StateSet_1
+                name "SHAPE_307_Store_70_material"
+                Use StateSet_3
                 useDisplayList TRUE
                 useVertexBufferObjects FALSE
                 PrimitiveSets 1
@@ -14974,8 +14963,8 @@ PositionAttitudeTransform {
               num_drawables 1
               Geometry {
                 DataVariance STATIC
-                name "SHAPE_308_Store_73_material"
-                Use StateSet_1
+                name "SHAPE_308_Store_71_material"
+                Use StateSet_3
                 useDisplayList TRUE
                 useVertexBufferObjects FALSE
                 PrimitiveSets 1
@@ -15157,8 +15146,8 @@ PositionAttitudeTransform {
               num_drawables 1
               Geometry {
                 DataVariance STATIC
-                name "SHAPE_309_Store_74_material"
-                Use StateSet_1
+                name "SHAPE_309_Store_72_material"
+                Use StateSet_3
                 useDisplayList TRUE
                 useVertexBufferObjects FALSE
                 PrimitiveSets 1
@@ -15289,8 +15278,8 @@ PositionAttitudeTransform {
               num_drawables 1
               Geometry {
                 DataVariance STATIC
-                name "SHAPE_310_Store_75_material"
-                Use StateSet_1
+                name "SHAPE_310_Store_73_material"
+                Use StateSet_3
                 useDisplayList TRUE
                 useVertexBufferObjects FALSE
                 PrimitiveSets 1
@@ -15396,8 +15385,8 @@ PositionAttitudeTransform {
               num_drawables 1
               Geometry {
                 DataVariance STATIC
-                name "SHAPE_311_Store_76_material"
-                Use StateSet_1
+                name "SHAPE_311_Store_74_material"
+                Use StateSet_3
                 useDisplayList TRUE
                 useVertexBufferObjects FALSE
                 PrimitiveSets 1
@@ -15503,8 +15492,8 @@ PositionAttitudeTransform {
               num_drawables 1
               Geometry {
                 DataVariance STATIC
-                name "SHAPE_312_Store_77_material"
-                Use StateSet_1
+                name "SHAPE_312_Store_75_material"
+                Use StateSet_3
                 useDisplayList TRUE
                 useVertexBufferObjects FALSE
                 PrimitiveSets 1
@@ -15610,8 +15599,8 @@ PositionAttitudeTransform {
               num_drawables 1
               Geometry {
                 DataVariance STATIC
-                name "SHAPE_313_Store_78_material"
-                Use StateSet_1
+                name "SHAPE_313_Store_76_material"
+                Use StateSet_3
                 useDisplayList TRUE
                 useVertexBufferObjects FALSE
                 PrimitiveSets 1
@@ -15868,8 +15857,8 @@ PositionAttitudeTransform {
               num_drawables 1
               Geometry {
                 DataVariance STATIC
-                name "SHAPE_314_Store_79_material"
-                Use StateSet_1
+                name "SHAPE_314_Store_77_material"
+                Use StateSet_3
                 useDisplayList TRUE
                 useVertexBufferObjects FALSE
                 PrimitiveSets 1
@@ -16303,8 +16292,8 @@ PositionAttitudeTransform {
               num_drawables 1
               Geometry {
                 DataVariance STATIC
-                name "SHAPE_315_Store_80_material"
-                Use StateSet_1
+                name "SHAPE_315_Store_78_material"
+                Use StateSet_3
                 useDisplayList TRUE
                 useVertexBufferObjects FALSE
                 PrimitiveSets 1
@@ -16410,8 +16399,8 @@ PositionAttitudeTransform {
               num_drawables 1
               Geometry {
                 DataVariance STATIC
-                name "SHAPE_316_Store_81_material"
-                Use StateSet_1
+                name "SHAPE_316_Store_79_material"
+                Use StateSet_3
                 useDisplayList TRUE
                 useVertexBufferObjects FALSE
                 PrimitiveSets 1
@@ -16567,8 +16556,8 @@ PositionAttitudeTransform {
               num_drawables 1
               Geometry {
                 DataVariance STATIC
-                name "SHAPE_317_Store_82_material"
-                Use StateSet_1
+                name "SHAPE_317_Store_80_material"
+                Use StateSet_3
                 useDisplayList TRUE
                 useVertexBufferObjects FALSE
                 PrimitiveSets 1
@@ -16674,8 +16663,8 @@ PositionAttitudeTransform {
               num_drawables 1
               Geometry {
                 DataVariance STATIC
-                name "SHAPE_318_Store_83_material"
-                Use StateSet_1
+                name "SHAPE_318_Store_81_material"
+                Use StateSet_3
                 useDisplayList TRUE
                 useVertexBufferObjects FALSE
                 PrimitiveSets 1
@@ -16831,8 +16820,8 @@ PositionAttitudeTransform {
               num_drawables 1
               Geometry {
                 DataVariance STATIC
-                name "SHAPE_364_Store_84_material"
-                Use StateSet_1
+                name "SHAPE_364_Store_82_material"
+                Use StateSet_3
                 useDisplayList TRUE
                 useVertexBufferObjects FALSE
                 PrimitiveSets 1
@@ -17064,8 +17053,8 @@ PositionAttitudeTransform {
               num_drawables 1
               Geometry {
                 DataVariance STATIC
-                name "SHAPE_365_Store_85_material"
-                Use StateSet_1
+                name "SHAPE_365_Store_83_material"
+                Use StateSet_3
                 useDisplayList TRUE
                 useVertexBufferObjects FALSE
                 PrimitiveSets 1
@@ -17261,32 +17250,6 @@ PositionAttitudeTransform {
               }
             }
           }
-          MatrixTransform {
-            name "Model"
-            nodeMask 0xffffffff
-            cullingActive TRUE
-            Use StateSet_3
-            referenceFrame RELATIVE
-            Matrix {
-              0.125 0 0 0
-              0 0.1 0 0
-              0 0 0.19 0
-              -23 81 -4 1
-            }
-          }
-          MatrixTransform {
-            name "Model"
-            nodeMask 0xffffffff
-            cullingActive TRUE
-            Use StateSet_3
-            referenceFrame RELATIVE
-            Matrix {
-              -0.125 1.53081e-17 0 0
-              -1.22465e-17 -0.1 0 0
-              0 0 0.19 0
-              -23.5 140.5 -4 1
-            }
-          }
         }
         MatrixTransform {
           name "FLOOR_5_2"
@@ -17306,7 +17269,7 @@ PositionAttitudeTransform {
             num_drawables 1
             Geometry {
               DataVariance STATIC
-              name "FLOOR_5_2_88_material"
+              name "FLOOR_5_2_84_material"
               StateSet {
                 DataVariance STATIC
                 rendering_hint DEFAULT_BIN
@@ -17318,7 +17281,7 @@ PositionAttitudeTransform {
                 textureUnit 1 {
                   GL_TEXTURE_2D ON
                   Texture2D {
-                    file "texture/reference/a9df30d4871e6eae13bf67eed6f4248d665f3808.png"
+                    file "texture/reference/04c75a1bfdfb2fbd4b9f1ce0ec4b174ca37c6594.png"
                     wrap_s CLAMP_TO_BORDER
                     wrap_t CLAMP_TO_BORDER
                     wrap_r CLAMP
@@ -17335,7 +17298,7 @@ PositionAttitudeTransform {
                     shadowCompareFunc GL_LEQUAL
                     shadowTextureMode GL_LUMINANCE
                   }
-                  Use TexEnv_2
+                  Use TexEnv_1
                 }
               }
               useDisplayList TRUE
@@ -17814,7 +17777,7 @@ PositionAttitudeTransform {
               num_drawables 1
               Geometry {
                 DataVariance STATIC
-                name "ExtrudeMesh_89_material"
+                name "ExtrudeMesh_85_material"
                 StateSet {
                   DataVariance STATIC
                   rendering_hint DEFAULT_BIN
@@ -18772,8 +18735,8 @@ PositionAttitudeTransform {
               num_drawables 1
               Geometry {
                 DataVariance STATIC
-                name "SHAPE_227_Store_90_material"
-                Use StateSet_1
+                name "SHAPE_227_Store_86_material"
+                Use StateSet_3
                 useDisplayList TRUE
                 useVertexBufferObjects FALSE
                 PrimitiveSets 1
@@ -19005,8 +18968,8 @@ PositionAttitudeTransform {
               num_drawables 1
               Geometry {
                 DataVariance STATIC
-                name "SHAPE_228_Store_91_material"
-                Use StateSet_1
+                name "SHAPE_228_Store_87_material"
+                Use StateSet_3
                 useDisplayList TRUE
                 useVertexBufferObjects FALSE
                 PrimitiveSets 1
@@ -19188,8 +19151,8 @@ PositionAttitudeTransform {
               num_drawables 1
               Geometry {
                 DataVariance STATIC
-                name "SHAPE_229_Store_92_material"
-                Use StateSet_1
+                name "SHAPE_229_Store_88_material"
+                Use StateSet_3
                 useDisplayList TRUE
                 useVertexBufferObjects FALSE
                 PrimitiveSets 1
@@ -19295,8 +19258,8 @@ PositionAttitudeTransform {
               num_drawables 1
               Geometry {
                 DataVariance STATIC
-                name "SHAPE_230_Store_93_material"
-                Use StateSet_1
+                name "SHAPE_230_Store_89_material"
+                Use StateSet_3
                 useDisplayList TRUE
                 useVertexBufferObjects FALSE
                 PrimitiveSets 1
@@ -19452,8 +19415,8 @@ PositionAttitudeTransform {
               num_drawables 1
               Geometry {
                 DataVariance STATIC
-                name "SHAPE_231_Store_94_material"
-                Use StateSet_1
+                name "SHAPE_231_Store_90_material"
+                Use StateSet_3
                 useDisplayList TRUE
                 useVertexBufferObjects FALSE
                 PrimitiveSets 1
@@ -19609,8 +19572,8 @@ PositionAttitudeTransform {
               num_drawables 1
               Geometry {
                 DataVariance STATIC
-                name "SHAPE_232_Store_95_material"
-                Use StateSet_1
+                name "SHAPE_232_Store_91_material"
+                Use StateSet_3
                 useDisplayList TRUE
                 useVertexBufferObjects FALSE
                 PrimitiveSets 1
@@ -19766,8 +19729,8 @@ PositionAttitudeTransform {
               num_drawables 1
               Geometry {
                 DataVariance STATIC
-                name "SHAPE_233_Store_96_material"
-                Use StateSet_1
+                name "SHAPE_233_Store_92_material"
+                Use StateSet_3
                 useDisplayList TRUE
                 useVertexBufferObjects FALSE
                 PrimitiveSets 1
@@ -19873,8 +19836,8 @@ PositionAttitudeTransform {
               num_drawables 1
               Geometry {
                 DataVariance STATIC
-                name "SHAPE_234_Store_97_material"
-                Use StateSet_1
+                name "SHAPE_234_Store_93_material"
+                Use StateSet_3
                 useDisplayList TRUE
                 useVertexBufferObjects FALSE
                 PrimitiveSets 1
@@ -20030,8 +19993,8 @@ PositionAttitudeTransform {
               num_drawables 1
               Geometry {
                 DataVariance STATIC
-                name "SHAPE_235_Store_98_material"
-                Use StateSet_1
+                name "SHAPE_235_Store_94_material"
+                Use StateSet_3
                 useDisplayList TRUE
                 useVertexBufferObjects FALSE
                 PrimitiveSets 1
@@ -20162,8 +20125,8 @@ PositionAttitudeTransform {
               num_drawables 1
               Geometry {
                 DataVariance STATIC
-                name "SHAPE_236_Store_99_material"
-                Use StateSet_1
+                name "SHAPE_236_Store_95_material"
+                Use StateSet_3
                 useDisplayList TRUE
                 useVertexBufferObjects FALSE
                 PrimitiveSets 1
@@ -20269,8 +20232,8 @@ PositionAttitudeTransform {
               num_drawables 1
               Geometry {
                 DataVariance STATIC
-                name "SHAPE_237_Store_100_material"
-                Use StateSet_1
+                name "SHAPE_237_Store_96_material"
+                Use StateSet_3
                 useDisplayList TRUE
                 useVertexBufferObjects FALSE
                 PrimitiveSets 1
@@ -20376,8 +20339,8 @@ PositionAttitudeTransform {
               num_drawables 1
               Geometry {
                 DataVariance STATIC
-                name "SHAPE_238_Store_101_material"
-                Use StateSet_1
+                name "SHAPE_238_Store_97_material"
+                Use StateSet_3
                 useDisplayList TRUE
                 useVertexBufferObjects FALSE
                 PrimitiveSets 1
@@ -20483,8 +20446,8 @@ PositionAttitudeTransform {
               num_drawables 1
               Geometry {
                 DataVariance STATIC
-                name "SHAPE_239_Store_102_material"
-                Use StateSet_1
+                name "SHAPE_239_Store_98_material"
+                Use StateSet_3
                 useDisplayList TRUE
                 useVertexBufferObjects FALSE
                 PrimitiveSets 1
@@ -20615,8 +20578,8 @@ PositionAttitudeTransform {
               num_drawables 1
               Geometry {
                 DataVariance STATIC
-                name "SHAPE_240_Store_103_material"
-                Use StateSet_1
+                name "SHAPE_240_Store_99_material"
+                Use StateSet_3
                 useDisplayList TRUE
                 useVertexBufferObjects FALSE
                 PrimitiveSets 1
@@ -20747,8 +20710,8 @@ PositionAttitudeTransform {
               num_drawables 1
               Geometry {
                 DataVariance STATIC
-                name "SHAPE_241_Store_104_material"
-                Use StateSet_1
+                name "SHAPE_241_Store_100_material"
+                Use StateSet_3
                 useDisplayList TRUE
                 useVertexBufferObjects FALSE
                 PrimitiveSets 1
@@ -20879,8 +20842,8 @@ PositionAttitudeTransform {
               num_drawables 1
               Geometry {
                 DataVariance STATIC
-                name "SHAPE_242_Store_105_material"
-                Use StateSet_1
+                name "SHAPE_242_Store_101_material"
+                Use StateSet_3
                 useDisplayList TRUE
                 useVertexBufferObjects FALSE
                 PrimitiveSets 1
@@ -21011,8 +20974,8 @@ PositionAttitudeTransform {
               num_drawables 1
               Geometry {
                 DataVariance STATIC
-                name "SHAPE_243_Store_106_material"
-                Use StateSet_1
+                name "SHAPE_243_Store_102_material"
+                Use StateSet_3
                 useDisplayList TRUE
                 useVertexBufferObjects FALSE
                 PrimitiveSets 1
@@ -21168,8 +21131,8 @@ PositionAttitudeTransform {
               num_drawables 1
               Geometry {
                 DataVariance STATIC
-                name "SHAPE_244_Store_107_material"
-                Use StateSet_1
+                name "SHAPE_244_Store_103_material"
+                Use StateSet_3
                 useDisplayList TRUE
                 useVertexBufferObjects FALSE
                 PrimitiveSets 1
@@ -21275,8 +21238,8 @@ PositionAttitudeTransform {
               num_drawables 1
               Geometry {
                 DataVariance STATIC
-                name "SHAPE_245_Store_108_material"
-                Use StateSet_1
+                name "SHAPE_245_Store_104_material"
+                Use StateSet_3
                 useDisplayList TRUE
                 useVertexBufferObjects FALSE
                 PrimitiveSets 1
@@ -21407,8 +21370,8 @@ PositionAttitudeTransform {
               num_drawables 1
               Geometry {
                 DataVariance STATIC
-                name "SHAPE_246_Store_109_material"
-                Use StateSet_1
+                name "SHAPE_246_Store_105_material"
+                Use StateSet_3
                 useDisplayList TRUE
                 useVertexBufferObjects FALSE
                 PrimitiveSets 1
@@ -21615,8 +21578,8 @@ PositionAttitudeTransform {
               num_drawables 1
               Geometry {
                 DataVariance STATIC
-                name "SHAPE_247_Store_110_material"
-                Use StateSet_1
+                name "SHAPE_247_Store_106_material"
+                Use StateSet_3
                 useDisplayList TRUE
                 useVertexBufferObjects FALSE
                 PrimitiveSets 1
@@ -21974,8 +21937,8 @@ PositionAttitudeTransform {
               num_drawables 1
               Geometry {
                 DataVariance STATIC
-                name "SHAPE_248_Store_111_material"
-                Use StateSet_1
+                name "SHAPE_248_Store_107_material"
+                Use StateSet_3
                 useDisplayList TRUE
                 useVertexBufferObjects FALSE
                 PrimitiveSets 1
@@ -22232,8 +22195,8 @@ PositionAttitudeTransform {
               num_drawables 1
               Geometry {
                 DataVariance STATIC
-                name "SHAPE_249_Store_112_material"
-                Use StateSet_1
+                name "SHAPE_249_Store_108_material"
+                Use StateSet_3
                 useDisplayList TRUE
                 useVertexBufferObjects FALSE
                 PrimitiveSets 1
@@ -22566,8 +22529,8 @@ PositionAttitudeTransform {
               num_drawables 1
               Geometry {
                 DataVariance STATIC
-                name "SHAPE_250_Store_113_material"
-                Use StateSet_1
+                name "SHAPE_250_Store_109_material"
+                Use StateSet_3
                 useDisplayList TRUE
                 useVertexBufferObjects FALSE
                 PrimitiveSets 1
@@ -22925,8 +22888,8 @@ PositionAttitudeTransform {
               num_drawables 1
               Geometry {
                 DataVariance STATIC
-                name "SHAPE_251_Store_114_material"
-                Use StateSet_1
+                name "SHAPE_251_Store_110_material"
+                Use StateSet_3
                 useDisplayList TRUE
                 useVertexBufferObjects FALSE
                 PrimitiveSets 1
@@ -23183,8 +23146,8 @@ PositionAttitudeTransform {
               num_drawables 1
               Geometry {
                 DataVariance STATIC
-                name "SHAPE_252_Store_115_material"
-                Use StateSet_1
+                name "SHAPE_252_Store_111_material"
+                Use StateSet_3
                 useDisplayList TRUE
                 useVertexBufferObjects FALSE
                 PrimitiveSets 1
@@ -23416,8 +23379,8 @@ PositionAttitudeTransform {
               num_drawables 1
               Geometry {
                 DataVariance STATIC
-                name "SHAPE_253_Store_116_material"
-                Use StateSet_1
+                name "SHAPE_253_Store_112_material"
+                Use StateSet_3
                 useDisplayList TRUE
                 useVertexBufferObjects FALSE
                 PrimitiveSets 1
@@ -23624,8 +23587,8 @@ PositionAttitudeTransform {
               num_drawables 1
               Geometry {
                 DataVariance STATIC
-                name "SHAPE_254_Store_117_material"
-                Use StateSet_1
+                name "SHAPE_254_Store_113_material"
+                Use StateSet_3
                 useDisplayList TRUE
                 useVertexBufferObjects FALSE
                 PrimitiveSets 1
@@ -23832,8 +23795,8 @@ PositionAttitudeTransform {
               num_drawables 1
               Geometry {
                 DataVariance STATIC
-                name "SHAPE_255_Store_118_material"
-                Use StateSet_1
+                name "SHAPE_255_Store_114_material"
+                Use StateSet_3
                 useDisplayList TRUE
                 useVertexBufferObjects FALSE
                 PrimitiveSets 1
@@ -23989,8 +23952,8 @@ PositionAttitudeTransform {
               num_drawables 1
               Geometry {
                 DataVariance STATIC
-                name "SHAPE_256_Store_119_material"
-                Use StateSet_1
+                name "SHAPE_256_Store_115_material"
+                Use StateSet_3
                 useDisplayList TRUE
                 useVertexBufferObjects FALSE
                 PrimitiveSets 1
@@ -24121,8 +24084,8 @@ PositionAttitudeTransform {
               num_drawables 1
               Geometry {
                 DataVariance STATIC
-                name "SHAPE_257_Store_120_material"
-                Use StateSet_1
+                name "SHAPE_257_Store_116_material"
+                Use StateSet_3
                 useDisplayList TRUE
                 useVertexBufferObjects FALSE
                 PrimitiveSets 1
@@ -24228,8 +24191,8 @@ PositionAttitudeTransform {
               num_drawables 1
               Geometry {
                 DataVariance STATIC
-                name "SHAPE_366_Store_121_material"
-                Use StateSet_1
+                name "SHAPE_366_Store_117_material"
+                Use StateSet_3
                 useDisplayList TRUE
                 useVertexBufferObjects FALSE
                 PrimitiveSets 1
@@ -24436,8 +24399,8 @@ PositionAttitudeTransform {
               num_drawables 1
               Geometry {
                 DataVariance STATIC
-                name "SHAPE_367_Store_122_material"
-                Use StateSet_1
+                name "SHAPE_367_Store_118_material"
+                Use StateSet_3
                 useDisplayList TRUE
                 useVertexBufferObjects FALSE
                 PrimitiveSets 1
