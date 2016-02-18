@@ -187,9 +187,7 @@ MainViewController *vcMain;
     //NSArray<ADSCategory*> *categories = [dataManager getAllADSCategories];
     //NSArray<ADSMedia*> *medias = [dataManager getAllADSMedias];
     
-    // init search box
-    [vcMain initSearchBox];
-    
+      
     // done
     [vcMain mapIsReady:YES];
     [_progressCircle stopAnimating];
@@ -214,6 +212,10 @@ MainViewController *vcMain;
     [self.adSumMapViewController centerOnPlace:placeId];
     //HighLight the first POI linked to the place the user clicked
     [self.adSumMapViewController highLightPlace:placeId color:[UIColor greenColor]];
+    
+    ADSPoi *poi = [_dataManager getADSPoiFromId:_currentPoiId];
+    if (poi!=nil)
+        [vcMain setSearchBarText:[poi name]];
 }
 
 -(void)centerOnPlace:(NSNumber*)placeId

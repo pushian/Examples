@@ -22,6 +22,7 @@
 @property (weak, nonatomic) IBOutlet UIBarButtonItem *buFloors;
 @property (weak, nonatomic) IBOutlet UIBarButtonItem *buBack;
 @property (weak, nonatomic) IBOutlet UIBarButtonItem *bu3d;
+@property (weak, nonatomic) IBOutlet UIBarButtonItem *buDrawPath;
 
 @end
 
@@ -82,6 +83,23 @@ bool mapIsReady=false;
    
     [vcAdsum loadMap];
     
+    // search bar
+    searchController = [[UISearchController alloc] initWithSearchResultsController:self];
+    // Use the current view controller to update the search results.
+    //searchController.searchResultsUpdater = self;
+    //searchController.delegate = self;
+    // Install the search bar as the table header.
+    self.navigationItem.titleView = searchController.searchBar;
+    searchController.searchBar.delegate = self;
+    searchController.searchBar.showsCancelButton = NO;
+    // It is usually good to set the presentation context.
+    self.definesPresentationContext = YES;
+    // searchController.active = YES;
+    _buDrawPath.enabled=NO;
+    
+    //if (b==YES)
+    //  searchController.active = YES;
+    
     // apply custom button style
    // [MainViewController applyCustomButtonStyle:_bu3d];
    // [MainViewController applyCustomButtonStyle:_buFloors];
@@ -109,7 +127,7 @@ bool mapIsReady=false;
 -(void)mapIsReady:(BOOL)b
 {
     mapIsReady = b;
-
+   
     
 }
 
@@ -183,25 +201,42 @@ bool mapIsReady=false;
     [self.specialtySearchResultsTVC.tableView reloadData];
 }*/
 
--(void)initSearchBox
+/*
+-(void)presentSearchController:(UISearchController *)searchController
 {
-    /*
-    UISearchController *searchController = [[UISearchController alloc] initWithSearchResultsController:self];
-    // Use the current view controller to update the search results.
-    searchController.searchResultsUpdater = self;
-    // Install the search bar as the table header.
-    self.navigationItem.titleView = searchController.searchBar;
-    // It is usually good to set the presentation context.
-    self.definesPresentationContext = YES;
-    */
-    }
+    return;
+}
+*/
+
+
+- (BOOL)searchBarShouldBeginEditing:(UISearchBar *)searchBar
+{
+    [self performSegueWithIdentifier:@"segueSearch" sender:self];
+    return NO;
+}
+
+UISearchController *searchController;
+
+
 
 - (BOOL)textFieldShouldReturn:(UITextField *)textField {
     [textField resignFirstResponder];
     return NO;
 }
 
+-(void)setSearchBarText:(NSString*)text
+{
+    _buDrawPath.enabled=YES;
+    searchController.searchBar.text = text;
+}
 
+- (void)searchBarCancelButtonClicked:(UISearchBar *)searchBar
+{
+    _buDrawPath.enabled=NO;
+    searchController.searchBar.text = @"";
+}
+
+// mktodo: cliquer sur "x" de la searchbar ouvre la recherche (pas ok) puis rend la map toute noire quand on revient
 
 
 #pragma mark - Navigation

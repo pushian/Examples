@@ -4,6 +4,7 @@
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9529"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+        <capability name="Navigation items with more than one left or right bar item" minToolsVersion="7.0"/>
     </dependencies>
     <scenes>
         <!--Search Feature Table View Controller-->
@@ -63,16 +64,6 @@
                         </connections>
                     </containerView>
                     <toolbarItems>
-                        <barButtonItem systemItem="search" id="CV7-6J-HeI">
-                            <connections>
-                                <segue destination="jWj-qD-8yQ" kind="show" identifier="segueSearch" id="Msm-xu-ju6"/>
-                            </connections>
-                        </barButtonItem>
-                        <barButtonItem image="map-direction" id="Oue-k8-R62">
-                            <connections>
-                                <segue destination="Ele-2R-mGf" kind="show" identifier="segueDrawPath" id="ha4-XN-EQv"/>
-                            </connections>
-                        </barButtonItem>
                         <barButtonItem style="plain" systemItem="flexibleSpace" id="Ksk-xm-kQT"/>
                         <barButtonItem title="2D" id="yfQ-eT-jnO">
                             <connections>
@@ -87,16 +78,25 @@
                                 <action selector="buBack:" destination="pmW-QJ-aJ5" id="Pcm-lh-KPG"/>
                             </connections>
                         </barButtonItem>
-                        <barButtonItem key="rightBarButtonItem" image="layers-show" id="svy-we-yOC">
-                            <connections>
-                                <action selector="buFloors:" destination="pmW-QJ-aJ5" id="Dgw-Vj-edH"/>
-                            </connections>
-                        </barButtonItem>
+                        <rightBarButtonItems>
+                            <barButtonItem image="layers-show" id="svy-we-yOC">
+                                <connections>
+                                    <action selector="buFloors:" destination="pmW-QJ-aJ5" id="Dgw-Vj-edH"/>
+                                </connections>
+                            </barButtonItem>
+                            <barButtonItem image="redo" id="Oue-k8-R62">
+                                <connections>
+                                    <segue destination="Ele-2R-mGf" kind="show" identifier="segueDrawPath" id="ha4-XN-EQv"/>
+                                </connections>
+                            </barButtonItem>
+                        </rightBarButtonItems>
                     </navigationItem>
                     <connections>
                         <outlet property="bu3d" destination="yfQ-eT-jnO" id="koT-uS-yUK"/>
                         <outlet property="buBack" destination="zyh-jK-jzF" id="ooA-bI-EWc"/>
+                        <outlet property="buDrawPath" destination="Oue-k8-R62" id="eGd-CU-ByI"/>
                         <outlet property="buFloors" destination="svy-we-yOC" id="fm9-Pq-Rc8"/>
+                        <segue destination="jWj-qD-8yQ" kind="show" identifier="segueSearch" id="Q0h-fJ-phu"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="jmI-1o-NXq" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -118,12 +118,12 @@
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="46E-QU-Iuc" customClass="MPGTextField">
                                 <rect key="frame" x="20" y="39" width="560" height="30"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
+                                <textInputTraits key="textInputTraits" autocorrectionType="no" spellCheckingType="no" returnKeyType="next"/>
                             </textField>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="TKn-ft-l0J" customClass="MPGTextField">
                                 <rect key="frame" x="20" y="104" width="560" height="30"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
+                                <textInputTraits key="textInputTraits" autocorrectionType="no" spellCheckingType="no" returnKeyType="search"/>
                             </textField>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ziZ-2d-6n2">
                                 <rect key="frame" x="258" y="171" width="85" height="30"/>
@@ -403,6 +403,6 @@
         <image name="adactive_logo.png" width="820" height="374"/>
         <image name="home" width="24" height="24"/>
         <image name="layers-show" width="24" height="24"/>
-        <image name="map-direction" width="24" height="24"/>
+        <image name="redo" width="24" height="24"/>
     </resources>
 </document>

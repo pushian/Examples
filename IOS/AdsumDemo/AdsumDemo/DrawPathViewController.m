@@ -43,13 +43,14 @@ ADSPoi *poiFrom, *poiTo;
     [_sbTo setBackgroundImage:[[UIImage alloc]init]]; // remove weird black border around searchbox
     
     [_sbFrom becomeFirstResponder];
+    sbCurrent = _sbFrom;
     
     // si un poi est sélectionné sur la map quand on ouvre "drawpath" : from doit etre préselectionné (c'est dans le cahier des charges)
     if (_vc.currentPoiId!=-1)
     {
         ADSPoi *poi = [_dataManager getADSPoiFromId:_vc.currentPoiId];
-        poiFrom = poi;
-        _sbFrom.text = [poi name];
+        poiTo = poi;
+        _sbTo.text = [poi name];
     }
 }
 
@@ -89,18 +90,20 @@ ADSPoi *poiFrom, *poiTo;
     {
         if (sbCurrent==_sbFrom)
         {
-            [_sbTo becomeFirstResponder];
             poiFrom = poi;
+            _sbFrom.text = _pois[indexPath.row].name;
+            [_sbTo becomeFirstResponder];
         }
         else
         {
             poiTo = poi;
-            [_vc drawPathFrom:[poiFrom.uid longValue] to:[poiTo.uid longValue]];
-            
-            // close view
-            [self.navigationController popViewControllerAnimated:YES];
+
+            if (poiFrom!=nil && poiTo!=nil)
+            {
+                [_vc drawPathFrom:[poiFrom.uid longValue] to:[poiTo.uid longValue]];
+                [self.navigationController popViewControllerAnimated:YES];
+            }
         }
-      
     }
     else
     {
@@ -114,7 +117,8 @@ ADSPoi *poiFrom, *poiTo;
     }
 }
 
-
+// mktodo: est-ce que "x" sur les sb met bien poiFrom et poiTo à nil? je pense pas
+// mktodo: quand on modifie à la main le texte: metttre poiFrom et poiTo à nil -> çà n'est remis que quand l'utilisateur choisit un item dans la liste
 
 - (BOOL)searchBarShouldBeginEditing:(UISearchBar *)searchBar
 {
@@ -125,6 +129,22 @@ ADSPoi *poiFrom, *poiTo;
     
     return YES;
 }
+
+- (void)searchBarSearchButtonClicked:(UISearchBar *)searchBar
+{
+    // si l'utilisateur clique sur "enter" sur le clavier, et que from et to sont ok, on fait le drawpath:
+    if (searchBar==_sbTo)
+    {
+        if (poiFrom!=nil && poiTo!=nil)
+        {
+            [_vc drawPathFrom:[poiFrom.uid longValue] to:[poiTo.uid longValue]];
+            
+            // close view
+            [self.navigationController popViewControllerAnimated:YES];
+        }
+    }
+}
+
 
 - (void)searchBar:(UISearchBar *)searchBar textDidChange:(NSString *)searchText{
     
