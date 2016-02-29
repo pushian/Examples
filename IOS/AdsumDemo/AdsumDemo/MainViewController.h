@@ -10,7 +10,7 @@
 //#import "MPGTextField.h"
 
 
-@interface MainViewController : UIViewController <UISearchBarDelegate>
+@interface MainViewController : UIViewController // <UISearchBarDelegate>
 
 -(void)showUI:(BOOL)b;
 -(void)initSearchBox;

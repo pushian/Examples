@@ -23,6 +23,7 @@
 @property (weak, nonatomic) IBOutlet UIBarButtonItem *buBack;
 @property (weak, nonatomic) IBOutlet UIBarButtonItem *bu3d;
 @property (weak, nonatomic) IBOutlet UIBarButtonItem *buDrawPath;
+@property (weak, nonatomic) IBOutlet UITextField *tfSearch;
 
 @end
 
@@ -84,6 +85,7 @@ bool mapIsReady=false;
     [vcAdsum loadMap];
     
     // search bar
+    /*
     searchController = [[UISearchController alloc] initWithSearchResultsController:self];
     // Use the current view controller to update the search results.
     //searchController.searchResultsUpdater = self;
@@ -94,7 +96,7 @@ bool mapIsReady=false;
     searchController.searchBar.showsCancelButton = NO;
     // It is usually good to set the presentation context.
     self.definesPresentationContext = YES;
-    // searchController.active = YES;
+    // searchController.active = YES;*/
     _buDrawPath.enabled=NO;
     
     //if (b==YES)
@@ -160,6 +162,12 @@ bool mapIsReady=false;
 }
 
 
+- (IBAction)tfSearchClicked:(id)sender {
+   
+}
+- (IBAction)tfSearchEditingDidBegin:(id)sender {
+     [self performSegueWithIdentifier:@"segueSearch" sender:self];
+}
 
 -(void)showUI:(BOOL)b
 {
@@ -208,14 +216,29 @@ bool mapIsReady=false;
 }
 */
 
+/*
+- (void)didPresentSearchController:(UISearchController *)searchController
+{
+    searchController.searchBar.showsCancelButton = NO;
+    [searchController.searchBar setShowsCancelButton:NO animated:NO];
+}*/
 
+/*
+- (void)searchBarCancelButtonClicked:(UISearchBar *)searchBar
+{
+    _buDrawPath.enabled=NO;
+    searchController.searchBar.text = @"";
+}*/
+
+/*
 - (BOOL)searchBarShouldBeginEditing:(UISearchBar *)searchBar
 {
+    searchController.active = NO;
     [self performSegueWithIdentifier:@"segueSearch" sender:self];
     return NO;
-}
+}*/
 
-UISearchController *searchController;
+//UISearchController *searchController;
 
 
 
@@ -227,14 +250,14 @@ UISearchController *searchController;
 -(void)setSearchBarText:(NSString*)text
 {
     _buDrawPath.enabled=YES;
-    searchController.searchBar.text = text;
+    _tfSearch.text = text;
+   // searchController.searchBar.text = text;
+    
+  //  searchController.searchBar.showsCancelButton = NO;
+   // [searchController.searchBar setShowsCancelButton:NO animated:NO];
 }
 
-- (void)searchBarCancelButtonClicked:(UISearchBar *)searchBar
-{
-    _buDrawPath.enabled=NO;
-    searchController.searchBar.text = @"";
-}
+
 
 // mktodo: cliquer sur "x" de la searchbar ouvre la recherche (pas ok) puis rend la map toute noire quand on revient
 
