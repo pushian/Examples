@@ -177,8 +177,18 @@ MainViewController *vcMain;
     vcMain = (MainViewController*)[self parentViewController];
     [vcMain showUI:YES];
     
+    // limit camera movements : NO
+    [self.adSumMapViewController limitCameraMovements:NO];
+    
     // get data manager
     _dataManager = [adSumViewController getDataManager];
+    
+    // set up path object config
+    /*AdsumCorePath *p = [adSumViewController getPathObject];
+    [p setPatternOffsetWithX:0 Y:0 Z:7];
+    [p setMarkerSizeWithX:8 Y:8];
+    [p setMarkerMode: ROTATE_TO_CAMERA];
+    [p setSpace:5];*/
     
     // data for search box
     _pois = [_dataManager getAllADSPois];

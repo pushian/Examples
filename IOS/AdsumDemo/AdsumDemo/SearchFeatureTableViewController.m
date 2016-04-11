@@ -84,12 +84,15 @@ NSString *currentSearchText;
         // center view on selected place
         [_vc centerOnPlace:places[0]];
         
+        // set name in searchbox
+        [_mvc setSearchBarText:[poi name]];
+        
         // close search view
         [self.navigationController popViewControllerAnimated:YES];
     }
     else
     {
-        // mktodo: on doit gérer çà comment? ces items ne devraient pas ne pas etre visible comme resultat de la recherche ?
+        // note: ceci ne peut plus arriver (les POI sans place ne sont pas proposés dans la recherche)
         UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Not a place"
                                                         message:@"No place associated with this POI"
                                                        delegate:nil
@@ -113,7 +116,11 @@ NSString *currentSearchText;
             ADSPoi *p = poisFull[i];
             if ([[p.name lowercaseString] rangeOfString:currentSearchText].location != NSNotFound)
             {
-                [ma addObject:p];
+                NSArray<NSNumber*> *places = p.placesIds;
+                if ([places count]>0)
+                {
+                    [ma addObject:p];
+                }
             }
         }
         pois = ma;

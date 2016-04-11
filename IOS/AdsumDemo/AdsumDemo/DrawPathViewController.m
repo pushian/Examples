@@ -107,7 +107,7 @@ ADSPoi *poiFrom, *poiTo;
     }
     else
     {
-        // mktodo: on doit gérer çà comment? ces items ne devraient pas ne pas etre visible comme resultat de la recherche ?
+        // note: ceci ne peut plus arriver (les POI sans place ne sont pas proposés dans la recherche)
         UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Not a place"
                                                         message:@"No place associated with this POI"
                                                        delegate:nil
@@ -167,7 +167,11 @@ ADSPoi *poiFrom, *poiTo;
             ADSPoi *p = _poisFull[i];
             if ([[p.name lowercaseString] rangeOfString:currentSearchTextFrom].location != NSNotFound)
             {
-                [ma addObject:p];
+                NSArray<NSNumber*> *places = p.placesIds;
+                if ([places count]>0)
+                {
+                    [ma addObject:p];
+                }
             }
         }
         _pois = ma;
