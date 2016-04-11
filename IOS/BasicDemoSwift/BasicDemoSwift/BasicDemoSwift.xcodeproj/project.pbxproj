@@ -25,25 +25,7 @@
 		4DC2ACA81C5F6F3600E701ED /* AdsumConfig.xml in Resources */ = {isa = PBXBuildFile; fileRef = 4DC2ACA31C5F6F3600E701ED /* AdsumConfig.xml */; };
 		4DC2ACA91C5F6F3600E701ED /* AdsumCaCert.pem in Resources */ = {isa = PBXBuildFile; fileRef = 4DC2ACA41C5F6F3600E701ED /* AdsumCaCert.pem */; };
 		4DC2ACAD1C5F708A00E701ED /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DC2ACAC1C5F708A00E701ED /* ViewController.swift */; };
-		4DC2ACAE1C5F724E00E701ED /* AdsumIOSAPI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4DC2AC9F1C5F6EEF00E701ED /* AdsumIOSAPI.framework */; };
 /* End PBXBuildFile section */
-
-/* Begin PBXContainerItemProxy section */
-		4DC2AC981C5F6EDC00E701ED /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 4DC2AC941C5F6EDC00E701ED /* AdsumCoreNativeAPI.xcodeproj */;
-			proxyType = 2;
-			remoteGlobalIDString = E4497E7519FF8D080098F353;
-			remoteInfo = AdsumIOSAPI;
-		};
-		4DC2AC9E1C5F6EEF00E701ED /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 4DC2AC9A1C5F6EEF00E701ED /* AdsumCoreNativeAPI.xcodeproj */;
-			proxyType = 2;
-			remoteGlobalIDString = E4497E7519FF8D080098F353;
-			remoteInfo = AdsumIOSAPI;
-		};
-/* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
 		4D2357881C5F6E66005441BB /* BasicDemoSwift.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BasicDemoSwift.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -61,8 +43,6 @@
 		4D8266CB1C5F86940029D11C /* ImageIO.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ImageIO.framework; path = System/Library/Frameworks/ImageIO.framework; sourceTree = SDKROOT; };
 		4D8266CD1C5F869D0029D11C /* libz.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libz.tbd; path = usr/lib/libz.tbd; sourceTree = SDKROOT; };
 		4D8266CF1C5F86A50029D11C /* libc++.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = "libc++.tbd"; path = "usr/lib/libc++.tbd"; sourceTree = SDKROOT; };
-		4DC2AC941C5F6EDC00E701ED /* AdsumCoreNativeAPI.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = AdsumCoreNativeAPI.xcodeproj; path = "../../../../../adsum-core/Wrappers/IOS/IOS_step_2/AdsumCoreNativeAPI.xcodeproj"; sourceTree = "<group>"; };
-		4DC2AC9A1C5F6EEF00E701ED /* AdsumCoreNativeAPI.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = AdsumCoreNativeAPI.xcodeproj; path = "../../../../../adsum-core/Wrappers/IOS/IOS_step_2/AdsumCoreNativeAPI.xcodeproj"; sourceTree = "<group>"; };
 		4DC2ACA01C5F6F3600E701ED /* marker.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = marker.png; path = BasicDemoSwift/marker.png; sourceTree = "<group>"; };
 		4DC2ACA11C5F6F3600E701ED /* path.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = path.png; path = BasicDemoSwift/path.png; sourceTree = "<group>"; };
 		4DC2ACA21C5F6F3600E701ED /* AdsumFont.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = AdsumFont.ttf; path = BasicDemoSwift/AdsumFont.ttf; sourceTree = "<group>"; };
@@ -85,7 +65,6 @@
 				4D8266C61C5F86810029D11C /* Accelerate.framework in Frameworks */,
 				4D8266C41C5F867B0029D11C /* CoreFoundation.framework in Frameworks */,
 				4D8266C21C5F86740029D11C /* Foundation.framework in Frameworks */,
-				4DC2ACAE1C5F724E00E701ED /* AdsumIOSAPI.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -110,8 +89,6 @@
 				4DC2ACA21C5F6F3600E701ED /* AdsumFont.ttf */,
 				4DC2ACA31C5F6F3600E701ED /* AdsumConfig.xml */,
 				4DC2ACA41C5F6F3600E701ED /* AdsumCaCert.pem */,
-				4DC2AC9A1C5F6EEF00E701ED /* AdsumCoreNativeAPI.xcodeproj */,
-				4DC2AC941C5F6EDC00E701ED /* AdsumCoreNativeAPI.xcodeproj */,
 				4D23578A1C5F6E66005441BB /* BasicDemoSwift */,
 				4D2357891C5F6E66005441BB /* Products */,
 			);
@@ -136,22 +113,6 @@
 				4D2357971C5F6E66005441BB /* Info.plist */,
 			);
 			path = BasicDemoSwift;
-			sourceTree = "<group>";
-		};
-		4DC2AC951C5F6EDC00E701ED /* Products */ = {
-			isa = PBXGroup;
-			children = (
-				4DC2AC991C5F6EDC00E701ED /* AdsumIOSAPI.framework */,
-			);
-			name = Products;
-			sourceTree = "<group>";
-		};
-		4DC2AC9B1C5F6EEF00E701ED /* Products */ = {
-			isa = PBXGroup;
-			children = (
-				4DC2AC9F1C5F6EEF00E701ED /* AdsumIOSAPI.framework */,
-			);
-			name = Products;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -200,39 +161,12 @@
 			mainGroup = 4D23577F1C5F6E66005441BB;
 			productRefGroup = 4D2357891C5F6E66005441BB /* Products */;
 			projectDirPath = "";
-			projectReferences = (
-				{
-					ProductGroup = 4DC2AC9B1C5F6EEF00E701ED /* Products */;
-					ProjectRef = 4DC2AC9A1C5F6EEF00E701ED /* AdsumCoreNativeAPI.xcodeproj */;
-				},
-				{
-					ProductGroup = 4DC2AC951C5F6EDC00E701ED /* Products */;
-					ProjectRef = 4DC2AC941C5F6EDC00E701ED /* AdsumCoreNativeAPI.xcodeproj */;
-				},
-			);
 			projectRoot = "";
 			targets = (
 				4D2357871C5F6E66005441BB /* BasicDemoSwift */,
 			);
 		};
 /* End PBXProject section */
-
-/* Begin PBXReferenceProxy section */
-		4DC2AC991C5F6EDC00E701ED /* AdsumIOSAPI.framework */ = {
-			isa = PBXReferenceProxy;
-			fileType = wrapper.framework;
-			path = AdsumIOSAPI.framework;
-			remoteRef = 4DC2AC981C5F6EDC00E701ED /* PBXContainerItemProxy */;
-			sourceTree = BUILT_PRODUCTS_DIR;
-		};
-		4DC2AC9F1C5F6EEF00E701ED /* AdsumIOSAPI.framework */ = {
-			isa = PBXReferenceProxy;
-			fileType = wrapper.framework;
-			path = AdsumIOSAPI.framework;
-			remoteRef = 4DC2AC9E1C5F6EEF00E701ED /* PBXContainerItemProxy */;
-			sourceTree = BUILT_PRODUCTS_DIR;
-		};
-/* End PBXReferenceProxy section */
 
 /* Begin PBXResourcesBuildPhase section */
 		4D2357861C5F6E66005441BB /* Resources */ = {
@@ -373,7 +307,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ENABLE_BITCODE = NO;
 				FRAMEWORK_SEARCH_PATHS = "$(BUILT_PRODUCTS_DIR)/AdsumIOSAPI.framework/Headers";
-				HEADER_SEARCH_PATHS = "$(BUILT_PRODUCTS_DIR)/AdsumIOSAPI.framework/Headers";
+				HEADER_SEARCH_PATHS = "";
 				INFOPLIST_FILE = BasicDemoSwift/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.adactive.BasicDemoSwift;
@@ -388,7 +322,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ENABLE_BITCODE = NO;
 				FRAMEWORK_SEARCH_PATHS = "$(BUILT_PRODUCTS_DIR)/AdsumIOSAPI.framework/Headers";
-				HEADER_SEARCH_PATHS = "$(BUILT_PRODUCTS_DIR)/AdsumIOSAPI.framework/Headers";
+				HEADER_SEARCH_PATHS = "";
 				INFOPLIST_FILE = BasicDemoSwift/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.adactive.BasicDemoSwift;
