@@ -230,11 +230,20 @@ MainViewController *vcMain;
 
 -(void)centerOnPlace:(NSNumber*)placeId
 {
-    //Unlight all the POIs previously highlighted
+    // Unlight all the POIs previously highlighted
     [self.adSumMapViewController unLightAll];
-    //Center the camera on the place
+    
+    // Center the camera on the place
     [self.adSumMapViewController centerOnPlace:[placeId longValue]];
-    //HighLight the first POI linked to the place
+    
+    // change floor if needed
+    long floorId = [self.adSumMapViewController getPlaceFloor:[placeId longValue]];
+    if (floorId!=[self.adSumMapViewController getCurrentFloor])
+    {
+        [self.adSumMapViewController setCurrentFloor:floorId];
+    }
+    
+    // HighLight the first POI linked to the place
     [self.adSumMapViewController highLightPlace:[placeId longValue] color:[UIColor greenColor]];
 }
 
