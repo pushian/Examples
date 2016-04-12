@@ -49,7 +49,7 @@ class ViewController: UIViewController, ADSumMapViewControllerDelegate {
     
     func mapDidFinishLoading(adSumViewController: AnyObject!) {
         //self.adSumMapViewController.customizeInactivePlaces(UIColor.redColor())
-        self.adSumMapViewController.setCameraMode(CameraMode.init(0))
+        self.adSumMapViewController.setCameraMode(ObjectiveBridge().Get_CameraMode_FULL());
         
         self.adSumMapViewController.setCurrentFloor(2);
         

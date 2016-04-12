@@ -10,5 +10,6 @@
 #define TestAdactiveSwift_Bridging_Header_h
 
 #import <ADSumMapViewController.h>
+#import "ObjectiveBridge.h"
 
 #endif /* TestAdactiveSwift_Bridging_Header_h */

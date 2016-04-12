@@ -25,6 +25,7 @@
 		4DC2ACA81C5F6F3600E701ED /* AdsumConfig.xml in Resources */ = {isa = PBXBuildFile; fileRef = 4DC2ACA31C5F6F3600E701ED /* AdsumConfig.xml */; };
 		4DC2ACA91C5F6F3600E701ED /* AdsumCaCert.pem in Resources */ = {isa = PBXBuildFile; fileRef = 4DC2ACA41C5F6F3600E701ED /* AdsumCaCert.pem */; };
 		4DC2ACAD1C5F708A00E701ED /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DC2ACAC1C5F708A00E701ED /* ViewController.swift */; };
+		5E22D1AD1CBD2B6A00D0A9E1 /* ObjectiveBridge.m in Sources */ = {isa = PBXBuildFile; fileRef = 5E22D1AC1CBD2B6A00D0A9E1 /* ObjectiveBridge.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -50,6 +51,8 @@
 		4DC2ACA41C5F6F3600E701ED /* AdsumCaCert.pem */ = {isa = PBXFileReference; lastKnownFileType = text; name = AdsumCaCert.pem; path = BasicDemoSwift/AdsumCaCert.pem; sourceTree = "<group>"; };
 		4DC2ACAC1C5F708A00E701ED /* ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ViewController.swift; path = BasicDemoSwift/ViewController.swift; sourceTree = "<group>"; };
 		4DC2ACBF1C5F76F700E701ED /* BasicDemoSwift-Bridging-Header.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "BasicDemoSwift-Bridging-Header.h"; path = "BasicDemoSwift/BasicDemoSwift-Bridging-Header.h"; sourceTree = "<group>"; };
+		5E22D1AB1CBD2B6A00D0A9E1 /* ObjectiveBridge.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ObjectiveBridge.h; sourceTree = "<group>"; };
+		5E22D1AC1CBD2B6A00D0A9E1 /* ObjectiveBridge.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ObjectiveBridge.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -105,6 +108,8 @@
 		4D23578A1C5F6E66005441BB /* BasicDemoSwift */ = {
 			isa = PBXGroup;
 			children = (
+				5E22D1AB1CBD2B6A00D0A9E1 /* ObjectiveBridge.h */,
+				5E22D1AC1CBD2B6A00D0A9E1 /* ObjectiveBridge.m */,
 				4D23578B1C5F6E66005441BB /* AppDelegate.swift */,
 				4D23578D1C5F6E66005441BB /* ViewController.swift */,
 				4D23578F1C5F6E66005441BB /* Main.storyboard */,
@@ -192,6 +197,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				4DC2ACAD1C5F708A00E701ED /* ViewController.swift in Sources */,
+				5E22D1AD1CBD2B6A00D0A9E1 /* ObjectiveBridge.m in Sources */,
 				4D23578C1C5F6E66005441BB /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
