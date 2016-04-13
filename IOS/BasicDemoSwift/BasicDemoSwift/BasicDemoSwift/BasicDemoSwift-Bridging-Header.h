@@ -1,15 +1,14 @@
-//
-//  TestAdactiveSwift-Bridging-Header.h
-//  TestAdactiveSwift
-//
-//  Created by Openfield Mobility on 26/01/2016.
-//  Copyright © 2016 Openfield Mobility. All rights reserved.
-//
-
 #ifndef TestAdactiveSwift_Bridging_Header_h
 #define TestAdactiveSwift_Bridging_Header_h
 
+#import <UIKit/UIKit.h>
+
+#import <AdsumCoreDataManager.h>
+#import <AdsumCoreNativeAPIFrameWork.h>
+#import <AdsumCorePath.h>
+#import <AdsumCoreView.h>
 #import <ADSumMapViewController.h>
+
 #import "ObjectiveBridge.h"
 
-#endif /* TestAdactiveSwift_Bridging_Header_h */
+#endif

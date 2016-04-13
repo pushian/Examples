@@ -312,8 +312,8 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ENABLE_BITCODE = NO;
-				FRAMEWORK_SEARCH_PATHS = "$(BUILT_PRODUCTS_DIR)/AdsumIOSAPI.framework/Headers";
-				HEADER_SEARCH_PATHS = "";
+				FRAMEWORK_SEARCH_PATHS = "\"$(SRCROOT)/../../../..\"";
+				HEADER_SEARCH_PATHS = "\"$(SRCROOT)/../../../../AdsumIOSAPI.framework/Headers\"";
 				INFOPLIST_FILE = BasicDemoSwift/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.adactive.BasicDemoSwift;
@@ -327,8 +327,8 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ENABLE_BITCODE = NO;
-				FRAMEWORK_SEARCH_PATHS = "$(BUILT_PRODUCTS_DIR)/AdsumIOSAPI.framework/Headers";
-				HEADER_SEARCH_PATHS = "";
+				FRAMEWORK_SEARCH_PATHS = "\"$(SRCROOT)/../../../..\"";
+				HEADER_SEARCH_PATHS = "\"$(SRCROOT)/../../../../AdsumIOSAPI.framework/Headers\"";
 				INFOPLIST_FILE = BasicDemoSwift/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.adactive.BasicDemoSwift;

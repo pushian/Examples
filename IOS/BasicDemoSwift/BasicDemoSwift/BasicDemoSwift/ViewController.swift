@@ -23,7 +23,8 @@ class ViewController: UIViewController, ADSumMapViewControllerDelegate {
         self.adSumMapViewController.view.backgroundColor = UIColor.whiteColor()
         self.view.backgroundColor = UIColor.whiteColor()
         self.view.addSubview(self.adSumMapViewController.view)
-        
+        var data: AdsumCoreDataManager;
+        data.get
         self.adSumMapViewController.update()
     }
     
@@ -49,7 +50,10 @@ class ViewController: UIViewController, ADSumMapViewControllerDelegate {
     
     func mapDidFinishLoading(adSumViewController: AnyObject!) {
         //self.adSumMapViewController.customizeInactivePlaces(UIColor.redColor())
+
         self.adSumMapViewController.setCameraMode(ObjectiveBridge().Get_CameraMode_FULL());
+
+
         
         self.adSumMapViewController.setCurrentFloor(2);
         
