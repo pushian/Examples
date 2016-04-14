@@ -23,8 +23,7 @@ class ViewController: UIViewController, ADSumMapViewControllerDelegate {
         self.adSumMapViewController.view.backgroundColor = UIColor.whiteColor()
         self.view.backgroundColor = UIColor.whiteColor()
         self.view.addSubview(self.adSumMapViewController.view)
-        var data: AdsumCoreDataManager;
-        data.get
+
         self.adSumMapViewController.update()
     }
     
