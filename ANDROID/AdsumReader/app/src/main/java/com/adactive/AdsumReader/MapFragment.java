@@ -1,4 +1,5 @@
 package com.adactive.AdsumReader;
+
 import android.content.Context;
 import android.content.Intent;
 import android.graphics.Color;
@@ -376,8 +377,6 @@ public class MapFragment extends MainActivity.PlaceholderFragment {
 
         // Make the setLevel button invisible
         setLevel.setVisibility(View.GONE);
-
-        map.setSiteView();
     }
 
     private void doPOIClicked(int placeId) {
