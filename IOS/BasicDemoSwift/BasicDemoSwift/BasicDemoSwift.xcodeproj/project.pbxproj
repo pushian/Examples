@@ -26,6 +26,7 @@
 		4DC2ACA91C5F6F3600E701ED /* AdsumCaCert.pem in Resources */ = {isa = PBXBuildFile; fileRef = 4DC2ACA41C5F6F3600E701ED /* AdsumCaCert.pem */; };
 		4DC2ACAD1C5F708A00E701ED /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DC2ACAC1C5F708A00E701ED /* ViewController.swift */; };
 		5E22D1AD1CBD2B6A00D0A9E1 /* ObjectiveBridge.m in Sources */ = {isa = PBXBuildFile; fileRef = 5E22D1AC1CBD2B6A00D0A9E1 /* ObjectiveBridge.m */; };
+		66F9CC6B1CFDDB6600AE700F /* AdsumIOSAPI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 66F9CC6A1CFDDB6600AE700F /* AdsumIOSAPI.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -53,6 +54,7 @@
 		4DC2ACBF1C5F76F700E701ED /* BasicDemoSwift-Bridging-Header.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "BasicDemoSwift-Bridging-Header.h"; path = "BasicDemoSwift/BasicDemoSwift-Bridging-Header.h"; sourceTree = "<group>"; };
 		5E22D1AB1CBD2B6A00D0A9E1 /* ObjectiveBridge.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ObjectiveBridge.h; sourceTree = "<group>"; };
 		5E22D1AC1CBD2B6A00D0A9E1 /* ObjectiveBridge.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ObjectiveBridge.m; sourceTree = "<group>"; };
+		66F9CC6A1CFDDB6600AE700F /* AdsumIOSAPI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AdsumIOSAPI.framework; path = BasicDemoSwift/AdsumIOSAPI.framework; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -62,6 +64,7 @@
 			files = (
 				4D8266D01C5F86A50029D11C /* libc++.tbd in Frameworks */,
 				4D8266CE1C5F869D0029D11C /* libz.tbd in Frameworks */,
+				66F9CC6B1CFDDB6600AE700F /* AdsumIOSAPI.framework in Frameworks */,
 				4D8266CC1C5F86940029D11C /* ImageIO.framework in Frameworks */,
 				4D8266CA1C5F868E0029D11C /* UIKit.framework in Frameworks */,
 				4D8266C81C5F86860029D11C /* MobileCoreServices.framework in Frameworks */,
@@ -77,6 +80,7 @@
 		4D23577F1C5F6E66005441BB = {
 			isa = PBXGroup;
 			children = (
+				66F9CC6A1CFDDB6600AE700F /* AdsumIOSAPI.framework */,
 				4D8266CF1C5F86A50029D11C /* libc++.tbd */,
 				4D8266CD1C5F869D0029D11C /* libz.tbd */,
 				4D8266CB1C5F86940029D11C /* ImageIO.framework */,
@@ -312,8 +316,8 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ENABLE_BITCODE = NO;
-				FRAMEWORK_SEARCH_PATHS = "\"$(SRCROOT)/../../../..\"";
-				HEADER_SEARCH_PATHS = "\"$(SRCROOT)/../../../../AdsumIOSAPI.framework/Headers\"";
+				FRAMEWORK_SEARCH_PATHS = "$(PROJECT_DIR)/BasicDemoSwift";
+				HEADER_SEARCH_PATHS = "\"$(SRCROOT)/BasicDemoSwift/AdsumIOSAPI.framework/Headers\"";
 				INFOPLIST_FILE = BasicDemoSwift/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.adactive.BasicDemoSwift;
@@ -327,8 +331,8 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ENABLE_BITCODE = NO;
-				FRAMEWORK_SEARCH_PATHS = "\"$(SRCROOT)/../../../..\"";
-				HEADER_SEARCH_PATHS = "\"$(SRCROOT)/../../../../AdsumIOSAPI.framework/Headers\"";
+				FRAMEWORK_SEARCH_PATHS = "$(PROJECT_DIR)/BasicDemoSwift";
+				HEADER_SEARCH_PATHS = "\"$(SRCROOT)/BasicDemoSwift/AdsumIOSAPI.framework/Headers\"";
 				INFOPLIST_FILE = BasicDemoSwift/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.adactive.BasicDemoSwift;

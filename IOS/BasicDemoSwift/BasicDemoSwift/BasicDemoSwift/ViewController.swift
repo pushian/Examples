@@ -17,8 +17,8 @@ class ViewController: UIViewController, ADSumMapViewControllerDelegate {
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
-        self.adSumMapViewController = ADSumMapViewController()
-        self.adSumMapViewController.AdactiveParentRect = CGRectMake(0, 0, self.view.frame.size.width, self.view.frame.size.height)
+        self.adSumMapViewController = ADSumMapViewController(frame:CGRectMake(0, 0, self.view.frame.size.width, self.view.frame.size.height))
+        
         self.adSumMapViewController.delegate = self
         self.adSumMapViewController.view.backgroundColor = UIColor.whiteColor()
         self.view.backgroundColor = UIColor.whiteColor()
