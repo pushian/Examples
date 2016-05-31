@@ -120,9 +120,8 @@ MainViewController *vcMain;
 {
    
     //Allocate memory to the ADSumMapViewController
-    self.adSumMapViewController = [[ADSumMapViewController alloc] init];
-    //Setup the size of the ADSumMapViewController display
-    self.adSumMapViewController.AdactiveParentRect = CGRectMake(0, 0, self.view.frame.size.width, self.view.frame.size.height);
+    self.adSumMapViewController = [[ADSumMapViewController alloc] initWithFrame:CGRectMake(0, 0, self.view.frame.size.width, self.view.frame.size.height)];
+
     //Register your view controller as delegate to receive ADSumMapViewController events
     self.adSumMapViewController.delegate = self;
     //Setup the background color
@@ -132,7 +131,7 @@ MainViewController *vcMain;
     [self.view addSubview:self.adSumMapViewController.view];
     
     // on ne lit jamais le xml du bundle
-    self.adSumMapViewController.loadThisXmlInsteadOfBundleXml = newXml;
+    [self.adSumMapViewController useCustomConfigXml:newXml];
     
     //Launch the downloading or update of the map data
     if (forceUpdate)
