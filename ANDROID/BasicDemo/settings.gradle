@@ -1,1 +1,1 @@
-include ':app',':adsumnativeapi'
+include ':app'
