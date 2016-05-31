@@ -2,10 +2,11 @@ source 'https://github.com/CocoaPods/Specs.git'
 use_frameworks!
 
 xcodeproj '../AdsumDemo.xcodeproj'
-workspace 'AdsumDemo'
+target 'AdsumDemo' do
 
 pod 'ActionSheetPicker-3.0'
 #pod 'QRCodeReaderViewController', '~> 4.0.1'
 
 #pod 'MLPAutoCompleteTextField'
 #pod 'MLPAutoCompleteTextField', :git => 'https://github.com/EddyBorja/MLPAutoCompleteTextField.git'
+end
