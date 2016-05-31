@@ -37,7 +37,6 @@
 		4D779B771C4F8D7F008E3579 /* AdsumConfig.xml */ = {isa = PBXFileReference; lastKnownFileType = text.xml; name = AdsumConfig.xml; path = BasicDemo/AdsumConfig.xml; sourceTree = "<group>"; };
 		4D779B781C4F8D7F008E3579 /* AdsumCaCert.pem */ = {isa = PBXFileReference; lastKnownFileType = text; name = AdsumCaCert.pem; path = BasicDemo/AdsumCaCert.pem; sourceTree = "<group>"; };
 		4D779B7B1C4F8E7F008E3579 /* libc++.1.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = "libc++.1.dylib"; path = "../../../../../../../usr/lib/libc++.1.dylib"; sourceTree = "<group>"; };
-		4D7B47D81C5A1A2A002FA73B /* AdsumIOSAPI */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = AdsumIOSAPI; path = BasicDemo/AdsumIOSAPI; sourceTree = "<group>"; };
 		4D9127B41C4F8C3C0088CDBC /* BasicDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BasicDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		4D9127B81C4F8C3C0088CDBC /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		4D9127BA1C4F8C3C0088CDBC /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -83,7 +82,6 @@
 				4D6809D91C5B64C700DDCAEA /* marker.png */,
 				4D6809DA1C5B64C700DDCAEA /* path.png */,
 				4D6809DB1C5B64C700DDCAEA /* AdsumFont.ttf */,
-				4D7B47D81C5A1A2A002FA73B /* AdsumIOSAPI */,
 				4D779B7B1C4F8E7F008E3579 /* libc++.1.dylib */,
 				4D779B771C4F8D7F008E3579 /* AdsumConfig.xml */,
 				4D779B781C4F8D7F008E3579 /* AdsumCaCert.pem */,
@@ -163,7 +161,7 @@
 				TargetAttributes = {
 					4D9127B31C4F8C3C0088CDBC = {
 						CreatedOnToolsVersion = 7.2;
-						DevelopmentTeam = GMJ6UN65XZ;
+						DevelopmentTeam = 65X8TJ7L5Y;
 					};
 				};
 			};
@@ -329,7 +327,7 @@
 					"$(inherited)",
 					"$(PROJECT_DIR)/BasicDemo",
 				);
-				HEADER_SEARCH_PATHS = /Users/mk/git/adactive/Examples/IOS/BasicDemo/BasicDemo/AdsumIOSAPI.framework/Headers;
+				HEADER_SEARCH_PATHS = "\"$(SRCROOT)/BasicDemo/AdsumIOSAPI.framework/Headers\"";
 				INFOPLIST_FILE = BasicDemo/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
@@ -355,7 +353,7 @@
 					"$(inherited)",
 					"$(PROJECT_DIR)/BasicDemo",
 				);
-				HEADER_SEARCH_PATHS = /Users/mk/git/adactive/Examples/IOS/BasicDemo/BasicDemo/AdsumIOSAPI.framework/Headers;
+				HEADER_SEARCH_PATHS = "\"$(SRCROOT)/BasicDemo/AdsumIOSAPI.framework/Headers\"";
 				INFOPLIST_FILE = BasicDemo/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";

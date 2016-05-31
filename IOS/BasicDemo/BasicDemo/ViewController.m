@@ -19,9 +19,8 @@
     // Do any additional setup after loading the view, typically from a nib.
     
     //Allocate memory to the ADSumMapViewController
-    self.adSumMapViewController = [[ADSumMapViewController alloc] init];
-    //Setup the size of the ADSumMapViewController display
-    self.adSumMapViewController.AdactiveParentRect = CGRectMake(0, 0, self.view.frame.size.width, self.view.frame.size.height);
+    self.adSumMapViewController = [[ADSumMapViewController alloc] initWithFrame:CGRectMake(0, 0, self.view.frame.size.width, self.view.frame.size.height)];
+
     //Register your view controller as delegate to receive ADSumMapViewController events
     self.adSumMapViewController.delegate = self;
     //Setup the background color
