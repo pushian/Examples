@@ -30,7 +30,9 @@
 		4DF0328A1C51159600472603 /* ImageIO.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4DF032891C51159600472603 /* ImageIO.framework */; };
 		4DF0328F1C5115D000472603 /* libc++.1.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 4DF0328D1C5115D000472603 /* libc++.1.dylib */; };
 		4DF032901C5115D000472603 /* libz.1.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 4DF0328E1C5115D000472603 /* libz.1.dylib */; };
-		66F9CC681CFDC96A00AE700F /* AdsumIOSAPI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4D3118041C5625120061D54B /* AdsumIOSAPI.framework */; };
+		E4F5EBEE1D182F8600ECBB3A /* AdsumIOSAPI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4D3118041C5625120061D54B /* AdsumIOSAPI.framework */; };
+		E4F5EBF01D18329E00ECBB3A /* AdsumConfig.xml in Resources */ = {isa = PBXBuildFile; fileRef = E4F5EBEF1D18329E00ECBB3A /* AdsumConfig.xml */; };
+		E4F5EBF21D1832FF00ECBB3A /* AdsumCaCert.pem in Resources */ = {isa = PBXBuildFile; fileRef = E4F5EBF11D1832FF00ECBB3A /* AdsumCaCert.pem */; };
 		F657354B15A930D5EEA53FF0 /* Pods_AdsumDemo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7FB62C6493E0151F796C2696 /* Pods_AdsumDemo.framework */; };
 /* End PBXBuildFile section */
 
@@ -76,6 +78,8 @@
 		7FB62C6493E0151F796C2696 /* Pods_AdsumDemo.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_AdsumDemo.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		D6565CCF7E79BAF70ACE7029 /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "AdsumDemo/Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
 		E2206BB12CE9D545FA289408 /* Pods-AdsumDemo.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AdsumDemo.release.xcconfig"; path = "AdsumDemo/Pods/Target Support Files/Pods-AdsumDemo/Pods-AdsumDemo.release.xcconfig"; sourceTree = "<group>"; };
+		E4F5EBEF1D18329E00ECBB3A /* AdsumConfig.xml */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; name = AdsumConfig.xml; path = AdsumDemo/AdsumConfig.xml; sourceTree = "<group>"; };
+		E4F5EBF11D1832FF00ECBB3A /* AdsumCaCert.pem */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = AdsumCaCert.pem; sourceTree = "<group>"; };
 		F2EAA3AAF1DE0ACA9BC9B30A /* Pods-AdsumDemo.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AdsumDemo.debug.xcconfig"; path = "AdsumDemo/Pods/Target Support Files/Pods-AdsumDemo/Pods-AdsumDemo.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -84,7 +88,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				66F9CC681CFDC96A00AE700F /* AdsumIOSAPI.framework in Frameworks */,
+				E4F5EBEE1D182F8600ECBB3A /* AdsumIOSAPI.framework in Frameworks */,
 				4DF0328F1C5115D000472603 /* libc++.1.dylib in Frameworks */,
 				4DF032901C5115D000472603 /* libz.1.dylib in Frameworks */,
 				4DF0328A1C51159600472603 /* ImageIO.framework in Frameworks */,
@@ -119,8 +123,10 @@
 			children = (
 				4D69AF871C6898CA0003059E /* files */,
 				4DA045931C6890EC00845605 /* adactive_logo.png */,
+				E4F5EBEF1D18329E00ECBB3A /* AdsumConfig.xml */,
 				4DA045941C6890EC00845605 /* marker.png */,
 				4DA045951C6890EC00845605 /* path.png */,
+				E4F5EBF11D1832FF00ECBB3A /* AdsumCaCert.pem */,
 				4DA045961C6890EC00845605 /* AdsumFont.ttf */,
 				4DF0328D1C5115D000472603 /* libc++.1.dylib */,
 				4DF0328E1C5115D000472603 /* libz.1.dylib */,
@@ -201,6 +207,7 @@
 				4DF0325F1C51153000472603 /* Resources */,
 				E28E0D01A96B34192E5D8612 /* 📦 Embed Pods Frameworks */,
 				DD61E963D2BE4255C5CB9530 /* 📦 Copy Pods Resources */,
+				14EE45ABA17DFD03D1698FDA /* Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -252,7 +259,9 @@
 				4DA0459A1C6890EC00845605 /* adactive_logo.png in Resources */,
 				4DA0459B1C6890EC00845605 /* marker.png in Resources */,
 				4DA0459C1C6890EC00845605 /* path.png in Resources */,
+				E4F5EBF21D1832FF00ECBB3A /* AdsumCaCert.pem in Resources */,
 				4DA0459D1C6890EC00845605 /* AdsumFont.ttf in Resources */,
+				E4F5EBF01D18329E00ECBB3A /* AdsumConfig.xml in Resources */,
 				4DF032741C51153000472603 /* LaunchScreen.storyboard in Resources */,
 				4D69AF881C6898CA0003059E /* files in Resources */,
 				4D57F0121C6A172100534947 /* Assets.xcassets in Resources */,
@@ -263,6 +272,21 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
+		14EE45ABA17DFD03D1698FDA /* Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/AdsumDemo/Pods/Target Support Files/Pods-AdsumDemo/Pods-AdsumDemo-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
 		7F54454BB51DA25E8D3A64CD /* 📦 Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -458,7 +482,7 @@
 			baseConfigurationReference = E2206BB12CE9D545FA289408 /* Pods-AdsumDemo.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CODE_SIGN_IDENTITY = "iPhone Developer";
+				CODE_SIGN_IDENTITY = "iPhone Distribution: ADACTIVE (65X8TJ7L5Y)";
 				ENABLE_BITCODE = NO;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
