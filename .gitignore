@@ -40,3 +40,5 @@ xcuserdata
 *.ipa
 ANDROID/SamsungDemo/.idea/
 *.iml
+IOS/AdsumDemo/AdsumDemo/Pods
+IOS/AdsumDemo/AdsumDemo/AdsumIOSAPI.framework
