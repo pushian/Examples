@@ -84,20 +84,20 @@ MainViewController *vcMain;
     }
     
     [ActionSheetStringPicker showPickerWithTitle:@"Select a floor"
-                                        rows:floorsArray
-                                        initialSelection:currentFloorPositionInFloorsArray
-                                        doneBlock:^(ActionSheetStringPicker *picker, NSInteger selectedIndex, id selectedValue)
-                                        {
-                                           // NSLog(@"Picker: %@, Index: %@, value: %@", picker, selectedIndex, selectedValue);
-                                           NSString *s = (NSString*)selectedValue;
-                                           long floorId = [s intValue];
-                                           [self.adSumMapViewController setCurrentFloor:floorId];
-                                        }
-                                        cancelBlock:^(ActionSheetStringPicker *picker)
-                                        {
-                                            // NSLog(@"Block Picker Canceled");
-                                        }
-                                        origin:button];  // You can also use self.view if you don't have a sender
+                                            rows:floorsArray
+                                initialSelection:currentFloorPositionInFloorsArray
+                                       doneBlock:^(ActionSheetStringPicker *picker, NSInteger selectedIndex, id selectedValue)
+     {
+         // NSLog(@"Picker: %@, Index: %@, value: %@", picker, selectedIndex, selectedValue);
+         NSString *s = (NSString*)selectedValue;
+         long floorId = [s intValue];
+         [self.adSumMapViewController setCurrentFloor:floorId];
+     }
+                                     cancelBlock:^(ActionSheetStringPicker *picker)
+     {
+         // NSLog(@"Block Picker Canceled");
+     }
+                                          origin:button];  // You can also use self.view if you don't have a sender
 }
 
 
@@ -116,12 +116,49 @@ MainViewController *vcMain;
     self.adSumMapViewController.view.frame = rect;
 }
 
+-(void)createConfigXML:(NSString *)xmlContent{
+    NSFileManager*  fileManager = [NSFileManager defaultManager];
+    NSURL * documentsURL =[fileManager URLsForDirectory:NSDocumentDirectory inDomains:NSUserDomainMask].firstObject;
+    
+    if (documentsURL != nil) {
+        NSURL * filesURL = [documentsURL URLByAppendingPathComponent:@"files"];
+        NSString * path = filesURL.path;
+        if(path!=nil){
+            @try {
+                [fileManager createDirectoryAtURL:filesURL withIntermediateDirectories:NO attributes:nil error:nil];
+            }
+            @catch (NSException *exception) {
+                NSLog(@"%@", exception.reason);
+            }
+         
+            NSData *databuffer;
+            databuffer = [xmlContent dataUsingEncoding:NSUTF8StringEncoding];
+            
+            NSString * filename = @"config.xml";
+            
+            NSURL * toUrl = [filesURL URLByAppendingPathComponent:filename];
+            
+            @try {
+                [fileManager createFileAtPath:[toUrl relativePath] contents:databuffer attributes:nil];
+            }
+            @catch (NSException *exception) {
+                NSLog(@"%@", exception.reason);
+            }
+            
+            
+        }
+    }
+    
+}
+
 -(void)loadMap:(NSString*)newXml forceUpdate:(BOOL)forceUpdate
 {
-   
+    
+    [self createConfigXML:newXml];
+    
     //Allocate memory to the ADSumMapViewController
     self.adSumMapViewController = [[ADSumMapViewController alloc] initWithFrame:CGRectMake(0, 0, self.view.frame.size.width, self.view.frame.size.height)];
-
+    
     //Register your view controller as delegate to receive ADSumMapViewController events
     self.adSumMapViewController.delegate = self;
     //Setup the background color
@@ -129,9 +166,6 @@ MainViewController *vcMain;
     self.view.backgroundColor = [ UIColor whiteColor];
     //Add the ADSumMapViewController view to your ViewController view
     [self.view addSubview:self.adSumMapViewController.view];
-    
-    // on ne lit jamais le xml du bundle
-    [self.adSumMapViewController useCustomConfigXml:newXml];
     
     //Launch the downloading or update of the map data
     if (forceUpdate)
@@ -145,39 +179,39 @@ MainViewController *vcMain;
 }
 
 /*
--(void)loadNewMap:(NSString *)xml
-{
-    //
-    //if(!FilesUtils::Instance()->copyFile(std::string(path)+"/"+ADSUM_CONFIG, dirFiles.string()+"/"+"config.xml")){
-    //    std::cout<< "ADSUM_ERROR Missing"<< ADSUM_CONFIG <<" file in your app bundle" <<std::endl;
-    
-    [self.adSumMapViewController updateConfigXmlFile:(NSString*)xml];
-    
-    [vcMain mapIsReady:NO];
-    [self loadMap:YES];
-}*/
+ -(void)loadNewMap:(NSString *)xml
+ {
+ //
+ //if(!FilesUtils::Instance()->copyFile(std::string(path)+"/"+ADSUM_CONFIG, dirFiles.string()+"/"+"config.xml")){
+ //    std::cout<< "ADSUM_ERROR Missing"<< ADSUM_CONFIG <<" file in your app bundle" <<std::endl;
+ 
+ [self.adSumMapViewController updateConfigXmlFile:(NSString*)xml];
+ 
+ [vcMain mapIsReady:NO];
+ [self loadMap:YES];
+ }*/
 
 /*
--(void)viewWillLayoutSubviews
-{
-    CGRect rect = CGRectMake(0, 0, self.view.frame.size.width, self.view.frame.size.height);
-
-    AdsumCoreView *acv = [self.adSumMapViewController getAdsumCoreView];
-    
-    acv.frame = rect;
-    
-    
-    //self.adSumMapViewController.AdactiveParentRect = rect;
-   // [self.adSumMapViewController
-   // [self.adSumMapViewController update];
-    
-   // AdsumCoreView *acv = (AdsumCoreView *)self.adSumMapViewController.;
-    
-    //acv=acv;
-    //[self.adSumMapViewController. AdsumCoreView setupView];
-    
-    //[acv resizeViewportWithWidth:self.view.frame.size.width height:self.view.frame.size.height];
-}*/
+ -(void)viewWillLayoutSubviews
+ {
+ CGRect rect = CGRectMake(0, 0, self.view.frame.size.width, self.view.frame.size.height);
+ 
+ AdsumCoreView *acv = [self.adSumMapViewController getAdsumCoreView];
+ 
+ acv.frame = rect;
+ 
+ 
+ //self.adSumMapViewController.AdactiveParentRect = rect;
+ // [self.adSumMapViewController
+ // [self.adSumMapViewController update];
+ 
+ // AdsumCoreView *acv = (AdsumCoreView *)self.adSumMapViewController.;
+ 
+ //acv=acv;
+ //[self.adSumMapViewController. AdsumCoreView setupView];
+ 
+ //[acv resizeViewportWithWidth:self.view.frame.size.width height:self.view.frame.size.height];
+ }*/
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
