@@ -32,6 +32,7 @@
 		4DF032901C5115D000472603 /* libz.1.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 4DF0328E1C5115D000472603 /* libz.1.dylib */; };
 		66F9CC691CFDD06000AE700F /* AdsumIOSAPI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4D3118041C5625120061D54B /* AdsumIOSAPI.framework */; };
 		D312E910FF68B2DD4DDE3B3A /* Pods_AdsumReader.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C2E5A2CB4AC6FBBB4C9853FC /* Pods_AdsumReader.framework */; };
+		E49C11F91D33DB440099D5E0 /* AdsumIOSAPI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E49C11F81D33DB440099D5E0 /* AdsumIOSAPI.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -53,10 +54,6 @@
 		4DCB22ED1C521D6F00CDD4AF /* AdsumIOSAPI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AdsumIOSAPI.framework; path = "../../../../../Library/Developer/Xcode/DerivedData/AdsumReader-ftltctqmnpjirieuyzlxvifzxuyd/Build/Products/Debug-iphoneos/AdsumIOSAPI.framework"; sourceTree = "<group>"; };
 		4DCB7C461C563B3600982B23 /* MainViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MainViewController.h; sourceTree = "<group>"; };
 		4DCB7C471C563B3600982B23 /* MainViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MainViewController.m; sourceTree = "<group>"; };
-		4DCB7C491C5655A500982B23 /* home.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = home.png; path = AdsumReader/Images/home.png; sourceTree = "<group>"; };
-		4DCB7C4A1C5655A500982B23 /* layer.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = layer.png; path = AdsumReader/Images/layer.png; sourceTree = "<group>"; };
-		4DCB7C4B1C5655A500982B23 /* magnifier.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = magnifier.png; path = AdsumReader/Images/magnifier.png; sourceTree = "<group>"; };
-		4DD9BF401C562A7200A29F29 /* AdsumIOSAPI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AdsumIOSAPI.framework; path = AdsumReader/AdsumIOSAPI.framework; sourceTree = "<group>"; };
 		4DF032611C51153000472603 /* AdsumReader.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AdsumReader.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		4DF032651C51153000472603 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		4DF032671C51153000472603 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -80,6 +77,7 @@
 		63BCCB391A9D2DF571944E65 /* Pods.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		C2E5A2CB4AC6FBBB4C9853FC /* Pods_AdsumReader.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_AdsumReader.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		D6565CCF7E79BAF70ACE7029 /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "AdsumReader/Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
+		E49C11F81D33DB440099D5E0 /* AdsumIOSAPI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = AdsumIOSAPI.framework; sourceTree = "<group>"; };
 		ED9C452B582E08CCA4210628 /* Pods-AdsumReader.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AdsumReader.release.xcconfig"; path = "AdsumReader/Pods/Target Support Files/Pods-AdsumReader/Pods-AdsumReader.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -97,6 +95,7 @@
 				4DF032841C51158300472603 /* Foundation.framework in Frameworks */,
 				4DF032821C51157600472603 /* CoreFoundation.framework in Frameworks */,
 				4DF032801C51157000472603 /* Accelerate.framework in Frameworks */,
+				E49C11F91D33DB440099D5E0 /* AdsumIOSAPI.framework in Frameworks */,
 				D312E910FF68B2DD4DDE3B3A /* Pods_AdsumReader.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -124,10 +123,7 @@
 				4D6809DF1C5B65CB00DDCAEA /* marker.png */,
 				4D6809E01C5B65CB00DDCAEA /* path.png */,
 				4D6809E11C5B65CB00DDCAEA /* AdsumFont.ttf */,
-				4DCB7C491C5655A500982B23 /* home.png */,
-				4DCB7C4A1C5655A500982B23 /* layer.png */,
-				4DCB7C4B1C5655A500982B23 /* magnifier.png */,
-				4DD9BF401C562A7200A29F29 /* AdsumIOSAPI.framework */,
+				E49C11F81D33DB440099D5E0 /* AdsumIOSAPI.framework */,
 				4D3118081C5627980061D54B /* AdsumFont.ttf */,
 				4DF0328D1C5115D000472603 /* libc++.1.dylib */,
 				4DF0328E1C5115D000472603 /* libz.1.dylib */,
@@ -209,6 +205,7 @@
 				4DF0325F1C51153000472603 /* Resources */,
 				E28E0D01A96B34192E5D8612 /* 📦 Embed Pods Frameworks */,
 				DD61E963D2BE4255C5CB9530 /* 📦 Copy Pods Resources */,
+				A8A1D84BF59F8E33BCDBF13C /* Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -284,6 +281,21 @@
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		A8A1D84BF59F8E33BCDBF13C /* Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/AdsumReader/Pods/Target Support Files/Pods-AdsumReader/Pods-AdsumReader-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 		DD61E963D2BE4255C5CB9530 /* 📦 Copy Pods Resources */ = {
@@ -447,12 +459,12 @@
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/AdsumReader",
-					"\"$(SRCROOT)/AdsumReader/AdsumIOSAPI.framework/Headers\"",
+					"\"$(SRCROOT)/\"",
+					"\"$(SRCROOT)/AdsumReader/Pods\"",
 				);
 				HEADER_SEARCH_PATHS = (
 					"$(BUILT_PRODUCTS_DIR)",
-					"$(BUILT_PRODUCTS_DIR)/AdsumIOSAPI.framework/Headers",
-					"\"$(SRCROOT)/AdsumReader/AdsumIOSAPI.framework/Headers\"",
+					"\"$(SRCROOT)/AdsumIOSAPI.framework/Headers\"",
 				);
 				INFOPLIST_FILE = AdsumReader/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
@@ -471,12 +483,12 @@
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/AdsumReader",
-					"\"$(SRCROOT)/AdsumReader/AdsumIOSAPI.framework/Headers\"",
+					"\"$(SRCROOT)/\"",
+					"\"$(SRCROOT)/AdsumReader/Pods\"",
 				);
 				HEADER_SEARCH_PATHS = (
 					"$(BUILT_PRODUCTS_DIR)",
-					"$(BUILT_PRODUCTS_DIR)/AdsumIOSAPI.framework/Headers",
-					"\"$(SRCROOT)/AdsumReader/AdsumIOSAPI.framework/Headers\"",
+					"\"$(SRCROOT)/AdsumIOSAPI.framework/Headers\"",
 				);
 				INFOPLIST_FILE = AdsumReader/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";

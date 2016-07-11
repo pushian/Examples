@@ -7,7 +7,7 @@
 //
 
 #import <UIKit/UIKit.h>
-#import <ADSumMapViewController.h>
+#import <AdsumIOSAPI/ADSumMapViewController.h>
 
 @interface ViewController : UIViewController<ADSumMapViewControllerDelegate>
 

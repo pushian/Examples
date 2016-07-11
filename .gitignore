@@ -42,3 +42,5 @@ ANDROID/SamsungDemo/.idea/
 *.iml
 IOS/AdsumDemo/AdsumDemo/Pods
 IOS/AdsumDemo/AdsumDemo/AdsumIOSAPI.framework
+IOS/AdsumReader/AdsumReader/Pods
+IOS/AdsumReader/AdsumIOSAPI.framework
