@@ -199,12 +199,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 4DF032781C51153000472603 /* Build configuration list for PBXNativeTarget "AdsumReader" */;
 			buildPhases = (
-				7F54454BB51DA25E8D3A64CD /* 📦 Check Pods Manifest.lock */,
+				7F54454BB51DA25E8D3A64CD /* [CP] Check Pods Manifest.lock */,
 				4DF0325D1C51153000472603 /* Sources */,
 				4DF0325E1C51153000472603 /* Frameworks */,
 				4DF0325F1C51153000472603 /* Resources */,
-				E28E0D01A96B34192E5D8612 /* 📦 Embed Pods Frameworks */,
-				DD61E963D2BE4255C5CB9530 /* 📦 Copy Pods Resources */,
+				E28E0D01A96B34192E5D8612 /* [CP] Embed Pods Frameworks */,
+				DD61E963D2BE4255C5CB9530 /* [CP] Copy Pods Resources */,
 				A8A1D84BF59F8E33BCDBF13C /* Embed Pods Frameworks */,
 			);
 			buildRules = (
@@ -268,14 +268,14 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		7F54454BB51DA25E8D3A64CD /* 📦 Check Pods Manifest.lock */ = {
+		7F54454BB51DA25E8D3A64CD /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			inputPaths = (
 			);
-			name = "📦 Check Pods Manifest.lock";
+			name = "[CP] Check Pods Manifest.lock";
 			outputPaths = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -298,14 +298,14 @@
 			shellScript = "\"${SRCROOT}/AdsumReader/Pods/Target Support Files/Pods-AdsumReader/Pods-AdsumReader-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
-		DD61E963D2BE4255C5CB9530 /* 📦 Copy Pods Resources */ = {
+		DD61E963D2BE4255C5CB9530 /* [CP] Copy Pods Resources */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			inputPaths = (
 			);
-			name = "📦 Copy Pods Resources";
+			name = "[CP] Copy Pods Resources";
 			outputPaths = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -313,14 +313,14 @@
 			shellScript = "\"${SRCROOT}/AdsumReader/Pods/Target Support Files/Pods-AdsumReader/Pods-AdsumReader-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
-		E28E0D01A96B34192E5D8612 /* 📦 Embed Pods Frameworks */ = {
+		E28E0D01A96B34192E5D8612 /* [CP] Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			inputPaths = (
 			);
-			name = "📦 Embed Pods Frameworks";
+			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
