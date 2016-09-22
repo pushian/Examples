@@ -39,9 +39,7 @@
 		29A9FC92B96C424BC2EFF987 /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "AdsumDemo/Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
 		4D2382341C71FB0B003CD7E0 /* DrawPathViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DrawPathViewController.h; sourceTree = "<group>"; };
 		4D2382351C71FB0B003CD7E0 /* DrawPathViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DrawPathViewController.m; sourceTree = "<group>"; };
-		4D3118021C5622C90061D54B /* AdsumIOSAPI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AdsumIOSAPI.framework; path = "../../../../adsum-core/Wrappers/IOS/IOS_step_2/build/Debug-iphoneos/AdsumIOSAPI.framework"; sourceTree = "<group>"; };
 		4D3118041C5625120061D54B /* AdsumIOSAPI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AdsumIOSAPI.framework; path = AdsumDemo/AdsumIOSAPI.framework; sourceTree = "<group>"; };
-		4D3118061C5625920061D54B /* AdsumIOSAPI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AdsumIOSAPI.framework; path = "../../../../adsum-core/Wrappers/IOS/IOS_step_2/build/Debug-iphoneos/AdsumIOSAPI.framework"; sourceTree = "<group>"; };
 		4D6809E41C5B797500DDCAEA /* FirstPageViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FirstPageViewController.h; sourceTree = "<group>"; };
 		4D6809E51C5B797500DDCAEA /* FirstPageViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FirstPageViewController.m; sourceTree = "<group>"; };
 		4D69AF871C6898CA0003059E /* files */ = {isa = PBXFileReference; lastKnownFileType = folder; name = files; path = AdsumDemo/AdsumMapData/files; sourceTree = "<group>"; };
@@ -49,8 +47,6 @@
 		4DA045941C6890EC00845605 /* marker.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = marker.png; path = AdsumDemo/marker.png; sourceTree = "<group>"; };
 		4DA045951C6890EC00845605 /* path.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = path.png; path = AdsumDemo/path.png; sourceTree = "<group>"; };
 		4DA045961C6890EC00845605 /* AdsumFont.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = AdsumFont.ttf; path = AdsumDemo/AdsumFont.ttf; sourceTree = "<group>"; };
-		4DA045A11C68910400845605 /* AdsumIOSAPI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AdsumIOSAPI.framework; path = "../../../../adsum-core/Wrappers/IOS/IOS_step_2/build/Release-iphoneos/AdsumIOSAPI.framework"; sourceTree = "<group>"; };
-		4DCB22ED1C521D6F00CDD4AF /* AdsumIOSAPI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AdsumIOSAPI.framework; path = "../../../../../Library/Developer/Xcode/DerivedData/AdsumDemo-ftltctqmnpjirieuyzlxvifzxuyd/Build/Products/Debug-iphoneos/AdsumIOSAPI.framework"; sourceTree = "<group>"; };
 		4DCB7C461C563B3600982B23 /* MainViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MainViewController.h; sourceTree = "<group>"; };
 		4DCB7C471C563B3600982B23 /* MainViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MainViewController.m; sourceTree = "<group>"; };
 		4DE061341C71D5E4001DAFA7 /* SearchFeatureTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SearchFeatureTableViewController.h; sourceTree = "<group>"; };
@@ -73,7 +69,6 @@
 		4DF032891C51159600472603 /* ImageIO.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ImageIO.framework; path = System/Library/Frameworks/ImageIO.framework; sourceTree = SDKROOT; };
 		4DF0328D1C5115D000472603 /* libc++.1.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = "libc++.1.dylib"; path = "../../../../../../../usr/lib/libc++.1.dylib"; sourceTree = "<group>"; };
 		4DF0328E1C5115D000472603 /* libz.1.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libz.1.dylib; path = ../../../../../../../usr/lib/libz.1.dylib; sourceTree = "<group>"; };
-		63BCCB391A9D2DF571944E65 /* Pods.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		7FB62C6493E0151F796C2696 /* Pods_AdsumDemo.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_AdsumDemo.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		D6565CCF7E79BAF70ACE7029 /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "AdsumDemo/Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
 		E2206BB12CE9D545FA289408 /* Pods-AdsumDemo.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AdsumDemo.release.xcconfig"; path = "AdsumDemo/Pods/Target Support Files/Pods-AdsumDemo/Pods-AdsumDemo.release.xcconfig"; sourceTree = "<group>"; };
@@ -106,12 +101,7 @@
 		24B110EEEFB4B2C952DEE0E9 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				4DA045A11C68910400845605 /* AdsumIOSAPI.framework */,
-				4D3118061C5625920061D54B /* AdsumIOSAPI.framework */,
 				4D3118041C5625120061D54B /* AdsumIOSAPI.framework */,
-				4D3118021C5622C90061D54B /* AdsumIOSAPI.framework */,
-				4DCB22ED1C521D6F00CDD4AF /* AdsumIOSAPI.framework */,
-				63BCCB391A9D2DF571944E65 /* Pods.framework */,
 				7FB62C6493E0151F796C2696 /* Pods_AdsumDemo.framework */,
 			);
 			name = Frameworks;
