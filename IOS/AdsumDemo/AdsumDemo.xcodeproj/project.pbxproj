@@ -10,7 +10,6 @@
 		4D2382361C71FB0B003CD7E0 /* DrawPathViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4D2382351C71FB0B003CD7E0 /* DrawPathViewController.m */; };
 		4D57F0121C6A172100534947 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4DF032701C51153000472603 /* Assets.xcassets */; };
 		4D6809E61C5B797500DDCAEA /* FirstPageViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4D6809E51C5B797500DDCAEA /* FirstPageViewController.m */; };
-		4D69AF881C6898CA0003059E /* files in Resources */ = {isa = PBXBuildFile; fileRef = 4D69AF871C6898CA0003059E /* files */; };
 		4DA0459A1C6890EC00845605 /* adactive_logo.png in Resources */ = {isa = PBXBuildFile; fileRef = 4DA045931C6890EC00845605 /* adactive_logo.png */; };
 		4DA0459B1C6890EC00845605 /* marker.png in Resources */ = {isa = PBXBuildFile; fileRef = 4DA045941C6890EC00845605 /* marker.png */; };
 		4DA0459C1C6890EC00845605 /* path.png in Resources */ = {isa = PBXBuildFile; fileRef = 4DA045951C6890EC00845605 /* path.png */; };
@@ -201,12 +200,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 4DF032781C51153000472603 /* Build configuration list for PBXNativeTarget "AdsumDemo" */;
 			buildPhases = (
-				7F54454BB51DA25E8D3A64CD /* 📦 Check Pods Manifest.lock */,
+				7F54454BB51DA25E8D3A64CD /* [CP] Check Pods Manifest.lock */,
 				4DF0325D1C51153000472603 /* Sources */,
 				4DF0325E1C51153000472603 /* Frameworks */,
 				4DF0325F1C51153000472603 /* Resources */,
-				E28E0D01A96B34192E5D8612 /* 📦 Embed Pods Frameworks */,
-				DD61E963D2BE4255C5CB9530 /* 📦 Copy Pods Resources */,
+				E28E0D01A96B34192E5D8612 /* [CP] Embed Pods Frameworks */,
+				DD61E963D2BE4255C5CB9530 /* [CP] Copy Pods Resources */,
 				14EE45ABA17DFD03D1698FDA /* Embed Pods Frameworks */,
 			);
 			buildRules = (
@@ -263,7 +262,6 @@
 				4DA0459D1C6890EC00845605 /* AdsumFont.ttf in Resources */,
 				E4F5EBF01D18329E00ECBB3A /* AdsumConfig.xml in Resources */,
 				4DF032741C51153000472603 /* LaunchScreen.storyboard in Resources */,
-				4D69AF881C6898CA0003059E /* files in Resources */,
 				4D57F0121C6A172100534947 /* Assets.xcassets in Resources */,
 				4DF0326F1C51153000472603 /* Main.storyboard in Resources */,
 			);
@@ -287,14 +285,14 @@
 			shellScript = "\"${SRCROOT}/AdsumDemo/Pods/Target Support Files/Pods-AdsumDemo/Pods-AdsumDemo-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
-		7F54454BB51DA25E8D3A64CD /* 📦 Check Pods Manifest.lock */ = {
+		7F54454BB51DA25E8D3A64CD /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			inputPaths = (
 			);
-			name = "📦 Check Pods Manifest.lock";
+			name = "[CP] Check Pods Manifest.lock";
 			outputPaths = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -302,14 +300,14 @@
 			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
 			showEnvVarsInLog = 0;
 		};
-		DD61E963D2BE4255C5CB9530 /* 📦 Copy Pods Resources */ = {
+		DD61E963D2BE4255C5CB9530 /* [CP] Copy Pods Resources */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			inputPaths = (
 			);
-			name = "📦 Copy Pods Resources";
+			name = "[CP] Copy Pods Resources";
 			outputPaths = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -317,14 +315,14 @@
 			shellScript = "\"${SRCROOT}/AdsumDemo/Pods/Target Support Files/Pods-AdsumDemo/Pods-AdsumDemo-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
-		E28E0D01A96B34192E5D8612 /* 📦 Embed Pods Frameworks */ = {
+		E28E0D01A96B34192E5D8612 /* [CP] Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			inputPaths = (
 			);
-			name = "📦 Embed Pods Frameworks";
+			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -459,7 +457,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
-				ENABLE_BITCODE = NO;
+				ENABLE_BITCODE = YES;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/AdsumDemo",
@@ -483,7 +481,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Distribution: ADACTIVE (65X8TJ7L5Y)";
-				ENABLE_BITCODE = NO;
+				ENABLE_BITCODE = YES;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/AdsumDemo",

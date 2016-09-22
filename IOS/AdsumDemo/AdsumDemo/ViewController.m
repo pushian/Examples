@@ -131,10 +131,12 @@ MainViewController *vcMain;
     [self.view addSubview:self.adSumMapViewController.view];
     
     // Launch the loading of the map
-    [self.adSumMapViewController updateWithLocalFiles];
-    
-    // go
-    [_progressCircle setHidden:NO];
+    [self.adSumMapViewController updateWithExData:YES];
+    if([self.adSumMapViewController isMapDataAvailable])
+    {
+    [self.adSumMapViewController start];  // go
+    }
+        [_progressCircle setHidden:NO];
     [_progressCircle startAnimating];
 }
 
